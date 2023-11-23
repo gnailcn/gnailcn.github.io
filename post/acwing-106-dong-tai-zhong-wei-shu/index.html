@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>AcWing 106. 动态中位数 | chaosliang</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://gnailcn.github.io/favicon.ico?v=1700740716663">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://gnailcn.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="https://gnailcn.github.io/styles/atom-one-dark.min.css">
+    <script src="https://gnailcn.github.io/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://gnailcn.github.io">chaosliang</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                全部
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/suan-fa" class="menu">
+                算法
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/bian-cheng" class="menu">
+                编程
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/dai-you-hua" class="menu">
+                待优化
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                介绍
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>AcWing 106. 动态中位数</h1>
+            <p class="article-meta">
+              2023-10-29
+              
+                <a href="https://gnailcn.github.io/tag/jin-jie-zhi-nan/" class="badge secondary">
+                  进阶指南
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/acwing/" class="badge ">
+                  AcWing
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/dui/" class="badge secondary">
+                  堆
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/suan-fa/" class="badge secondary">
+                  算法
+                </a>
+              
+            </p>
+            
+            <div class="post-content" v-pre>
+              <p>依次读入一个整数序列，每当已经读入的整数个数为奇数时，输出已读入的整数构成的序列的中位数。</p>
+<h4 id="输入格式">输入格式</h4>
+<p>第一行输入一个整数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span></span></span></span>，代表后面数据集的个数，接下来若干行输入各个数据集。</p>
+<p>每个数据集的第一行首先输入一个代表数据集的编号的整数。</p>
+<p>然后输入一个整数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span></span></span></span>，代表数据集中包含数据的个数，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span></span></span></span> 一定为奇数，数据之间用空格隔开。</p>
+<p>数据集的剩余行由数据集的数据构成，每行包含 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>10</mn></mrow><annotation encoding="application/x-tex">10</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span></span></span></span> 个数据，最后一行数据量可能少于 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>10</mn></mrow><annotation encoding="application/x-tex">10</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span></span></span></span> 个，数据之间用空格隔开。</p>
+<h4 id="输出格式">输出格式</h4>
+<p>对于每个数据集，第一行输出两个整数，分别代表数据集的编号以及输出中位数的个数（应为数据个数加一的二分之一），数据之间用空格隔开。</p>
+<p>数据集的剩余行由输出的中位数构成，每行包含 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>10</mn></mrow><annotation encoding="application/x-tex">10</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span></span></span></span> 个数据，最后一行数据量可能少于 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>10</mn></mrow><annotation encoding="application/x-tex">10</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span></span></span></span> 个，数据之间用空格隔开。</p>
+<p>输出中不应该存在空行。</p>
+<h4 id="数据范围">数据范围</h4>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>≤</mo><mi>P</mi><mo>≤</mo><mn>1000</mn></mrow><annotation encoding="application/x-tex">1 \le P \le 1000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.13597em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span>,<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>≤</mo><mi>M</mi><mo>≤</mo><mn>99999</mn></mrow><annotation encoding="application/x-tex">1 \le M \le 99999</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.13597em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span></span></span></span>,<br>
+所有 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span></span></span></span> 相加之和不超过 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>5</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">5 \times 10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">5</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span>。</p>
+<h4 id="输入样例">输入样例：</h4>
+<pre><code>3 
+1 9 
+1 2 3 4 5 6 7 8 9 
+2 9 
+9 8 7 6 5 4 3 2 1 
+3 23 
+23 41 13 22 -3 24 -31 -11 -8 -7 
+3 5 103 211 -311 -45 -67 -73 -81 -99 
+-33 24 56
+</code></pre>
+<h4 id="输出样例">输出样例：</h4>
+<pre><code>1 5
+1 2 3 4 5
+2 5
+9 8 7 6 5
+3 12
+23 23 22 22 13 3 5 5 3 -3 
+-7 -3
+</code></pre>
+<h4 id="程序">程序</h4>
+<pre><code class="language-java">import java.util.Scanner;
+import java.util.PriorityQueue;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        for(int tt = 0; tt &lt; T; tt ++)
+        {
+            int id = sc.nextInt();
+            int n = sc.nextInt();
+            PriorityQueue&lt;Integer&gt; bigPQ = new PriorityQueue&lt;Integer&gt;((x,y)-&gt;y-x);
+            PriorityQueue&lt;Integer&gt; smallPQ = new PriorityQueue&lt;Integer&gt;();
+            System.out.printf(&quot;%d %d\n&quot;, id, (n+1)/2);
+            for(int i = 1; i &lt;= n; i ++)
+            {
+                int x = sc.nextInt();
+                insert(x, bigPQ, smallPQ);
+                if(i%2==1)
+                {
+                    //奇数的时候中位数刚好是bigPQ.peek()
+                    System.out.printf(&quot;%d &quot;, bigPQ.peek());
+                }
+                if(i%20==0)
+                {
+                    System.out.println(); //有20保证后面有21，因为总数是奇数
+                }
+            }
+            System.out.println();
+        }
+    }
+    
+    //需要保证 bigPQ.size() &gt;= smallPQ.size() 并且最多相差1
+    public static void insert(int x, PriorityQueue&lt;Integer&gt; bigPQ, PriorityQueue&lt;Integer&gt; smallPQ)
+    {
+        if(bigPQ.size()==0)
+        {
+            bigPQ.add(x);
+            return;
+        }
+        int tpMid = bigPQ.peek();
+        if(x &lt;= tpMid)
+        {
+            //插入到左边的大根堆
+            bigPQ.add(x);
+            if(bigPQ.size()-smallPQ.size()&gt;=2)
+            {
+                int top = bigPQ.remove();
+                smallPQ.add(top);
+            }
+        }
+        else
+        {
+            //插入到右边的小根堆
+            smallPQ.add(x);
+            if(smallPQ.size()&gt;bigPQ.size())
+            {
+                int top = smallPQ.remove();
+                bigPQ.add(top);
+            }
+        }
+        return;
+    }
+}
+</code></pre>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://gnailcn.github.io/post/acwing-104-huo-cang-xuan-zhi/">
+                <h3 class="post-title">
+                  AcWing 104. 货仓选址
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+          
+            <div class="paper" data-aos="fade-in">
+              <div id="gitalk-container"></div>
+            </div>
+          
+
+          
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://gnailcn.github.io/images/avatar.png?v=1700740716663" class="no-responsive avatar">
+    <div class="text-muted">温故而知新</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/mei-ri-da-qia-20231123/">每日打卡 2023.11.23</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/mei-ri-da-qia-20231122/">每日打卡2023.11.22</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/leetcode-538-ba-er-cha-sou-suo-shu-zhuan-huan-wei-lei-jia-shu/">leetcode 538. 把二叉搜索树转换为累加树</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/leetcode-669-xiu-jian-er-cha-sou-suo-shu/">leetcode 669. 修剪二叉搜索树</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/acwing-110-fang-shai/">AcWing 110. 防晒</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/acwing-1055-gu-piao-mai-mai-ii/">AcWing 1055. 股票买卖 II</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/acwing-108-qi-shu-ma-wen-ti/">AcWing 108. 奇数码问题</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/acwing-107-chao-kuai-su-pai-xu/">AcWing 107. 超快速排序</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/leetcode-450-shan-chu-er-cha-sou-suo-shu-zhong-de-jie-dian/">leetcode 450. 删除二叉搜索树中的节点</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/leetcode-501-er-cha-sou-suo-shu-zhong-de-zhong-shu/">leetcode 501. 二叉搜索树中的众数</a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://gnailcn.github.io/tag/da-qia/" class="badge warning">
+          打卡
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/leetcode/" class="badge success">
+          leetcode
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu/" class="badge secondary">
+          树
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/suan-fa/" class="badge ">
+          算法
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/tan-xin/" class="badge warning">
+          贪心
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/jin-jie-zhi-nan/" class="badge ">
+          进阶指南
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/acwing/" class="badge secondary">
+          AcWing
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/di-gui-di-tui/" class="badge success">
+          递归递推
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-ju-ku/" class="badge ">
+          数据库
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/database-design-and-implementation/" class="badge secondary">
+          Database Design And Implementation
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/bian-cheng/" class="badge success">
+          编程
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/maven/" class="badge secondary">
+          Maven
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/java/" class="badge warning">
+          java
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/gong-ju/" class="badge secondary">
+          工具
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dui/" class="badge warning">
+          堆
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/pai-xu/" class="badge ">
+          排序
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/ji-he/" class="badge secondary">
+          集合
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/er-fen/" class="badge ">
+          二分
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/qian-zhui-he/" class="badge ">
+          前缀和
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/cha-fen/" class="badge secondary">
+          差分
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dai-you-hua/" class="badge warning">
+          待优化
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/git/" class="badge secondary">
+          git
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-xue/" class="badge secondary">
+          数学
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/wei-yun-suan/" class="badge warning">
+          位运算
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dong-tai-gui-hua/" class="badge secondary">
+          动态规划
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/java-ji-chu/" class="badge ">
+          java基础
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dan-diao-dui-lie/" class="badge ">
+          单调队列
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://gnailcn.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '5857b3000682679485b4',
+        clientSecret: '30d91ad9f7b78494f2bee0423984fa8a3882514b',
+        repo: 'gnailcn.github.io',
+        owner: 'gnailcn',
+        admin: ['gnailcn'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

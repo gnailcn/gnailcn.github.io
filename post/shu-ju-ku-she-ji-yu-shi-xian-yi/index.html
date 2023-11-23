@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>数据库设计与实现（一）数据库系统 | chaosliang</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://gnailcn.github.io/favicon.ico?v=1700740716663">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://gnailcn.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="https://gnailcn.github.io/styles/atom-one-dark.min.css">
+    <script src="https://gnailcn.github.io/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://gnailcn.github.io">chaosliang</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                全部
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/suan-fa" class="menu">
+                算法
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/bian-cheng" class="menu">
+                编程
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/dai-you-hua" class="menu">
+                待优化
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                介绍
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>数据库设计与实现（一）数据库系统</h1>
+            <p class="article-meta">
+              2023-11-02
+              
+                <a href="https://gnailcn.github.io/tag/shu-ju-ku/" class="badge ">
+                  数据库
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/database-design-and-implementation/" class="badge warning">
+                  Database Design And Implementation
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/bian-cheng/" class="badge secondary">
+                  编程
+                </a>
+              
+            </p>
+            
+            <div class="post-content" v-pre>
+              <h2 id="参考文献">参考文献</h2>
+<p><a href="https://link.springer.com/book/10.1007/978-3-030-33836-7">Database Design And Implementation</a></p>
+<h2 id="作者">作者</h2>
+<p><a href="http://cs.bc.edu/~sciore/">Edward Sciore</a></p>
+<h2 id="章节一-数据库系统">章节一   数据库系统</h2>
+<h3 id="定义">定义</h3>
+<p>数据库是存储在计算机上的数据的集合。数据库中的数据通常被组织成记录，如员工记录、医疗记录、销售记录等。</p>
+<h3 id="特征">特征</h3>
+<ul>
+<li>数据库必须是<strong>持久</strong>的。否则，一旦计算机关闭，这些记录就会消失。</li>
+<li>数据库可以<strong>共享</strong>。许多数据库，比如我们大学的数据库，都是由多个并发用户共享的。</li>
+<li>数据库必须保持<strong>准确</strong>。如果用户不能信任数据库的内容，那么它就会变得毫无用处和价值。</li>
+<li>数据库存储的数据可能是<strong>大量</strong>的。</li>
+<li>数据库必须<strong>可用</strong>。如果用户无法轻松获得他们想要的数据，他们的生产力就会受到影响，他们会吵着要不同的产品。</li>
+</ul>
+<h3 id="记录存储持久">记录存储（持久）</h3>
+<p>数据库持久化的一种常见方法是将其记录存储在文件中。最简单、最直接的方法是数据库系统将记录存储在文本文件中，每个记录类型一个文件；每条记录可以是一行文本，其值由制表符分隔。但是大型文本文件更新（如删除一条中间的记录）时间过长，并且大型文本文件读取时间过长。</p>
+<h3 id="并发访问共享">并发访问（共享）</h3>
+<p>当许多用户共享一个数据库时，他们很有可能同时访问其中的一些数据文件。并发是一件好事，因为每个用户都可以很快得到服务，而不必等待其他用户完成，但是有些情况下会导致数据库变得不准确。<br>
+这个问题的解决方案是限制并发性。数据库系统应允许第一用户读取记录，然后阻止第二用户，直到第一用户完成。</p>
+<p>用户可能还需要撤消他们所做的数据库更新。例如，假设用户在旅行计划数据库中搜索了马德里之旅，并找到了既有可用航班又有酒店空置的日期。现在假设用户预订了航班，但在预订过程中，该日期的所有酒店都已满。在这种情况下，用户可能需要取消航班预订并尝试其他日期。</p>
+<p>数据库的其他用户不应看到可撤消的更新。否则，另一个用户可能会看到更新，认为数据是“真实的”，并根据它做出决定。因此，数据库系统必须为用户提供指定其更改何时是永久性的能力；据说用户提交了更改。一旦用户提交，更改就会变得可见并且无法撤消。</p>
+<h3 id="灾难处理准确">灾难处理（准确）</h3>
+<p>如果数据库系统意外崩溃，系统重新启动后，需要数据库系统从崩溃中正常恢复，撤消崩溃发生时正在运行的所有程序的更新。</p>
+<h3 id="存储管理大量">存储管理（大量）</h3>
+<p>数据库需要存储在持久存储器中，例如磁盘驱动器或闪存驱动器。闪存驱动器的速度大约是磁盘驱动器的100倍，但也明显更贵。磁盘的典型访问时间大约为6毫秒，闪存的访问时间大约是60μs。然而，这两个时间都比主存储器41数据库系统（或RAM）慢几个数量级，后者的访问时间约为60ns。也就是说，RAM比闪存快1000倍，比磁盘快100000倍。</p>
+<p>数据库系统面临着以下难题：它必须管理比主存系统更多的数据，使用速度较慢的设备，多人争夺数据访问权，并使其完全可恢复，同时保持合理的响应时间。</p>
+<p>这个难题的大部分解决方案是使用缓存。每当数据库系统需要处理记录时，它都会将其加载到RAM中，并尽可能长时间地保存在那里。因此，主存储器将包含当前正在使用的数据库部分。所有读取和写入都发生在RAM中。这种策略的优点是使用快速主内存而不是慢速持久内存，但缺点是数据库的持久版本可能会过时。数据库系统需要实现保持数据库的持久版本与RAM版本同步的技术，即使在系统崩溃时（RAM的内容被破坏时）也是如此。</p>
+<h3 id="可用性可用">可用性（可用）</h3>
+<p>SQL语句比编程语言直接操作文件数据更短、更清晰，主要是因为它指定了要从文件中提取的值，而不必指定如何检索（循环遍历）这些值。</p>
+<h3 id="数据库引擎">数据库引擎</h3>
+<p>数据库引擎是维护数据的数据库系统的组件。数据库应用程序由两个独立的部分组成：用户界面（或UI）和访问数据库的代码。后一种代码称为数据库引擎。将UI与数据库引擎分离是很好的系统设计，因为它简化了应用程序的开发。</p>
+<p>这种分离还为系统增加了灵活性：应用程序设计者可以将同一用户界面与不同的数据库引擎一起使用，也可以为同一数据库引擎构建不同的用户界面。</p>
+<p>UI通过连接到所需的引擎，然后从引擎的API调用方法来访问数据库，数据库引擎通常支持多个标准API。当Java程序连接到引擎时，所选择的API称为JDBC。</p>
+<p>从UI到数据库引擎的连接可以是嵌入式的，也可以是基于服务器的。在嵌入式连接中，数据库引擎的代码与UI的代码在同一进程中运行，这使UI可以独占访问引擎。只有当数据库“属于”应用程序并与应用程序存储在同一台计算机上时，应用程序才应使用嵌入式连接。其他应用程序需要使用基于服务器的连接。</p>
+<p>在基于服务器的连接中，数据库引擎的代码在专用服务器程序中执行。此服务器程序始终在运行，等待客户端连接，并且不需要与其客户端在同一台计算机上。客户端与服务器建立连接后，客户端向其发送JDBC请求并接收响应。</p>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://gnailcn.github.io/post/leetcode-236-er-cha-shu-de-zui-jin-gong-gong-zu-xian/">
+                <h3 class="post-title">
+                  leetcode 236. 二叉树的最近公共祖先
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+          
+            <div class="paper" data-aos="fade-in">
+              <div id="gitalk-container"></div>
+            </div>
+          
+
+          
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://gnailcn.github.io/images/avatar.png?v=1700740716663" class="no-responsive avatar">
+    <div class="text-muted">温故而知新</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/mei-ri-da-qia-20231123/">每日打卡 2023.11.23</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/mei-ri-da-qia-20231122/">每日打卡2023.11.22</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/leetcode-538-ba-er-cha-sou-suo-shu-zhuan-huan-wei-lei-jia-shu/">leetcode 538. 把二叉搜索树转换为累加树</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/leetcode-669-xiu-jian-er-cha-sou-suo-shu/">leetcode 669. 修剪二叉搜索树</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/acwing-110-fang-shai/">AcWing 110. 防晒</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/acwing-1055-gu-piao-mai-mai-ii/">AcWing 1055. 股票买卖 II</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/acwing-108-qi-shu-ma-wen-ti/">AcWing 108. 奇数码问题</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/acwing-107-chao-kuai-su-pai-xu/">AcWing 107. 超快速排序</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/leetcode-450-shan-chu-er-cha-sou-suo-shu-zhong-de-jie-dian/">leetcode 450. 删除二叉搜索树中的节点</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/leetcode-501-er-cha-sou-suo-shu-zhong-de-zhong-shu/">leetcode 501. 二叉搜索树中的众数</a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://gnailcn.github.io/tag/da-qia/" class="badge warning">
+          打卡
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/leetcode/" class="badge warning">
+          leetcode
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu/" class="badge secondary">
+          树
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/suan-fa/" class="badge warning">
+          算法
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/tan-xin/" class="badge ">
+          贪心
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/jin-jie-zhi-nan/" class="badge secondary">
+          进阶指南
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/acwing/" class="badge secondary">
+          AcWing
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/di-gui-di-tui/" class="badge success">
+          递归递推
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-ju-ku/" class="badge secondary">
+          数据库
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/database-design-and-implementation/" class="badge secondary">
+          Database Design And Implementation
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/bian-cheng/" class="badge secondary">
+          编程
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/maven/" class="badge success">
+          Maven
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/java/" class="badge secondary">
+          java
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/gong-ju/" class="badge success">
+          工具
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dui/" class="badge ">
+          堆
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/pai-xu/" class="badge secondary">
+          排序
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/ji-he/" class="badge warning">
+          集合
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/er-fen/" class="badge warning">
+          二分
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/qian-zhui-he/" class="badge ">
+          前缀和
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/cha-fen/" class="badge ">
+          差分
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dai-you-hua/" class="badge secondary">
+          待优化
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/git/" class="badge secondary">
+          git
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-xue/" class="badge success">
+          数学
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/wei-yun-suan/" class="badge success">
+          位运算
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dong-tai-gui-hua/" class="badge secondary">
+          动态规划
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/java-ji-chu/" class="badge ">
+          java基础
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dan-diao-dui-lie/" class="badge secondary">
+          单调队列
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://gnailcn.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '5857b3000682679485b4',
+        clientSecret: '30d91ad9f7b78494f2bee0423984fa8a3882514b',
+        repo: 'gnailcn.github.io',
+        owner: 'gnailcn',
+        admin: ['gnailcn'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

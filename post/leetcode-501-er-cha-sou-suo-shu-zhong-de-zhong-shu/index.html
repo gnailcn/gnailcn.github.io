@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>leetcode 501. 二叉搜索树中的众数 | chaosliang</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://gnailcn.github.io/favicon.ico?v=1700740716663">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://gnailcn.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="https://gnailcn.github.io/styles/atom-one-dark.min.css">
+    <script src="https://gnailcn.github.io/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://gnailcn.github.io">chaosliang</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                全部
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/suan-fa" class="menu">
+                算法
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/bian-cheng" class="menu">
+                编程
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/dai-you-hua" class="menu">
+                待优化
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                介绍
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>leetcode 501. 二叉搜索树中的众数</h1>
+            <p class="article-meta">
+              2023-11-10
+              
+                <a href="https://gnailcn.github.io/tag/leetcode/" class="badge secondary">
+                  leetcode
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/shu/" class="badge warning">
+                  树
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/suan-fa/" class="badge success">
+                  算法
+                </a>
+              
+            </p>
+            
+            <div class="post-content" v-pre>
+              <p>给你一个含重复值的二叉搜索树（BST）的根节点 <code>root</code> ，找出并返回 BST 中的所有 <a href="https://baike.baidu.com/item/%E4%BC%97%E6%95%B0/44796">众数</a>（即，出现频率最高的元素）。</p>
+<p>如果树中有不止一个众数，可以按 <strong>任意顺序</strong> 返回。</p>
+<p>假定 BST 满足如下定义：</p>
+<ul>
+<li>结点左子树中所含节点的值 <strong>小于等于</strong> 当前节点的值</li>
+<li>结点右子树中所含节点的值 <strong>大于等于</strong> 当前节点的值</li>
+<li>左子树和右子树都是二叉搜索树</li>
+</ul>
+<p><strong>示例 1：</strong></p>
+<figure data-type="image" tabindex="1"><img src="https://assets.leetcode.com/uploads/2021/03/11/mode-tree.jpg" alt="" loading="lazy"></figure>
+<pre><code>输入：root = [1,null,2,2]
+输出：[2]
+
+</code></pre>
+<p><strong>示例 2：</strong></p>
+<pre><code>输入：root = [0]
+输出：[0]
+
+</code></pre>
+<p><strong>提示：</strong></p>
+<ul>
+<li>树中节点的数目在范围 <code>[1, 10&lt;sup&gt;4&lt;/sup&gt;]</code> 内</li>
+<li><code>-10&lt;sup&gt;5&lt;/sup&gt; &lt;= Node.val &lt;= 10&lt;sup&gt;5&lt;/sup&gt;</code></li>
+</ul>
+<p>**进阶：**你可以不使用额外的空间吗？（假设由递归产生的隐式调用栈的开销不被计算在内）</p>
+<p><strong>程序：</strong></p>
+<pre><code class="language-java">import java.util.List;
+import java.util.ArrayList;
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    List&lt;Integer&gt; ansList = new ArrayList&lt;Integer&gt;();
+    int lastNum = Integer.MAX_VALUE;
+    int lastCnt;
+    int maxCnt;
+    
+    public int[] findMode(TreeNode root) {
+        dfs(root);
+        int[] ans = new int[ansList.size()];
+        for(int i = 0; i &lt; ans.length; i ++)
+        {
+            ans[i] = ansList.get(i);
+        }
+        return ans;
+    }
+
+    //BST的中序遍历
+    public void dfs(TreeNode root)
+    {
+        if(root == null)
+        {
+            return;
+        }
+        dfs(root.left);
+
+        //访问当前节点
+        if(root.val == lastNum)
+        {
+            lastCnt ++;
+        }
+        else
+        {
+            lastNum = root.val;
+            lastCnt = 1;
+        }
+        if(lastCnt == maxCnt)
+        {
+            ansList.add(root.val);
+        }
+        else if(lastCnt &gt; maxCnt)
+        {
+            maxCnt = lastCnt;
+            ansList.clear();
+            ansList.add(root.val);
+        }
+        dfs(root.right);
+    }
+}
+</code></pre>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://gnailcn.github.io/post/shu-ju-ku-she-ji-yu-shi-xian-yi/">
+                <h3 class="post-title">
+                  数据库设计与实现（一）数据库系统
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+          
+            <div class="paper" data-aos="fade-in">
+              <div id="gitalk-container"></div>
+            </div>
+          
+
+          
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://gnailcn.github.io/images/avatar.png?v=1700740716663" class="no-responsive avatar">
+    <div class="text-muted">温故而知新</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/mei-ri-da-qia-20231123/">每日打卡 2023.11.23</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/mei-ri-da-qia-20231122/">每日打卡2023.11.22</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/leetcode-538-ba-er-cha-sou-suo-shu-zhuan-huan-wei-lei-jia-shu/">leetcode 538. 把二叉搜索树转换为累加树</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/leetcode-669-xiu-jian-er-cha-sou-suo-shu/">leetcode 669. 修剪二叉搜索树</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/acwing-110-fang-shai/">AcWing 110. 防晒</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/acwing-1055-gu-piao-mai-mai-ii/">AcWing 1055. 股票买卖 II</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/acwing-108-qi-shu-ma-wen-ti/">AcWing 108. 奇数码问题</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/acwing-107-chao-kuai-su-pai-xu/">AcWing 107. 超快速排序</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/leetcode-450-shan-chu-er-cha-sou-suo-shu-zhong-de-jie-dian/">leetcode 450. 删除二叉搜索树中的节点</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/leetcode-501-er-cha-sou-suo-shu-zhong-de-zhong-shu/">leetcode 501. 二叉搜索树中的众数</a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://gnailcn.github.io/tag/da-qia/" class="badge secondary">
+          打卡
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/leetcode/" class="badge secondary">
+          leetcode
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu/" class="badge secondary">
+          树
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/suan-fa/" class="badge success">
+          算法
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/tan-xin/" class="badge secondary">
+          贪心
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/jin-jie-zhi-nan/" class="badge secondary">
+          进阶指南
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/acwing/" class="badge secondary">
+          AcWing
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/di-gui-di-tui/" class="badge success">
+          递归递推
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-ju-ku/" class="badge secondary">
+          数据库
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/database-design-and-implementation/" class="badge ">
+          Database Design And Implementation
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/bian-cheng/" class="badge warning">
+          编程
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/maven/" class="badge ">
+          Maven
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/java/" class="badge secondary">
+          java
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/gong-ju/" class="badge success">
+          工具
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dui/" class="badge secondary">
+          堆
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/pai-xu/" class="badge success">
+          排序
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/ji-he/" class="badge success">
+          集合
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/er-fen/" class="badge warning">
+          二分
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/qian-zhui-he/" class="badge ">
+          前缀和
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/cha-fen/" class="badge ">
+          差分
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dai-you-hua/" class="badge secondary">
+          待优化
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/git/" class="badge ">
+          git
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-xue/" class="badge ">
+          数学
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/wei-yun-suan/" class="badge secondary">
+          位运算
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dong-tai-gui-hua/" class="badge warning">
+          动态规划
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/java-ji-chu/" class="badge ">
+          java基础
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dan-diao-dui-lie/" class="badge ">
+          单调队列
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://gnailcn.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '5857b3000682679485b4',
+        clientSecret: '30d91ad9f7b78494f2bee0423984fa8a3882514b',
+        repo: 'gnailcn.github.io',
+        owner: 'gnailcn',
+        admin: ['gnailcn'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

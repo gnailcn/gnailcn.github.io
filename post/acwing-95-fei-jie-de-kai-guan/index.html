@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>AcWing 95. 费解的开关 | chaosliang</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://gnailcn.github.io/favicon.ico?v=1700740716663">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://gnailcn.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="https://gnailcn.github.io/styles/atom-one-dark.min.css">
+    <script src="https://gnailcn.github.io/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://gnailcn.github.io">chaosliang</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                全部
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/suan-fa" class="menu">
+                算法
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/bian-cheng" class="menu">
+                编程
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/dai-you-hua" class="menu">
+                待优化
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                介绍
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>AcWing 95. 费解的开关</h1>
+            <p class="article-meta">
+              2023-10-22
+              
+                <a href="https://gnailcn.github.io/tag/jin-jie-zhi-nan/" class="badge success">
+                  进阶指南
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/acwing/" class="badge ">
+                  AcWing
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/di-gui-di-tui/" class="badge success">
+                  递归递推
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/wei-yun-suan/" class="badge secondary">
+                  位运算
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/suan-fa/" class="badge secondary">
+                  算法
+                </a>
+              
+            </p>
+            
+            <div class="post-content" v-pre>
+              <p>你玩过“拉灯”游戏吗？</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>25</mn></mrow><annotation encoding="application/x-tex">25</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">5</span></span></span></span> 盏灯排成一个 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>5</mn><mo>×</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">5 \times 5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">5</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span></span></span></span> 的方形。</p>
+<p>每一个灯都有一个开关，游戏者可以改变它的状态。</p>
+<p>每一步，游戏者可以改变某一个灯的状态。</p>
+<p>游戏者改变一个灯的状态会产生连锁反应：和这个灯上下左右相邻的灯也要相应地改变其状态。</p>
+<p>我们用数字 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 表示一盏开着的灯，用数字 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 表示关着的灯。</p>
+<p>下面这种状态</p>
+<pre><code>10111
+01101
+10111
+10000
+11011
+</code></pre>
+<p>在改变了最左上角的灯的状态后将变成：</p>
+<pre><code>01111
+11101
+10111
+10000
+11011
+</code></pre>
+<p>再改变它正中间的灯后状态将变成：</p>
+<pre><code>01111
+11001
+11001
+10100
+11011
+</code></pre>
+<p>给定一些游戏的初始状态，编写程序判断游戏者是否可能在 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>6</mn></mrow><annotation encoding="application/x-tex">6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span></span></span></span> 步以内使所有的灯都变亮。</p>
+<h4 id="输入格式">输入格式</h4>
+<p>第一行输入正整数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>，代表数据中共有 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> 个待解决的游戏初始状态。</p>
+<p>以下若干行数据分为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> 组，每组数据有 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>5</mn></mrow><annotation encoding="application/x-tex">5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span></span></span></span> 行，每行 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>5</mn></mrow><annotation encoding="application/x-tex">5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span></span></span></span> 个字符。</p>
+<p>每组数据描述了一个游戏的初始状态。</p>
+<p>各组数据间用一个空行分隔。</p>
+<h4 id="输出格式">输出格式</h4>
+<p>一共输出 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> 行数据，每行有一个小于等于 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>6</mn></mrow><annotation encoding="application/x-tex">6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span></span></span></span> 的整数，它表示对于输入数据中对应的游戏状态最少需要几步才能使所有灯变亮。</p>
+<p>对于某一个游戏初始状态，若 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>6</mn></mrow><annotation encoding="application/x-tex">6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span></span></span></span> 步以内无法使所有灯变亮，则输出 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">1</span></span></span></span>。</p>
+<h4 id="数据范围">数据范围</h4>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mo>&lt;</mo><mi>n</mi><mo>≤</mo><mn>500</mn></mrow><annotation encoding="application/x-tex">0 &lt; n \le 500</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68354em;vertical-align:-0.0391em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mord">0</span><span class="mord">0</span></span></span></span></p>
+<h4 id="输入样例">输入样例：</h4>
+<pre><code>3
+00111
+01011
+10001
+11010
+11100
+
+11101
+11101
+11110
+11111
+11111
+
+01111
+11111
+11111
+11111
+11111
+</code></pre>
+<h4 id="输出样例">输出样例：</h4>
+<pre><code>3
+2
+-1
+</code></pre>
+<h4 id="程序">程序</h4>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class Main
+{
+    public static int[][] g = new int[5][5]; 
+    public static int[][] back = new int[5][5];
+    
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        for(int tt = 1; tt &lt;= T; tt ++)
+        {
+            for(int i = 0; i &lt; 5; i ++)
+            {
+                String line = sc.next();
+                for(int j = 0; j &lt; 5; j ++)
+                {
+                    char c = line.charAt(j);
+                    if(c == '1')
+                    {
+                        back[i][j] = 1;
+                    }
+                    else
+                    {
+                        back[i][j] = 0;
+                    }
+                }
+            }
+            int ans = Integer.MAX_VALUE;
+            //依据第一行按哪些灯进行枚举
+            for(int state=0; state &lt; (1&lt;&lt;5); state ++)
+            {
+                int cnt = 0;
+                //重置g
+                for(int i = 0; i &lt; 5; i ++)
+                {
+                    for(int j = 0; j &lt; 5; j ++)
+                    {
+                        g[i][j] = back[i][j];
+                    }
+                }
+                //修改第一行
+                for(int j = 0; j &lt; 5; j ++)
+                {
+                    if((state&gt;&gt;j&amp;1)==1) //这里的1表示按下去
+                    {
+                        turn(0, j);
+                        cnt ++;
+                    }
+                }
+                for(int i = 1; i &lt; 5; i ++)
+                {
+                    for(int j = 0; j &lt; 5; j ++)
+                    {
+                        if(g[i-1][j]==0) //这里的0表示灯灭，需要点亮
+                        {
+                            turn(i, j);
+                            cnt ++;
+                        }
+                    }
+                }
+                //检查最后一行
+                boolean ok = true;
+                for(int j = 0; j &lt; 5; j ++)
+                {
+                    if(g[4][j]==0) //灯灭
+                    {
+                        ok = false;
+                        break;
+                    }
+                }
+                if(cnt &lt;= 6 &amp;&amp; ok)
+                {
+                    ans = Math.min(ans, cnt);
+                }
+            }
+            if(ans==Integer.MAX_VALUE)
+            {
+                ans = -1;
+            }
+            System.out.println(ans);
+        }
+    }
+    public static void turn(int x, int y)
+    {
+        int[] dx = {0, 1, 0, -1, 0};
+        int[] dy = {0, 0, 1, 0, -1};
+        for(int i = 0; i &lt; 5; i ++)
+        {
+            int a = x + dx[i];
+            int b = y + dy[i];
+            if(a&lt;0 || a&gt;=5 || b&lt;0 || b &gt;= 5)
+            {
+                continue;
+            }
+            g[a][b] = 1-g[a][b];
+        }
+    }
+}
+</code></pre>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://gnailcn.github.io/post/acwing-94-di-gui-shi-xian-pai-lie-xing-mei-ju/">
+                <h3 class="post-title">
+                  AcWing 94. 递归实现排列型枚举
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+          
+            <div class="paper" data-aos="fade-in">
+              <div id="gitalk-container"></div>
+            </div>
+          
+
+          
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://gnailcn.github.io/images/avatar.png?v=1700740716663" class="no-responsive avatar">
+    <div class="text-muted">温故而知新</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/mei-ri-da-qia-20231123/">每日打卡 2023.11.23</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/mei-ri-da-qia-20231122/">每日打卡2023.11.22</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/leetcode-538-ba-er-cha-sou-suo-shu-zhuan-huan-wei-lei-jia-shu/">leetcode 538. 把二叉搜索树转换为累加树</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/leetcode-669-xiu-jian-er-cha-sou-suo-shu/">leetcode 669. 修剪二叉搜索树</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/acwing-110-fang-shai/">AcWing 110. 防晒</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/acwing-1055-gu-piao-mai-mai-ii/">AcWing 1055. 股票买卖 II</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/acwing-108-qi-shu-ma-wen-ti/">AcWing 108. 奇数码问题</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/acwing-107-chao-kuai-su-pai-xu/">AcWing 107. 超快速排序</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/leetcode-450-shan-chu-er-cha-sou-suo-shu-zhong-de-jie-dian/">leetcode 450. 删除二叉搜索树中的节点</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/leetcode-501-er-cha-sou-suo-shu-zhong-de-zhong-shu/">leetcode 501. 二叉搜索树中的众数</a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://gnailcn.github.io/tag/da-qia/" class="badge warning">
+          打卡
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/leetcode/" class="badge ">
+          leetcode
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu/" class="badge secondary">
+          树
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/suan-fa/" class="badge ">
+          算法
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/tan-xin/" class="badge secondary">
+          贪心
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/jin-jie-zhi-nan/" class="badge warning">
+          进阶指南
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/acwing/" class="badge success">
+          AcWing
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/di-gui-di-tui/" class="badge warning">
+          递归递推
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-ju-ku/" class="badge warning">
+          数据库
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/database-design-and-implementation/" class="badge secondary">
+          Database Design And Implementation
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/bian-cheng/" class="badge ">
+          编程
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/maven/" class="badge ">
+          Maven
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/java/" class="badge secondary">
+          java
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/gong-ju/" class="badge secondary">
+          工具
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dui/" class="badge warning">
+          堆
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/pai-xu/" class="badge success">
+          排序
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/ji-he/" class="badge secondary">
+          集合
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/er-fen/" class="badge secondary">
+          二分
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/qian-zhui-he/" class="badge secondary">
+          前缀和
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/cha-fen/" class="badge warning">
+          差分
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dai-you-hua/" class="badge warning">
+          待优化
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/git/" class="badge warning">
+          git
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-xue/" class="badge secondary">
+          数学
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/wei-yun-suan/" class="badge ">
+          位运算
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dong-tai-gui-hua/" class="badge secondary">
+          动态规划
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/java-ji-chu/" class="badge warning">
+          java基础
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dan-diao-dui-lie/" class="badge secondary">
+          单调队列
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://gnailcn.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '5857b3000682679485b4',
+        clientSecret: '30d91ad9f7b78494f2bee0423984fa8a3882514b',
+        repo: 'gnailcn.github.io',
+        owner: 'gnailcn',
+        admin: ['gnailcn'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

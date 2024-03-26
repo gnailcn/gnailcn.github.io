@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>AcWing. 998. 起床困难综合症 | chaosliang</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://gnailcn.github.io/favicon.ico?v=1711464995415">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://gnailcn.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="https://gnailcn.github.io/styles/atom-one-dark.min.css">
+    <script src="https://gnailcn.github.io/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://gnailcn.github.io">chaosliang</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                全部
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/suan-fa" class="menu">
+                算法
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/bian-cheng" class="menu">
+                编程
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/dai-you-hua" class="menu">
+                待优化
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                介绍
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>AcWing. 998. 起床困难综合症</h1>
+            <p class="article-meta">
+              2023-10-15
+              
+                <a href="https://gnailcn.github.io/tag/jin-jie-zhi-nan/" class="badge secondary">
+                  进阶指南
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/acwing/" class="badge secondary">
+                  AcWing
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/wei-yun-suan/" class="badge secondary">
+                  位运算
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/suan-fa/" class="badge ">
+                  算法
+                </a>
+              
+            </p>
+            
+            <div class="post-content" v-pre>
+              <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>21</mn></mrow><annotation encoding="application/x-tex">21</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">1</span></span></span></span> 世纪，许多人得了一种奇怪的病：起床困难综合症，其临床表现为：起床难，起床后精神不佳。</p>
+<p>作为一名青春阳光好少年，atm 一直坚持与起床困难综合症作斗争。</p>
+<p>通过研究相关文献，他找到了该病的发病原因： 在深邃的太平洋海底中，出现了一条名为 drd 的巨龙，它掌握着睡眠之精髓，能随意延长大家的睡眠时间。</p>
+<p>正是由于 drd 的活动，起床困难综合症愈演愈烈， 以惊人的速度在世界上传播。</p>
+<p>为了彻底消灭这种病，atm 决定前往海底，消灭这条恶龙。</p>
+<p>历经千辛万苦，atm 终于来到了 drd 所在的地方，准备与其展开艰苦卓绝的战斗。</p>
+<p>drd 有着十分特殊的技能，他的防御战线能够使用一定的运算来改变他受到的伤害。</p>
+<p>具体说来，drd 的防御战线由 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> 扇防御门组成。</p>
+<p>每扇防御门包括一个运算 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">op</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span></span></span></span> 和一个参数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">t</span></span></span></span>，其中运算一定是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mi>R</mi><mo separator="true">,</mo><mi>X</mi><mi>O</mi><mi>R</mi><mo separator="true">,</mo><mi>A</mi><mi>N</mi><mi>D</mi></mrow><annotation encoding="application/x-tex">OR,XOR,AND</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span></span></span></span> 中的一种，参数则一定为非负整数。</p>
+<p>如果还未通过防御门时攻击力为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span>，则其通过这扇防御门后攻击力将变为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mtext> </mtext><mi>o</mi><mi>p</mi><mtext> </mtext><mi>t</mi></mrow><annotation encoding="application/x-tex">x\ op\ t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">x</span><span class="mspace"> </span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mspace"> </span><span class="mord mathdefault">t</span></span></span></span>。</p>
+<p>最终 drd 受到的伤害为对方初始攻击力 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 依次经过所有 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> 扇防御门后转变得到的攻击力。</p>
+<p>由于 atm 水平有限，他的初始攻击力只能为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span> 之间的一个整数（即他的初始攻击力只能在 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">0, 1, … , m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">m</span></span></span></span> 中任选，但在通过防御门之后的攻击力不受 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span> 的限制）。</p>
+<p>为了节省体力，他希望通过选择合适的初始攻击力使得他的攻击能让 drd 受到最大的伤害，请你帮他计算一下，他的一次攻击最多能使 drd 受到多少伤害。</p>
+<h4 id="输入格式">输入格式</h4>
+<p>第 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 行包含 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 个整数，依次为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo separator="true">,</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">n, m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">m</span></span></span></span>，表示 drd 有 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> 扇防御门，atm 的初始攻击力为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span> 之间的整数。</p>
+<p>接下来 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> 行，依次表示每一扇防御门。每行包括一个字符串 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">op</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span></span></span></span> 和一个非负整数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">t</span></span></span></span>，两者由一个空格隔开，且 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">op</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span></span></span></span> 在前，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">t</span></span></span></span> 在后，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">op</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span></span></span></span> 表示该防御门所对应的操作，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">t</span></span></span></span> 表示对应的参数。</p>
+<h4 id="输出格式">输出格式</h4>
+<p>输出一个整数，表示 atm 的一次攻击最多使 drd 受到多少伤害。</p>
+<h4 id="数据范围">数据范围</h4>
+<figure data-type="image" tabindex="1"><img src="https://cdn.acwing.com/media/article/image/2019/09/07/19_9f80784cd1-QQ%E6%88%AA%E5%9B%BE20190907125839.png" alt="QQ截图20190907125839.png" loading="lazy"></figure>
+<h4 id="输入样例">输入样例：</h4>
+<pre><code>3 10
+AND 5
+OR 6
+XOR 7
+</code></pre>
+<h4 id="输出样例">输出样例：</h4>
+<pre><code>1
+</code></pre>
+<h4 id="样例解释">样例解释</h4>
+<p>atm可以选择的初始攻击力为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">0,1, … ,10</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mord">0</span></span></span></span>。</p>
+<p>假设初始攻击力为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span>，最终攻击力经过了如下计算</p>
+<pre><code>4 AND 5 = 4
+
+4 OR 6 = 6
+
+6 XOR 7 = 1
+</code></pre>
+<p>类似的，我们可以计算出初始攻击力为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo separator="true">,</mo><mn>3</mn><mo separator="true">,</mo><mn>5</mn><mo separator="true">,</mo><mn>7</mn><mo separator="true">,</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">1,3,5,7,9</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">5</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">7</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">9</span></span></span></span> 时最终攻击力为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>，初始攻击力为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>4</mn><mo separator="true">,</mo><mn>6</mn><mo separator="true">,</mo><mn>8</mn><mo separator="true">,</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">0,2,4,6,8,10</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">4</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">6</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">8</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mord">0</span></span></span></span> 时最终攻击力为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>，因此 atm 的一次攻击最多使 drd 受到的伤害值为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>。</p>
+<h4 id="运算解释">运算解释</h4>
+<p>在本题中，选手需要先将数字变换为二进制后再进行计算。如果操作的两个数二进制长度不同，则在前补 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 至相同长度。</p>
+<ul>
+<li>OR 为按位或运算，处理两个长度相同的二进制数，两个相应的二进制位中只要有一个为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>，则该位的结果值为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>，否则为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>。</li>
+<li>XOR 为按位异或运算，对等长二进制模式或二进制数的每一位执行逻辑异或操作。如果两个相应的二进制位不同（相异），则该位的结果值为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>，否则该位为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>。</li>
+<li>AND 为按位与运算，处理两个长度相同的二进制数，两个相应的二进制位都为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>，该位的结果值才为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>，否则为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>。</li>
+</ul>
+<p>例如，我们将十进制数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>5</mn></mrow><annotation encoding="application/x-tex">5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span></span></span></span> 与十进制数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> 分别进行 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mi>R</mi><mi mathvariant="normal">、</mi><mi>X</mi><mi>O</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">OR、XOR</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mord cjk_fallback">、</span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span></span></span></span> 与 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mi>N</mi><mi>D</mi></mrow><annotation encoding="application/x-tex">AND</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span></span></span></span> 运算，可以得到如下结果：</p>
+<pre><code>    0101 (十进制 5)             0101 (十进制 5)             0101 (十进制 5)             
+ OR 0011 (十进制 3)         XOR 0011 (十进制 3)         AND 0011 (十进制 3)             
+  = 0111 (十进制 7)           = 0110 (十进制 6)           = 0001 (十进制 1)             
+</code></pre>
+<h4 id="程序">程序</h4>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class Main
+{
+    public static class OP
+    {
+        String op;
+        int num;
+        public OP(String op, int num)
+        {
+            this.op = op;
+            this.num = num;
+        }
+    }
+    public static int calc(int x, String op, int y)
+    {
+        if(op.equals(&quot;AND&quot;))
+        {
+            return x&amp;y;
+        }
+        else if(op.equals(&quot;OR&quot;))
+        {
+            return x|y;
+        }
+        else if(op.equals(&quot;XOR&quot;))
+        {
+            return x^y;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        OP[] opArray = new OP[n];
+        for(int i = 0; i &lt; n; i ++)
+        {
+            String op = sc.next();
+            int num = sc.nextInt();
+            opArray[i] = new OP(op, num);
+        }
+        int start = 0;
+        long ans = 0;
+        //1e9有30位
+        for(int bit = 29; bit &gt;= 0; bit--)
+        {
+            int res0 = 0;
+            //计算bit位放0的结果
+            for(int i = 0; i &lt; n; i ++)
+            {
+                res0 = calc(res0, opArray[i].op, opArray[i].num&gt;&gt;bit&amp;1);
+            }
+            int res1 = 1;
+            //计算bit位放1的结果
+            for(int i = 0; i &lt; n; i ++)
+            {
+                res1 = calc(res1, opArray[i].op, opArray[i].num&gt;&gt;bit&amp;1);
+            }
+            //放1
+            if((long)start + (1&lt;&lt;bit) &lt;= m &amp;&amp; res1 &gt; res0) //不要等号
+            {
+                start = start + (1&lt;&lt;bit);
+                ans = ans + (res1&lt;&lt;bit); //因为res1不一定是0
+            }
+            else //放0
+            {
+                ans = ans + (res0&lt;&lt;bit); //因为res0不一定是0
+            }
+        }
+        System.out.println(ans);
+    }
+}
+</code></pre>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://gnailcn.github.io/post/acwing-91-zui-duan-Hamilton-lu-jing/">
+                <h3 class="post-title">
+                  AcWing 91. 最短Hamilton路径
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+          
+            <div class="paper" data-aos="fade-in">
+              <div id="gitalk-container"></div>
+            </div>
+          
+
+          
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://gnailcn.github.io/images/avatar.png?v=1711464995415" class="no-responsive avatar">
+    <div class="text-muted">温故而知新</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/docker-jiao-cheng/">docker教程</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/leetcode-139dan-ci-chai-fen/">leetcode 139.单词拆分</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc330e-mex-and-update/">AtCoder ABC330.E Mex and Update</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc330d-counting-ls/">Atcoder ABC330.D Counting Ls</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc330c-minimize-abs-2/">AtCoder ABC330.C Minimize Abs 2</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc346e-paint/">AtCoder ABC346.E Paint</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc346d-gomamayo-sequence/">AtCoder ABC346.D Gomamayo Sequence</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc346c-s/">AtCoder ABC346.C Σ</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc331e-set-meal/">AtCoder ABC331.E Set Meal</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc331d-tile-pattern/">AtCoder ABC331.D Tile Pattern</a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://gnailcn.github.io/tag/docker/" class="badge secondary">
+          docker
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/xian-xing-dp/" class="badge secondary">
+          线性DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/ha-xi/" class="badge ">
+          哈希
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/leetcode/" class="badge warning">
+          leetcode
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/suan-fa/" class="badge secondary">
+          算法
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/atcoder/" class="badge warning">
+          AtCoder
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/si-wei/" class="badge secondary">
+          思维
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/mo-ni/" class="badge secondary">
+          模拟
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/qian-zhui-he/" class="badge ">
+          前缀和
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/zi-dian/" class="badge ">
+          字典
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dai-you-hua/" class="badge warning">
+          待优化
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/bei-bao/" class="badge ">
+          背包
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/suan-fa-ji-chu-ke/" class="badge success">
+          算法基础课
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dai-wan-shan/" class="badge secondary">
+          待完善
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/acwing/" class="badge warning">
+          AcWing
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/cha-fen/" class="badge success">
+          差分
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/gao-jing-du/" class="badge ">
+          高精度
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/er-fen/" class="badge ">
+          二分
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/pai-xu/" class="badge success">
+          排序
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/di-gui-di-tui/" class="badge secondary">
+          递归递推
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/sou-suo/" class="badge secondary">
+          搜索
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/qu-jian-dp/" class="badge ">
+          区间DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu/" class="badge success">
+          树
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/zhuang-tai-ya-suo-dp/" class="badge secondary">
+          状态压缩DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/zhan/" class="badge warning">
+          栈
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/duo-lu-gui-bing/" class="badge secondary">
+          多路归并
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/jin-jie-zhi-nan/" class="badge secondary">
+          进阶指南
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dui/" class="badge success">
+          堆
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-xing-dp/" class="badge secondary">
+          树形DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/lian-biao/" class="badge success">
+          链表
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/tan-xin/" class="badge secondary">
+          贪心
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/ji-he/" class="badge secondary">
+          集合
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/wei-yun-suan/" class="badge success">
+          位运算
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/trie/" class="badge secondary">
+          Trie
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/kmp/" class="badge ">
+          KMP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-xue/" class="badge success">
+          数学
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/xian-duan-shu/" class="badge secondary">
+          线段树
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shuang-zhi-zhen/" class="badge secondary">
+          双指针
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-zhuang-shu-zu/" class="badge success">
+          树状数组
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/zui-duan-lu/" class="badge secondary">
+          最短路
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dan-diao-dui-lie/" class="badge ">
+          单调队列
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dui-lie/" class="badge ">
+          队列
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dan-diao-zhan/" class="badge success">
+          单调栈
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/suan-fa-ti-gao-ke/" class="badge secondary">
+          算法提高课
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-wei-dp/" class="badge secondary">
+          数位DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dong-tai-gui-hua/" class="badge secondary">
+          动态规划
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/chi-san-hua/" class="badge warning">
+          离散化
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/codeforces/" class="badge secondary">
+          Codeforces
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/maven/" class="badge secondary">
+          Maven
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/java/" class="badge warning">
+          java
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/gong-ju/" class="badge success">
+          工具
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/bian-cheng/" class="badge secondary">
+          编程
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/git/" class="badge ">
+          git
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/java-ji-chu/" class="badge secondary">
+          java基础
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://gnailcn.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '5857b3000682679485b4',
+        clientSecret: '30d91ad9f7b78494f2bee0423984fa8a3882514b',
+        repo: 'gnailcn.github.io',
+        owner: 'gnailcn',
+        admin: ['gnailcn'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

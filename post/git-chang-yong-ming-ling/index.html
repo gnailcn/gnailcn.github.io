@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>git基本命令 | chaosliang</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://gnailcn.github.io/favicon.ico?v=1711464995415">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://gnailcn.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="https://gnailcn.github.io/styles/atom-one-dark.min.css">
+    <script src="https://gnailcn.github.io/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://gnailcn.github.io">chaosliang</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                全部
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/suan-fa" class="menu">
+                算法
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/bian-cheng" class="menu">
+                编程
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/dai-you-hua" class="menu">
+                待优化
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                介绍
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>git基本命令</h1>
+            <p class="article-meta">
+              2023-10-24
+              
+                <a href="https://gnailcn.github.io/tag/git/" class="badge success">
+                  git
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/gong-ju/" class="badge ">
+                  工具
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/bian-cheng/" class="badge secondary">
+                  编程
+                </a>
+              
+            </p>
+            
+            <div class="post-content" v-pre>
+              <h3 id="项目初始化">项目初始化</h3>
+<pre><code>git init
+</code></pre>
+<h3 id="建立远程连接">建立远程连接</h3>
+<pre><code>//和远程仓库建立连接
+git remote add origin(这个远程仓库的别名) 远程仓库路径
+</code></pre>
+<h3 id="配置">配置</h3>
+<h4 id="用户配置">用户配置</h4>
+<pre><code>//全局配置
+git config --global user.name '用户名'
+git config --global user.email '邮箱'
+
+//局部配置
+git config  user.name '用户名'
+git config  user.email '邮箱'
+
+</code></pre>
+<h3 id="抓取与推送">抓取与推送</h3>
+<h4 id="抓取">抓取</h4>
+<pre><code>// 从远程获取最新版本并merge到本地
+git pull origin master
+</code></pre>
+<h4 id="修改">修改</h4>
+<pre><code>git add .
+git commit -m &quot;描述信息&quot;
+</code></pre>
+<h4 id="推送">推送</h4>
+<pre><code>//推送代码到远程仓库
+git push [remote_name] [branch_name]
+//默认使用origin和master
+</code></pre>
+<h3 id="撤销">撤销</h3>
+<h4 id="撤销修改的代码">撤销修改的代码</h4>
+<pre><code>// 放弃单个文件修改,注意不要忘记中间的&quot;--&quot;,不写就成了检出分支了!
+git checkout -- filepathname
+// 放弃所有的文件修改
+git checkout .  
+</code></pre>
+<p>此命令用来放弃掉所有还没有加入到缓存区（就是 git add 命令）的修改：内容修改与整个文件删除。但是此命令不会删除掉刚新建的文件，因为刚新建的文件还没已有加入到 git 的管理系统中，所以对于git是未知的，需要自己手动删除。</p>
+<h4 id="撤销缓存的代码">撤销缓存的代码</h4>
+<pre><code>//放弃指定文件的缓存
+git reset HEAD filepathname
+//放弃所有的缓存可以使用 
+git reset HEAD . 
+</code></pre>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://gnailcn.github.io/post/acwing-100-zeng-jian-xu-lie/">
+                <h3 class="post-title">
+                  AcWing 100. 增减序列
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+          
+            <div class="paper" data-aos="fade-in">
+              <div id="gitalk-container"></div>
+            </div>
+          
+
+          
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://gnailcn.github.io/images/avatar.png?v=1711464995415" class="no-responsive avatar">
+    <div class="text-muted">温故而知新</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/docker-jiao-cheng/">docker教程</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/leetcode-139dan-ci-chai-fen/">leetcode 139.单词拆分</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc330e-mex-and-update/">AtCoder ABC330.E Mex and Update</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc330d-counting-ls/">Atcoder ABC330.D Counting Ls</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc330c-minimize-abs-2/">AtCoder ABC330.C Minimize Abs 2</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc346e-paint/">AtCoder ABC346.E Paint</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc346d-gomamayo-sequence/">AtCoder ABC346.D Gomamayo Sequence</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc346c-s/">AtCoder ABC346.C Σ</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc331e-set-meal/">AtCoder ABC331.E Set Meal</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc331d-tile-pattern/">AtCoder ABC331.D Tile Pattern</a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://gnailcn.github.io/tag/docker/" class="badge ">
+          docker
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/xian-xing-dp/" class="badge secondary">
+          线性DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/ha-xi/" class="badge secondary">
+          哈希
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/leetcode/" class="badge warning">
+          leetcode
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/suan-fa/" class="badge ">
+          算法
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/atcoder/" class="badge ">
+          AtCoder
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/si-wei/" class="badge warning">
+          思维
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/mo-ni/" class="badge secondary">
+          模拟
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/qian-zhui-he/" class="badge secondary">
+          前缀和
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/zi-dian/" class="badge ">
+          字典
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dai-you-hua/" class="badge secondary">
+          待优化
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/bei-bao/" class="badge secondary">
+          背包
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/suan-fa-ji-chu-ke/" class="badge ">
+          算法基础课
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dai-wan-shan/" class="badge secondary">
+          待完善
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/acwing/" class="badge secondary">
+          AcWing
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/cha-fen/" class="badge secondary">
+          差分
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/gao-jing-du/" class="badge ">
+          高精度
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/er-fen/" class="badge success">
+          二分
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/pai-xu/" class="badge secondary">
+          排序
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/di-gui-di-tui/" class="badge secondary">
+          递归递推
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/sou-suo/" class="badge success">
+          搜索
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/qu-jian-dp/" class="badge secondary">
+          区间DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu/" class="badge ">
+          树
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/zhuang-tai-ya-suo-dp/" class="badge success">
+          状态压缩DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/zhan/" class="badge ">
+          栈
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/duo-lu-gui-bing/" class="badge secondary">
+          多路归并
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/jin-jie-zhi-nan/" class="badge secondary">
+          进阶指南
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dui/" class="badge secondary">
+          堆
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-xing-dp/" class="badge warning">
+          树形DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/lian-biao/" class="badge warning">
+          链表
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/tan-xin/" class="badge secondary">
+          贪心
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/ji-he/" class="badge success">
+          集合
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/wei-yun-suan/" class="badge success">
+          位运算
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/trie/" class="badge success">
+          Trie
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/kmp/" class="badge warning">
+          KMP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-xue/" class="badge secondary">
+          数学
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/xian-duan-shu/" class="badge warning">
+          线段树
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shuang-zhi-zhen/" class="badge warning">
+          双指针
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-zhuang-shu-zu/" class="badge secondary">
+          树状数组
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/zui-duan-lu/" class="badge ">
+          最短路
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dan-diao-dui-lie/" class="badge secondary">
+          单调队列
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dui-lie/" class="badge secondary">
+          队列
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dan-diao-zhan/" class="badge secondary">
+          单调栈
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/suan-fa-ti-gao-ke/" class="badge success">
+          算法提高课
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-wei-dp/" class="badge ">
+          数位DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dong-tai-gui-hua/" class="badge success">
+          动态规划
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/chi-san-hua/" class="badge ">
+          离散化
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/codeforces/" class="badge secondary">
+          Codeforces
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/maven/" class="badge secondary">
+          Maven
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/java/" class="badge success">
+          java
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/gong-ju/" class="badge warning">
+          工具
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/bian-cheng/" class="badge secondary">
+          编程
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/git/" class="badge secondary">
+          git
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/java-ji-chu/" class="badge secondary">
+          java基础
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://gnailcn.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '5857b3000682679485b4',
+        clientSecret: '30d91ad9f7b78494f2bee0423984fa8a3882514b',
+        repo: 'gnailcn.github.io',
+        owner: 'gnailcn',
+        admin: ['gnailcn'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

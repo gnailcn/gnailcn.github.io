@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>AcWing 93. 递归实现组合型枚举 | chaosliang</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://gnailcn.github.io/favicon.ico?v=1718525539027">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://gnailcn.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="https://gnailcn.github.io/styles/atom-one-dark.min.css">
+    <script src="https://gnailcn.github.io/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://gnailcn.github.io">chaosliang</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                全部
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/suan-fa" class="menu">
+                算法
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/bian-cheng" class="menu">
+                编程
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/dai-you-hua" class="menu">
+                待优化
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                介绍
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>AcWing 93. 递归实现组合型枚举</h1>
+            <p class="article-meta">
+              2023-10-15
+              
+                <a href="https://gnailcn.github.io/tag/jin-jie-zhi-nan/" class="badge secondary">
+                  进阶指南
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/acwing/" class="badge warning">
+                  AcWing
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/di-gui-di-tui/" class="badge secondary">
+                  递归递推
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/suan-fa/" class="badge secondary">
+                  算法
+                </a>
+              
+            </p>
+            
+            <div class="post-content" v-pre>
+              <p>从 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>∼</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">1 \sim n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> 这 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> 个整数中随机选出 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span> 个，输出所有可能的选择方案。</p>
+<h4 id="输入格式">输入格式</h4>
+<p>两个整数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo separator="true">,</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">n, m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">m</span></span></span></span> ,在同一行用空格隔开。</p>
+<h4 id="输出格式">输出格式</h4>
+<p>按照从小到大的顺序输出所有方案，每行 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 个。</p>
+<p>首先，同一行内的数升序排列，相邻两个数用一个空格隔开。</p>
+<p>其次，对于两个不同的行，对应下标的数一一比较，字典序较小的排在前面（例如 <code>1 3 5 7</code> 排在 <code>1 3 6 8</code> 前面）。</p>
+<h4 id="数据范围">数据范围</h4>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">n&gt;0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> ,<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mo>≤</mo><mi>m</mi><mo>≤</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">0 \le m \le n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> ,<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>+</mo><mo>(</mo><mi>n</mi><mo>−</mo><mi>m</mi><mo>)</mo><mo>≤</mo><mn>25</mn></mrow><annotation encoding="application/x-tex">n+(n-m) \le 25</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">5</span></span></span></span></p>
+<h4 id="输入样例">输入样例：</h4>
+<pre><code>5 3
+</code></pre>
+<h4 id="输出样例">输出样例：</h4>
+<pre><code>1 2 3 
+1 2 4 
+1 2 5 
+1 3 4 
+1 3 5 
+1 4 5 
+2 3 4 
+2 3 5 
+2 4 5 
+3 4 5 
+</code></pre>
+<p><strong>思考题</strong>：如果要求使用非递归方法，该怎么做呢？</p>
+<h4 id="程序">程序</h4>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class Main
+{
+    static final int N = 30;
+    static int n = 0;
+    static int m = 0;
+    static boolean[] st = new boolean[N];
+    //已经选了cnt个元素，当前要选数x
+    public static void dfs(int cnt, int x)
+    {
+        if(cnt &gt; m)
+        {
+            return;
+        }
+        if(x &gt; n)
+        {
+            if(cnt == m)
+            {
+                for(int i = 1; i &lt;= n; i++)
+                {
+                    if(st[i])
+                    {
+                        System.out.print(i);
+                        System.out.print(&quot; &quot;);
+                    }
+                }
+                System.out.println();
+            }
+            return;
+        }
+        //选x
+        st[x] = true;
+        dfs(cnt+1, x+1);
+        //不选x
+        st[x] = false;
+        dfs(cnt, x+1);
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        m = sc.nextInt();
+        dfs(0, 1);
+    }
+}
+</code></pre>
+<p><strong>备注</strong>： 非递归思路可以采用二进制枚举</p>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://gnailcn.github.io/post/acwing-92-di-gui-shi-xian-zhi-shu-xing-mei-ju/">
+                <h3 class="post-title">
+                  AcWing 92. 递归实现指数型枚举
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+          
+            <div class="paper" data-aos="fade-in">
+              <div id="gitalk-container"></div>
+            </div>
+          
+
+          
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://gnailcn.github.io/images/avatar.png?v=1718525539027" class="no-responsive avatar">
+    <div class="text-muted">温故而知新</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/2024-06-16-blogmeng/">2024-06-16 blog：梦</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/bu-long-guo-lu-qi/">布隆过滤器</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc329d-election-quick-report/">AtCoder ABC329.D Election Quick Report</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc348e-minimize-sum-of-distances/">AtCoder ABC348.E Minimize Sum of Distances</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/leetcode-718zui-chang-chong-fu-zi-shu-zu/">leetcode 718.最长重复子数组</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/ling-pai-tong-yu-lou-tong/">令牌桶与漏桶</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/acwing-826dan-lian-biao/">AcWing 826.单链表</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc348d-medicines-on-grid/">AtCoder ABC.348.D Medicines on Grid</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc347e-set-add-query/">AtCoder ABC347.E Set Add Query</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/le-guan-suo-yu-bei-guan-suo/">乐观锁与悲观锁</a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://gnailcn.github.io/tag/sheng-huo/" class="badge secondary">
+          生活
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-ju-jie-gou/" class="badge secondary">
+          数据结构
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/gong-cheng/" class="badge secondary">
+          工程
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/atcoder/" class="badge ">
+          AtCoder
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/mo-ni/" class="badge ">
+          模拟
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/suan-fa/" class="badge ">
+          算法
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-xing-dp/" class="badge secondary">
+          树形DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/si-wei/" class="badge secondary">
+          思维
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/ha-xi/" class="badge ">
+          哈希
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/leetcode/" class="badge ">
+          leetcode
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/bing-fa/" class="badge secondary">
+          并发
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/suan-fa-ji-chu-ke/" class="badge ">
+          算法基础课
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/lian-biao/" class="badge secondary">
+          链表
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/sou-suo/" class="badge warning">
+          搜索
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/qian-zhui-he/" class="badge ">
+          前缀和
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/qian-hou-zhui-fen-jie/" class="badge ">
+          前后缀分解
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/wei-yun-suan/" class="badge secondary">
+          位运算
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/acwing/" class="badge success">
+          AcWing
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/pai-xu/" class="badge warning">
+          排序
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/chi-san-hua/" class="badge success">
+          离散化
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shuang-zhi-zhen/" class="badge warning">
+          双指针
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/docker/" class="badge warning">
+          docker
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/xian-xing-dp/" class="badge success">
+          线性DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/zi-dian/" class="badge secondary">
+          字典
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dai-you-hua/" class="badge secondary">
+          待优化
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/bei-bao/" class="badge warning">
+          背包
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dai-wan-shan/" class="badge success">
+          待完善
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/cha-fen/" class="badge secondary">
+          差分
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/gao-jing-du/" class="badge secondary">
+          高精度
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/er-fen/" class="badge ">
+          二分
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/di-gui-di-tui/" class="badge secondary">
+          递归递推
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/qu-jian-dp/" class="badge ">
+          区间DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu/" class="badge success">
+          树
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/zhuang-tai-ya-suo-dp/" class="badge secondary">
+          状态压缩DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/zhan/" class="badge warning">
+          栈
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/duo-lu-gui-bing/" class="badge success">
+          多路归并
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/jin-jie-zhi-nan/" class="badge secondary">
+          进阶指南
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dui/" class="badge secondary">
+          堆
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/tan-xin/" class="badge secondary">
+          贪心
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/ji-he/" class="badge warning">
+          集合
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/trie/" class="badge secondary">
+          Trie
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/kmp/" class="badge secondary">
+          KMP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-xue/" class="badge ">
+          数学
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/xian-duan-shu/" class="badge secondary">
+          线段树
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-zhuang-shu-zu/" class="badge ">
+          树状数组
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/zui-duan-lu/" class="badge secondary">
+          最短路
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dan-diao-dui-lie/" class="badge secondary">
+          单调队列
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dui-lie/" class="badge secondary">
+          队列
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dan-diao-zhan/" class="badge secondary">
+          单调栈
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/suan-fa-ti-gao-ke/" class="badge secondary">
+          算法提高课
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-wei-dp/" class="badge secondary">
+          数位DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dong-tai-gui-hua/" class="badge warning">
+          动态规划
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/codeforces/" class="badge secondary">
+          Codeforces
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/maven/" class="badge ">
+          Maven
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/java/" class="badge success">
+          java
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/gong-ju/" class="badge success">
+          工具
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/bian-cheng/" class="badge success">
+          编程
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/git/" class="badge secondary">
+          git
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/java-ji-chu/" class="badge secondary">
+          java基础
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://gnailcn.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '5857b3000682679485b4',
+        clientSecret: '30d91ad9f7b78494f2bee0423984fa8a3882514b',
+        repo: 'gnailcn.github.io',
+        owner: 'gnailcn',
+        admin: ['gnailcn'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

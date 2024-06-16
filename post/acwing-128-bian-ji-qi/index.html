@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>AcWing 128. 编辑器 | chaosliang</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://gnailcn.github.io/favicon.ico?v=1718525539027">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://gnailcn.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="https://gnailcn.github.io/styles/atom-one-dark.min.css">
+    <script src="https://gnailcn.github.io/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://gnailcn.github.io">chaosliang</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                全部
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/suan-fa" class="menu">
+                算法
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/bian-cheng" class="menu">
+                编程
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/dai-you-hua" class="menu">
+                待优化
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                介绍
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>AcWing 128. 编辑器</h1>
+            <p class="article-meta">
+              2024-01-23
+              
+                <a href="https://gnailcn.github.io/tag/zhan/" class="badge ">
+                  栈
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/si-wei/" class="badge warning">
+                  思维
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/jin-jie-zhi-nan/" class="badge warning">
+                  进阶指南
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/acwing/" class="badge warning">
+                  AcWing
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/suan-fa/" class="badge secondary">
+                  算法
+                </a>
+              
+            </p>
+            
+            <div class="post-content" v-pre>
+              <p><a href="https://www.acwing.com/problem/content/130/">原题</a></p>
+<p>你将要实现一个功能强大的整数序列编辑器。</p>
+<p>在开始时，序列是空的。</p>
+<p>编辑器共有五种指令，如下：</p>
+<p>1、<code>I x</code>，在光标处插入数值 xxx。<br>
+2、<code>D</code>，将光标前面的第一个元素删除，如果前面没有元素，则忽略此操作。<br>
+3、<code>L</code>，将光标向左移动，跳过一个元素，如果左边没有元素，则忽略此操作。<br>
+4、<code>R</code>，将光标向右移动，跳过一个元素，如果右边没有元素，则忽略此操作。<br>
+5、<code>Q k</code>，假设此刻光标之前的序列为 a1,a2,…,ana1,a2,…,ana_1,a_2,…,a_n，输出 max1≤i≤kSimax1≤i≤kSimax_{1 \le i \le k}S_i，其中 Si=a1+a2+…+aiSi=a1+a2+…+aiS_i=a_1+a_2+…+a_i。</p>
+<h4 id="输入格式">输入格式</h4>
+<p>第一行包含一个整数 QQQ，表示指令的总数。</p>
+<p>接下来 QQQ 行，每行一个指令，具体指令格式如题目描述。</p>
+<h4 id="输出格式">输出格式</h4>
+<p>每一个 <code>Q k</code> 指令，输出一个整数作为结果，每个结果占一行。</p>
+<h4 id="数据范围">数据范围</h4>
+<p>1≤Q≤1061≤Q≤1061 \le Q \le 10^6,<br>
+|x|≤103|x|≤103|x| \le 10^3,<br>
+1≤k≤n1≤k≤n1 \le k \le n</p>
+<h4 id="输入样例">输入样例：</h4>
+<pre><code>8
+I 2
+I -1
+I 1
+Q 3
+L
+D
+R
+Q 2
+</code></pre>
+<h4 id="输出样例">输出样例：</h4>
+<pre><code>2
+3
+</code></pre>
+<h4 id="样例解释">样例解释</h4>
+<p>下图包含了对样例的过程描述：</p>
+<figure data-type="image" tabindex="1"><img src="https://www.acwing.com/media/article/image/2019/01/22/19_e0778ec41d-C464-1004-2.jpg" alt="C464-1004-2.jpg" loading="lazy"></figure>
+<h4 id="程序">程序</h4>
+<pre><code class="language-java">import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.io.BufferedWriter;
+import java.io.OutputStreamWriter;
+import java.util.Stack;
+import java.util.List;
+import java.util.ArrayList;
+
+public class Main
+{
+    static Stack&lt;Integer&gt; sLeft = new Stack&lt;Integer&gt;();
+    static Stack&lt;Integer&gt; sRight = new Stack&lt;Integer&gt;();
+    static List&lt;Integer&gt; maxSumLeft = new ArrayList&lt;Integer&gt;(); //List模拟栈
+    static int leftSum = 0;
+
+    public static int top()
+    {
+        //获取maxSumLeft的栈顶元素
+        if(!maxSumLeft.isEmpty())
+        {
+            return maxSumLeft.get(maxSumLeft.size() - 1);
+        }
+        return 0;
+    }
+
+    public static int pop()
+    {
+        //弹出maxSumLeft的栈顶元素
+        if(!maxSumLeft.isEmpty())
+        {
+            return maxSumLeft.remove(maxSumLeft.size() - 1);
+        }
+        return 0;
+    }
+
+    public static void push(int x)
+    {
+        //压入maxSumLeft的栈顶元素
+        maxSumLeft.add(x);
+    }
+
+
+    public static void main(String[] args) throws IOException
+    {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        //读取第一行作为n
+        int n = Integer.parseInt(br.readLine());
+        for(int i = 0; i &lt; n; i ++)
+        {
+            String line = br.readLine();
+            char c = line.charAt(0);
+            if(c == 'I')
+            {
+                int x = Integer.parseInt(line.substring(2));
+                sLeft.push(x);
+                leftSum += x;
+                int maxv = leftSum;
+                if(!maxSumLeft.isEmpty())
+                {
+                    maxv = Math.max(maxv, top());
+                }
+                push(maxv);
+            }
+            else if(c == 'D')
+            {
+                if(!sLeft.isEmpty())
+                {
+                    int x = sLeft.peek();
+                    sLeft.pop();
+                    leftSum -= x;
+                    pop();
+                }
+            }
+            else if(c == 'L')
+            {
+                if(!sLeft.isEmpty())
+                {
+                    int x = sLeft.pop();
+                    sRight.push(x);
+                    leftSum -= x;
+                    pop();
+                }
+            }
+            else if(c == 'R')
+            {
+                if(!sRight.isEmpty())
+                {
+                    int x = sRight.pop();
+                    sLeft.push(x);
+                    leftSum += x;
+                    int maxv = leftSum;
+                    if(!maxSumLeft.isEmpty())
+                    {
+                        maxv = Math.max(maxv, top());
+                    }
+                    push(maxv);
+                }
+            }
+            else // c == 'Q'
+            {
+                int k = Integer.parseInt(line.substring(2));
+                int ans = maxSumLeft.get(k - 1);
+                bw.write(ans + &quot;\n&quot;);
+            }
+            bw.flush();
+        }
+    }
+}
+</code></pre>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://gnailcn.github.io/post/acwing-41-bao-han-min-han-shu-de-zhan/">
+                <h3 class="post-title">
+                  AcWing 41. 包含min函数的栈
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+          
+            <div class="paper" data-aos="fade-in">
+              <div id="gitalk-container"></div>
+            </div>
+          
+
+          
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://gnailcn.github.io/images/avatar.png?v=1718525539027" class="no-responsive avatar">
+    <div class="text-muted">温故而知新</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/2024-06-16-blogmeng/">2024-06-16 blog：梦</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/bu-long-guo-lu-qi/">布隆过滤器</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc329d-election-quick-report/">AtCoder ABC329.D Election Quick Report</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc348e-minimize-sum-of-distances/">AtCoder ABC348.E Minimize Sum of Distances</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/leetcode-718zui-chang-chong-fu-zi-shu-zu/">leetcode 718.最长重复子数组</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/ling-pai-tong-yu-lou-tong/">令牌桶与漏桶</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/acwing-826dan-lian-biao/">AcWing 826.单链表</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc348d-medicines-on-grid/">AtCoder ABC.348.D Medicines on Grid</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc347e-set-add-query/">AtCoder ABC347.E Set Add Query</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/le-guan-suo-yu-bei-guan-suo/">乐观锁与悲观锁</a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://gnailcn.github.io/tag/sheng-huo/" class="badge secondary">
+          生活
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-ju-jie-gou/" class="badge ">
+          数据结构
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/gong-cheng/" class="badge secondary">
+          工程
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/atcoder/" class="badge ">
+          AtCoder
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/mo-ni/" class="badge ">
+          模拟
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/suan-fa/" class="badge secondary">
+          算法
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-xing-dp/" class="badge warning">
+          树形DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/si-wei/" class="badge success">
+          思维
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/ha-xi/" class="badge secondary">
+          哈希
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/leetcode/" class="badge secondary">
+          leetcode
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/bing-fa/" class="badge secondary">
+          并发
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/suan-fa-ji-chu-ke/" class="badge warning">
+          算法基础课
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/lian-biao/" class="badge success">
+          链表
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/sou-suo/" class="badge success">
+          搜索
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/qian-zhui-he/" class="badge secondary">
+          前缀和
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/qian-hou-zhui-fen-jie/" class="badge warning">
+          前后缀分解
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/wei-yun-suan/" class="badge ">
+          位运算
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/acwing/" class="badge success">
+          AcWing
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/pai-xu/" class="badge warning">
+          排序
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/chi-san-hua/" class="badge secondary">
+          离散化
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shuang-zhi-zhen/" class="badge success">
+          双指针
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/docker/" class="badge secondary">
+          docker
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/xian-xing-dp/" class="badge secondary">
+          线性DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/zi-dian/" class="badge secondary">
+          字典
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dai-you-hua/" class="badge success">
+          待优化
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/bei-bao/" class="badge warning">
+          背包
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dai-wan-shan/" class="badge success">
+          待完善
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/cha-fen/" class="badge success">
+          差分
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/gao-jing-du/" class="badge success">
+          高精度
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/er-fen/" class="badge warning">
+          二分
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/di-gui-di-tui/" class="badge success">
+          递归递推
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/qu-jian-dp/" class="badge warning">
+          区间DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu/" class="badge success">
+          树
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/zhuang-tai-ya-suo-dp/" class="badge secondary">
+          状态压缩DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/zhan/" class="badge warning">
+          栈
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/duo-lu-gui-bing/" class="badge warning">
+          多路归并
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/jin-jie-zhi-nan/" class="badge secondary">
+          进阶指南
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dui/" class="badge ">
+          堆
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/tan-xin/" class="badge warning">
+          贪心
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/ji-he/" class="badge secondary">
+          集合
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/trie/" class="badge secondary">
+          Trie
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/kmp/" class="badge success">
+          KMP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-xue/" class="badge secondary">
+          数学
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/xian-duan-shu/" class="badge secondary">
+          线段树
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-zhuang-shu-zu/" class="badge secondary">
+          树状数组
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/zui-duan-lu/" class="badge warning">
+          最短路
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dan-diao-dui-lie/" class="badge warning">
+          单调队列
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dui-lie/" class="badge success">
+          队列
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dan-diao-zhan/" class="badge secondary">
+          单调栈
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/suan-fa-ti-gao-ke/" class="badge secondary">
+          算法提高课
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-wei-dp/" class="badge warning">
+          数位DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dong-tai-gui-hua/" class="badge secondary">
+          动态规划
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/codeforces/" class="badge secondary">
+          Codeforces
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/maven/" class="badge secondary">
+          Maven
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/java/" class="badge ">
+          java
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/gong-ju/" class="badge secondary">
+          工具
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/bian-cheng/" class="badge ">
+          编程
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/git/" class="badge secondary">
+          git
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/java-ji-chu/" class="badge ">
+          java基础
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://gnailcn.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '5857b3000682679485b4',
+        clientSecret: '30d91ad9f7b78494f2bee0423984fa8a3882514b',
+        repo: 'gnailcn.github.io',
+        owner: 'gnailcn',
+        admin: ['gnailcn'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

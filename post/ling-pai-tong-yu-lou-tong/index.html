@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>令牌桶与漏桶 | chaosliang</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://gnailcn.github.io/favicon.ico?v=1718525539027">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://gnailcn.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="https://gnailcn.github.io/styles/atom-one-dark.min.css">
+    <script src="https://gnailcn.github.io/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://gnailcn.github.io">chaosliang</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                全部
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/suan-fa" class="menu">
+                算法
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/bian-cheng" class="menu">
+                编程
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tag/dai-you-hua" class="menu">
+                待优化
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                介绍
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>令牌桶与漏桶</h1>
+            <p class="article-meta">
+              2024-04-09
+              
+                <a href="https://gnailcn.github.io/tag/gong-cheng/" class="badge secondary">
+                  工程
+                </a>
+              
+                <a href="https://gnailcn.github.io/tag/bing-fa/" class="badge success">
+                  并发
+                </a>
+              
+            </p>
+            
+            <div class="post-content" v-pre>
+              <h3 id="令牌桶">令牌桶</h3>
+<p>令牌桶算法是一种用于流量控制和请求限制的算法，常用于限制系统的访问频率，防止系统被过多的请求压垮。该算法通过维护一个令牌桶，其中存放着一定数量的令牌，每个令牌代表一个请求的许可。请求到来时，需要从令牌桶中获取一个令牌，如果令牌桶中有足够的令牌，则允许请求通过；如果令牌桶中没有足够的令牌，则拒绝请求或者将请求放入队列中等待。</p>
+<p>具体来说，令牌桶算法包括两个关键参数：</p>
+<ul>
+<li>令牌生成速率：即每秒往令牌桶中添加的令牌数量，用来控制系统的处理能力。</li>
+<li>令牌桶容量：即令牌桶中最多可以存放的令牌数量，用来应对短时间内的突发请求。</li>
+</ul>
+<p>算法的基本原理如下：</p>
+<ol>
+<li>令牌桶以固定速率生成令牌，直到达到令牌桶的容量为止。</li>
+<li>每当一个请求到来时，就尝试从令牌桶中获取一个令牌。</li>
+<li>如果令牌桶中有足够的令牌，则允许请求通过，并从令牌桶中移除一个令牌。</li>
+<li>如果令牌桶中没有足够的令牌，则拒绝请求或者将请求放入队列中等待，直到有足够的令牌为止。</li>
+</ol>
+<p>令牌桶算法的优点包括平滑了请求流量，对突发请求有一定的缓冲能力，同时简单易于实现。在实际应用中，令牌桶算法常用于限制接口的访问频率，防止恶意攻击或者系统过载。</p>
+<p>Google开源工具包Guava提供了限流工具类RateLimiter，该类基于令牌桶算法实现流量限制，使用十分方便。</p>
+<h3 id="漏桶算法">漏桶算法</h3>
+<p>漏桶算法是一种常用的限流算法，用于控制数据传输的速率，防止突发流量对系统造成影响。<br>
+漏桶算法的基本原理类似于一个装满水的漏桶，水以固定的速率流出，当水流入速度过快时，水会溢出，即限制了数据的传输速率。<br>
+在网络中，漏桶算法可以用来控制请求的发送速率，防止突发的大流量请求导致系统崩溃。</p>
+<p>算法基本实现如下：</p>
+<ol>
+<li>漏桶算法通过一个固定容量的漏桶（bucket）和一个固定速率的出水口（leak）来实现限流。</li>
+<li>当请求到达时，将请求放入漏桶中，如果漏桶未满，则请求被处理；如果漏桶已满，则请求被拒绝或延迟处理。</li>
+<li>每隔固定时间间隔，漏桶会以固定速率将水漏出（请求被处理），直到漏桶为空。</li>
+<li>漏桶的大小和漏水的速率可以根据系统需求进行调整，以平衡系统的处理能力和请求的到达速率。</li>
+</ol>
+<p>漏桶算法能够有效地平滑流量，防止系统被突发流量击垮，是一种简单而有效的限流算法。</p>
+<h3 id="比较">比较</h3>
+<ul>
+<li>令牌桶算法更适合对服务质量有要求的场景，允许一定程度的突发流量，能够平滑处理流量波动。</li>
+<li>漏桶算法更适合对系统稳定性要求高的场景，能够限制请求速率，防止突发流量对系统造成影响。</li>
+</ul>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://gnailcn.github.io/post/acwing-826dan-lian-biao/">
+                <h3 class="post-title">
+                  AcWing 826.单链表
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+          
+            <div class="paper" data-aos="fade-in">
+              <div id="gitalk-container"></div>
+            </div>
+          
+
+          
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://gnailcn.github.io/images/avatar.png?v=1718525539027" class="no-responsive avatar">
+    <div class="text-muted">温故而知新</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/2024-06-16-blogmeng/">2024-06-16 blog：梦</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/bu-long-guo-lu-qi/">布隆过滤器</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc329d-election-quick-report/">AtCoder ABC329.D Election Quick Report</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc348e-minimize-sum-of-distances/">AtCoder ABC348.E Minimize Sum of Distances</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/leetcode-718zui-chang-chong-fu-zi-shu-zu/">leetcode 718.最长重复子数组</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/ling-pai-tong-yu-lou-tong/">令牌桶与漏桶</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/acwing-826dan-lian-biao/">AcWing 826.单链表</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc348d-medicines-on-grid/">AtCoder ABC.348.D Medicines on Grid</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/atcoder-abc347e-set-add-query/">AtCoder ABC347.E Set Add Query</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://gnailcn.github.io/post/le-guan-suo-yu-bei-guan-suo/">乐观锁与悲观锁</a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://gnailcn.github.io/tag/sheng-huo/" class="badge success">
+          生活
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-ju-jie-gou/" class="badge secondary">
+          数据结构
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/gong-cheng/" class="badge ">
+          工程
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/atcoder/" class="badge secondary">
+          AtCoder
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/mo-ni/" class="badge secondary">
+          模拟
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/suan-fa/" class="badge success">
+          算法
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-xing-dp/" class="badge success">
+          树形DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/si-wei/" class="badge secondary">
+          思维
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/ha-xi/" class="badge warning">
+          哈希
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/leetcode/" class="badge secondary">
+          leetcode
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/bing-fa/" class="badge ">
+          并发
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/suan-fa-ji-chu-ke/" class="badge warning">
+          算法基础课
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/lian-biao/" class="badge secondary">
+          链表
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/sou-suo/" class="badge secondary">
+          搜索
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/qian-zhui-he/" class="badge ">
+          前缀和
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/qian-hou-zhui-fen-jie/" class="badge secondary">
+          前后缀分解
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/wei-yun-suan/" class="badge secondary">
+          位运算
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/acwing/" class="badge success">
+          AcWing
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/pai-xu/" class="badge secondary">
+          排序
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/chi-san-hua/" class="badge secondary">
+          离散化
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shuang-zhi-zhen/" class="badge warning">
+          双指针
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/docker/" class="badge success">
+          docker
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/xian-xing-dp/" class="badge secondary">
+          线性DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/zi-dian/" class="badge success">
+          字典
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dai-you-hua/" class="badge secondary">
+          待优化
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/bei-bao/" class="badge ">
+          背包
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dai-wan-shan/" class="badge secondary">
+          待完善
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/cha-fen/" class="badge warning">
+          差分
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/gao-jing-du/" class="badge success">
+          高精度
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/er-fen/" class="badge ">
+          二分
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/di-gui-di-tui/" class="badge secondary">
+          递归递推
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/qu-jian-dp/" class="badge secondary">
+          区间DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu/" class="badge secondary">
+          树
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/zhuang-tai-ya-suo-dp/" class="badge warning">
+          状态压缩DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/zhan/" class="badge secondary">
+          栈
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/duo-lu-gui-bing/" class="badge secondary">
+          多路归并
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/jin-jie-zhi-nan/" class="badge warning">
+          进阶指南
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dui/" class="badge secondary">
+          堆
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/tan-xin/" class="badge warning">
+          贪心
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/ji-he/" class="badge ">
+          集合
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/trie/" class="badge ">
+          Trie
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/kmp/" class="badge success">
+          KMP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-xue/" class="badge warning">
+          数学
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/xian-duan-shu/" class="badge ">
+          线段树
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-zhuang-shu-zu/" class="badge warning">
+          树状数组
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/zui-duan-lu/" class="badge secondary">
+          最短路
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dan-diao-dui-lie/" class="badge secondary">
+          单调队列
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dui-lie/" class="badge success">
+          队列
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dan-diao-zhan/" class="badge success">
+          单调栈
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/suan-fa-ti-gao-ke/" class="badge secondary">
+          算法提高课
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/shu-wei-dp/" class="badge warning">
+          数位DP
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/dong-tai-gui-hua/" class="badge secondary">
+          动态规划
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/codeforces/" class="badge success">
+          Codeforces
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/maven/" class="badge secondary">
+          Maven
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/java/" class="badge secondary">
+          java
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/gong-ju/" class="badge warning">
+          工具
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/bian-cheng/" class="badge ">
+          编程
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/git/" class="badge secondary">
+          git
+        </a>
+      
+        <a href="https://gnailcn.github.io/tag/java-ji-chu/" class="badge success">
+          java基础
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://gnailcn.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '5857b3000682679485b4',
+        clientSecret: '30d91ad9f7b78494f2bee0423984fa8a3882514b',
+        repo: 'gnailcn.github.io',
+        owner: 'gnailcn',
+        admin: ['gnailcn'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

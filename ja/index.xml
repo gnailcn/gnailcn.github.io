@@ -31,9 +31,9 @@
 &lt;p>&lt;code>index.ja.md&lt;/code> ファイルの中で、複雑なパスは一切不要で、次のように書くだけです：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">旅の始まり&lt;/span>](&lt;span style="color:#a6e22e">journey-start.jpg&lt;/span>)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;picture>
-&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
-&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
-&lt;img src="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
+&lt;source srcset="https://gnailcn.github.io/en/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
+&lt;source srcset="https://gnailcn.github.io/en/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
+&lt;img src="https://gnailcn.github.io/en/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
 width="800"
 height="444"
 alt="旅の始まり"
@@ -55,9 +55,9 @@ loading="lazy">
 &lt;h2 id="結び">結び
 &lt;/h2>&lt;p>創造のプロセスは、負担ではなく、喜びであるべきです。&lt;/p>
 &lt;p>&lt;code>hugo new&lt;/code> で旅を始め、専用のフォルダに文章と画像を収め、最後に &lt;code>draft&lt;/code> の埃を払う。これが「さまよう潮拾い」で一つ一つの発見を記録するためのすべての秘訣です。&lt;/p>
-&lt;p>この小さな籠が、日増しに満たされていきますように。&lt;/p></description></item><item><title>「潮拾い」について</title><link>https://gnailcn.github.io/ja/about/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/ja/about/about/</guid><description>&lt;p>こんにちは、gnailcnです。デジタル時代の海辺を散策する「さまよう潮拾い」です。&lt;/p>
+&lt;p>この小さな籠が、日増しに満たされていきますように。&lt;/p></description></item><item><title>「潮拾い」について</title><link>https://gnailcn.github.io/ja/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/ja/about/</guid><description>&lt;p>こんにちは、gnailcnです。デジタル時代の海辺を散策する「さまよう潮拾い」です。&lt;/p>
 &lt;p>知識の海は広大で無限だと信じています。技術の反復、思想の衝突、その一つ一つが潮の満ち引きのようです。潮が引くと、そこにはいつも無数の宝物が発見されるのを待っています。&lt;/p>
 &lt;p>私がこの小さなサイトを作ったのは、私の「潮拾い」の過程を記録するためです。&lt;/p>
 &lt;p>ここで私が拾い上げるのは、エレガントなコードの一片や精巧なアルゴリズムかもしれません。それらは情報の大波の中で輝く「貝殻」です。また、私たちの進むべき道を示す壮大な思想や、認識を変える人生哲学にも目を向けます。それらは夜空で永遠の導きを与える「星々」です。&lt;/p>
 &lt;p>このブログは、私がこれらの貝殻と星々をしまっておく籠です。そこには私が学んだこと、考えたこと、感じたことが詰まっており、普通の人間が情報の洪水の中でいかにして自分自身の認知体系を築き上げていくかの証人となります。&lt;/p>
-&lt;p>同じく探求を愛するあなたと、この潮拾いの喜びを分かち合えれば幸いです。&lt;/p></description></item><item><title>アーカイブ</title><link>https://gnailcn.github.io/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/archives/</guid><description/></item><item><title>検索</title><link>https://gnailcn.github.io/ja/search/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/ja/search/search/</guid><description/></item></channel></rss>
+&lt;p>同じく探求を愛するあなたと、この潮拾いの喜びを分かち合えれば幸いです。&lt;/p></description></item></channel></rss>

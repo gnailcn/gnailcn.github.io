@@ -31,9 +31,9 @@
 &lt;p>Dans votre fichier &lt;code>index.fr.md&lt;/code>, il vous suffit d&amp;rsquo;écrire ce qui suit, sans aucun chemin complexe :&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">Le Début du Voyage&lt;/span>](&lt;span style="color:#a6e22e">journey-start.jpg&lt;/span>)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;picture>
-&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
-&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
-&lt;img src="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
+&lt;source srcset="https://gnailcn.github.io/en/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
+&lt;source srcset="https://gnailcn.github.io/en/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
+&lt;img src="https://gnailcn.github.io/en/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
 width="800"
 height="444"
 alt="Le Début du Voyage"
@@ -55,9 +55,9 @@ loading="lazy">
 &lt;h2 id="conclusion">Conclusion
 &lt;/h2>&lt;p>Le processus créatif doit être une joie, pas un fardeau.&lt;/p>
 &lt;p>Commencer le voyage avec &lt;code>hugo new&lt;/code>, placer les mots et les images dans leur dossier dédié, et enfin, dépoussiérer le &lt;code>draft&lt;/code>. C&amp;rsquo;est tout le secret pour enregistrer chaque découverte ici, chez &amp;ldquo;Le Vadrouilleur des Marées&amp;rdquo;.&lt;/p>
-&lt;p>Puisse ce petit panier se remplir de jour en jour.&lt;/p></description></item><item><title>À propos du 'Vadrouilleur des Marées'</title><link>https://gnailcn.github.io/fr/about/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/fr/about/about/</guid><description>&lt;p>Bonjour, je suis gnailcn, un &amp;lsquo;Vadrouilleur des Marées&amp;rsquo; flânant sur les plages de l&amp;rsquo;ère numérique.&lt;/p>
+&lt;p>Puisse ce petit panier se remplir de jour en jour.&lt;/p></description></item><item><title>À propos du 'Vadrouilleur des Marées'</title><link>https://gnailcn.github.io/fr/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/fr/about/</guid><description>&lt;p>Bonjour, je suis gnailcn, un &amp;lsquo;Vadrouilleur des Marées&amp;rsquo; flânant sur les plages de l&amp;rsquo;ère numérique.&lt;/p>
 &lt;p>Je crois que l&amp;rsquo;océan de la connaissance est vaste et infini. Chaque itération technologique, chaque collision d&amp;rsquo;idées, est comme une marée. Lorsque la marée se retire, elle laisse toujours derrière elle d&amp;rsquo;innombrables trésors à découvrir.&lt;/p>
 &lt;p>J&amp;rsquo;ai créé ce petit site pour documenter mon processus de « cueillette des marées ».&lt;/p>
 &lt;p>Ici, ce que je récupère peut être un morceau de code élégant ou un algorithme brillant – ce sont les &amp;lsquo;coquillages&amp;rsquo; scintillants dans les vagues de l&amp;rsquo;information. J&amp;rsquo;admire aussi les grandes idées qui guident notre direction et les philosophies de vie qui changent nos perspectives – ce sont les &amp;lsquo;étoiles&amp;rsquo; qui offrent un guidage éternel dans le ciel nocturne.&lt;/p>
 &lt;p>Ce blog est le panier où je conserve ces coquillages et ces étoiles. Il contient ce que j&amp;rsquo;ai appris, pensé et ressenti, témoignant de la manière dont une personne ordinaire construit son propre système cognitif au milieu du déluge d&amp;rsquo;informations.&lt;/p>
-&lt;p>Puisse-je partager la joie de cette cueillette des marées avec vous, compagnon explorateur.&lt;/p></description></item><item><title>Archives</title><link>https://gnailcn.github.io/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/archives/</guid><description/></item><item><title>Rechercher</title><link>https://gnailcn.github.io/fr/search/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/fr/search/search/</guid><description/></item></channel></rss>
+&lt;p>Puisse-je partager la joie de cette cueillette des marées avec vous, compagnon explorateur.&lt;/p></description></item></channel></rss>

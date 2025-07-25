@@ -31,9 +31,9 @@
 &lt;p>В вашем файле &lt;code>index.ru.md&lt;/code> вам просто нужно написать следующее, без каких-либо сложных путей:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">Начало Путешествия&lt;/span>](&lt;span style="color:#a6e22e">journey-start.jpg&lt;/span>)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;picture>
-&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
-&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
-&lt;img src="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
+&lt;source srcset="https://gnailcn.github.io/en/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
+&lt;source srcset="https://gnailcn.github.io/en/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
+&lt;img src="https://gnailcn.github.io/en/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
 width="800"
 height="444"
 alt="Начало Путешествия"
@@ -55,9 +55,9 @@ loading="lazy">
 &lt;h2 id="заключение">Заключение
 &lt;/h2>&lt;p>Творческий процесс должен приносить радость, а не быть обузой.&lt;/p>
 &lt;p>Начать путешествие с &lt;code>hugo new&lt;/code>, разместить текст и изображения в их выделенной папке и, наконец, стряхнуть пыль с &lt;code>draft&lt;/code>. В этом весь секрет записи каждого открытия здесь, в «Странствующем Ловце Приливов».&lt;/p>
-&lt;p>Пусть эта маленькая корзинка наполняется с каждым днём.&lt;/p></description></item><item><title>Архивы</title><link>https://gnailcn.github.io/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/archives/</guid><description/></item><item><title>О «Ловце Приливов»</title><link>https://gnailcn.github.io/ru/about/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/ru/about/about/</guid><description>&lt;p>Здравствуйте, я gnailcn, «Странствующий Ловец Приливов», прогуливающийся по пляжам цифровой эпохи.&lt;/p>
+&lt;p>Пусть эта маленькая корзинка наполняется с каждым днём.&lt;/p></description></item><item><title>О «Ловце Приливов»</title><link>https://gnailcn.github.io/ru/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/ru/about/</guid><description>&lt;p>Здравствуйте, я gnailcn, «Странствующий Ловец Приливов», прогуливающийся по пляжам цифровой эпохи.&lt;/p>
 &lt;p>Я верю, что океан знаний огромен и безграничен. Каждая технологическая итерация, каждое столкновение идей — это как прилив. Когда прилив отступает, он всегда оставляет после себя бесчисленные сокровища, ожидающие своего открытия.&lt;/p>
 &lt;p>Я создал этот небольшой сайт, чтобы документировать мой процесс &amp;ldquo;ловли приливов&amp;rdquo;.&lt;/p>
 &lt;p>Здесь то, что я нахожу, может быть элегантным фрагментом кода или гениальным алгоритмом — это сияющие &amp;lsquo;ракушки&amp;rsquo; в волнах информации. Я также восхищаюсь великими идеями, которые указывают нам путь, и жизненными философиями, меняющими наше восприятие — это &amp;lsquo;звёзды&amp;rsquo;, которые служат вечным ориентиром в ночном небе.&lt;/p>
 &lt;p>Этот блог — корзина, в которой я храню эти ракушки и звёзды. В ней содержится то, что я узнал, о чём думал и что чувствовал, и она свидетельствует о том, как обычный человек строит свою собственную когнитивную систему в потоке информации.&lt;/p>
-&lt;p>Желаю поделиться радостью этой ловли приливов с вами, таким же любителем исследований.&lt;/p></description></item><item><title>Поиск</title><link>https://gnailcn.github.io/ru/search/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/ru/search/search/</guid><description/></item></channel></rss>
+&lt;p>Желаю поделиться радостью этой ловли приливов с вами, таким же любителем исследований.&lt;/p></description></item></channel></rss>

@@ -31,9 +31,9 @@
 &lt;p>No seu arquivo &lt;code>index.pt.md&lt;/code>, você só precisa escrever o seguinte, sem nenhum caminho complicado:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">O Início da Jornada&lt;/span>](&lt;span style="color:#a6e22e">journey-start.jpg&lt;/span>)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;picture>
-&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
-&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
-&lt;img src="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
+&lt;source srcset="https://gnailcn.github.io/en/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
+&lt;source srcset="https://gnailcn.github.io/en/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
+&lt;img src="https://gnailcn.github.io/en/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
 width="800"
 height="444"
 alt="O Início da Jornada"
@@ -55,7 +55,7 @@ loading="lazy">
 &lt;h2 id="conclusão">Conclusão
 &lt;/h2>&lt;p>O processo criativo deve ser um prazer, não um fardo.&lt;/p>
 &lt;p>Começar a jornada com &lt;code>hugo new&lt;/code>, colocar palavras e imagens na sua pasta dedicada e, finalmente, remover a poeira do &lt;code>draft&lt;/code>. Este é todo o segredo para registrar cada descoberta aqui em &amp;ldquo;O Apanhador de Marés Errante&amp;rdquo;.&lt;/p>
-&lt;p>Que este pequeno cesto se encha cada dia mais.&lt;/p></description></item><item><title>Arquivos</title><link>https://gnailcn.github.io/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/archives/</guid><description/></item><item><title>Pesquisar</title><link>https://gnailcn.github.io/pt/search/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/pt/search/search/</guid><description/></item><item><title>Sobre o 'Apanhador de Marés'</title><link>https://gnailcn.github.io/pt/about/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/pt/about/about/</guid><description>&lt;p>Olá, sou gnailcn, um &amp;lsquo;Apanhador de Marés Errante&amp;rsquo; a passear pelas praias da era digital.&lt;/p>
+&lt;p>Que este pequeno cesto se encha cada dia mais.&lt;/p></description></item><item><title>Sobre o 'Apanhador de Marés'</title><link>https://gnailcn.github.io/pt/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/pt/about/</guid><description>&lt;p>Olá, sou gnailcn, um &amp;lsquo;Apanhador de Marés Errante&amp;rsquo; a passear pelas praias da era digital.&lt;/p>
 &lt;p>Acredito que o oceano do conhecimento é vasto e ilimitado. Cada iteração tecnológica, cada colisão de ideias, é como uma maré. Quando a maré recua, deixa sempre para trás inúmeros tesouros à espera de serem descobertos.&lt;/p>
 &lt;p>Criei este pequeno site para documentar o meu processo de &amp;ldquo;apanhar a maré&amp;rdquo;.&lt;/p>
 &lt;p>Aqui, o que resgato pode ser um pedaço de código elegante ou um algoritmo brilhante — são as &amp;lsquo;conchas&amp;rsquo; reluzentes nas ondas da informação. Também admiro as grandes ideias que guiam o nosso rumo e as filosofias de vida que mudam a nossa perceção — são as &amp;rsquo;estrelas&amp;rsquo; que oferecem orientação eterna no céu noturno.&lt;/p>

@@ -31,9 +31,9 @@
 &lt;p>In deiner &lt;code>index.de.md&lt;/code>-Datei musst du nur Folgendes schreiben, ohne komplexe Pfade:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">Der Beginn der Reise&lt;/span>](&lt;span style="color:#a6e22e">journey-start.jpg&lt;/span>)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;picture>
-&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
-&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
-&lt;img src="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
+&lt;source srcset="https://gnailcn.github.io/en/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
+&lt;source srcset="https://gnailcn.github.io/en/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
+&lt;img src="https://gnailcn.github.io/en/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
 width="800"
 height="444"
 alt="Der Beginn der Reise"
@@ -55,7 +55,7 @@ loading="lazy">
 &lt;h2 id="fazit">Fazit
 &lt;/h2>&lt;p>Der kreative Prozess sollte eine Freude sein, keine Last.&lt;/p>
 &lt;p>Die Reise mit &lt;code>hugo new&lt;/code> beginnen, Worte und Bilder in ihrem dedizierten Ordner platzieren und schließlich den &lt;code>draft&lt;/code>-Staub abwischen. Das ist das ganze Geheimnis, um jede Entdeckung hier bei „Wandernder Gezeitensammler“ festzuhalten.&lt;/p>
-&lt;p>Möge dieser kleine Korb mit jedem Tag voller werden.&lt;/p></description></item><item><title>Archiv</title><link>https://gnailcn.github.io/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/archives/</guid><description/></item><item><title>Suchen</title><link>https://gnailcn.github.io/de/search/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/de/search/search/</guid><description/></item><item><title>Über den 'Gezeitensammler'</title><link>https://gnailcn.github.io/de/about/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/de/about/about/</guid><description>&lt;p>Hallo, ich bin gnailcn, ein &amp;lsquo;Wandernder Gezeitensammler&amp;rsquo;, der an den Stränden des digitalen Zeitalters spaziert.&lt;/p>
+&lt;p>Möge dieser kleine Korb mit jedem Tag voller werden.&lt;/p></description></item><item><title>Über den 'Gezeitensammler'</title><link>https://gnailcn.github.io/de/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/de/about/</guid><description>&lt;p>Hallo, ich bin gnailcn, ein &amp;lsquo;Wandernder Gezeitensammler&amp;rsquo;, der an den Stränden des digitalen Zeitalters spaziert.&lt;/p>
 &lt;p>Ich glaube, dass der Ozean des Wissens weit und grenzenlos ist. Jede technologische Iteration, jede Kollision von Ideen ist wie eine Gezeit. Wenn die Flut zurückweicht, hinterlässt sie immer unzählige Schätze, die darauf warten, entdeckt zu werden.&lt;/p>
 &lt;p>Ich habe diese kleine Seite erstellt, um meinen Prozess des „Gezeitensammelns“ zu dokumentieren.&lt;/p>
 &lt;p>Hier könnte das, was ich berge, ein elegantes Stück Code oder ein brillanter Algorithmus sein – dies sind die glänzenden &amp;lsquo;Muscheln&amp;rsquo; in den Wellen der Information. Ich blicke auch zu den großen Ideen auf, die unsere Richtung weisen, und zu den Lebensphilosophien, die unsere Wahrnehmung verändern – dies sind die &amp;lsquo;Sterne&amp;rsquo;, die ewige Führung am Nachthimmel bieten.&lt;/p>

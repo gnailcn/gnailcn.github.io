@@ -31,9 +31,9 @@
 &lt;p>Nel tuo file &lt;code>index.it.md&lt;/code>, devi solo scrivere quanto segue, senza percorsi complicati:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">L&amp;#39;inizio del viaggio&lt;/span>](&lt;span style="color:#a6e22e">journey-start.jpg&lt;/span>)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;picture>
-&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
-&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
-&lt;img src="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
+&lt;source srcset="https://gnailcn.github.io/en/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
+&lt;source srcset="https://gnailcn.github.io/en/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
+&lt;img src="https://gnailcn.github.io/en/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
 width="800"
 height="444"
 alt="L&amp;rsquo;inizio del viaggio"
@@ -55,7 +55,7 @@ loading="lazy">
 &lt;h2 id="conclusione">Conclusione
 &lt;/h2>&lt;p>Il processo creativo dovrebbe essere una gioia, non un peso.&lt;/p>
 &lt;p>Iniziare il viaggio con &lt;code>hugo new&lt;/code>, inserire parole e immagini nella loro cartella dedicata e, infine, spolverare via il &lt;code>draft&lt;/code>. Questo è tutto il segreto per registrare ogni scoperta qui, su &amp;ldquo;Il Raccoglitore Errante di Maree&amp;rdquo;.&lt;/p>
-&lt;p>Possa questo piccolo cesto riempirsi ogni giorno di più.&lt;/p></description></item><item><title>Archivio</title><link>https://gnailcn.github.io/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/archives/</guid><description/></item><item><title>Cerca</title><link>https://gnailcn.github.io/it/search/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/it/search/search/</guid><description/></item><item><title>Sul 'Raccoglitore di Maree'</title><link>https://gnailcn.github.io/it/about/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/it/about/about/</guid><description>&lt;p>Ciao, sono gnailcn, un &amp;lsquo;Raccoglitore Errante di Maree&amp;rsquo; che passeggia sulle spiagge dell&amp;rsquo;era digitale.&lt;/p>
+&lt;p>Possa questo piccolo cesto riempirsi ogni giorno di più.&lt;/p></description></item><item><title>Sul 'Raccoglitore di Maree'</title><link>https://gnailcn.github.io/it/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/it/about/</guid><description>&lt;p>Ciao, sono gnailcn, un &amp;lsquo;Raccoglitore Errante di Maree&amp;rsquo; che passeggia sulle spiagge dell&amp;rsquo;era digitale.&lt;/p>
 &lt;p>Credo che l&amp;rsquo;oceano della conoscenza sia vasto e sconfinato. Ogni iterazione tecnologica, ogni collisione di idee, è come una marea. Quando la marea si ritira, lascia sempre dietro di sé innumerevoli tesori in attesa di essere scoperti.&lt;/p>
 &lt;p>Ho creato questo piccolo sito per documentare il mio processo di &amp;ldquo;raccolta delle maree&amp;rdquo;.&lt;/p>
 &lt;p>Qui, ciò che recupero potrebbe essere un pezzo di codice elegante o un algoritmo brillante: sono le &amp;lsquo;conchiglie&amp;rsquo; scintillanti tra le onde dell&amp;rsquo;informazione. Ammiro anche le grandi idee che guidano la nostra direzione e le filosofie di vita che cambiano la nostra percezione: sono le &amp;lsquo;stelle&amp;rsquo; che offrono una guida eterna nel cielo notturno.&lt;/p>

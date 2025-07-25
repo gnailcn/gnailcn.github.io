@@ -31,9 +31,9 @@
 &lt;p>في ملف &lt;code>index.ar.md&lt;/code> الخاص بك، تحتاج فقط إلى كتابة ما يلي، دون أي مسارات معقدة:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">بداية الرحلة&lt;/span>](&lt;span style="color:#a6e22e">journey-start.jpg&lt;/span>)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;picture>
-&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
-&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
-&lt;img src="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
+&lt;source srcset="https://gnailcn.github.io/en/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
+&lt;source srcset="https://gnailcn.github.io/en/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
+&lt;img src="https://gnailcn.github.io/en/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
 width="800"
 height="444"
 alt="بداية الرحلة"
@@ -55,7 +55,7 @@ loading="lazy">
 &lt;h2 id="خاتمة">خاتمة
 &lt;/h2>&lt;p>يجب أن تكون العملية الإبداعية ممتعة، لا عبئًا.&lt;/p>
 &lt;p>ابدأ الرحلة بـ &lt;code>hugo new&lt;/code>، ضع الكلمات والصور في مجلدها المخصص، وأخيرًا، أزل غبار &lt;code>draft&lt;/code>. هذا هو كل السر لتسجيل كل اكتشاف هنا في &amp;ldquo;صائد المد والجزر التائه&amp;rdquo;.&lt;/p>
-&lt;p>أتمنى أن تمتلئ هذه السلة الصغيرة يومًا بعد يوم.&lt;/p></description></item><item><title>الأرشيف</title><link>https://gnailcn.github.io/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/archives/</guid><description/></item><item><title>البحث</title><link>https://gnailcn.github.io/ar/search/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/ar/search/search/</guid><description/></item><item><title>عن «صائد المد والجزر»</title><link>https://gnailcn.github.io/ar/about/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/ar/about/about/</guid><description>&lt;p>مرحبًا، أنا gnailcn، «صائد المد والجزر التائه» الذي يتجول على شواطئ العصر الرقمي.&lt;/p>
+&lt;p>أتمنى أن تمتلئ هذه السلة الصغيرة يومًا بعد يوم.&lt;/p></description></item><item><title>عن «صائد المد والجزر»</title><link>https://gnailcn.github.io/ar/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/ar/about/</guid><description>&lt;p>مرحبًا، أنا gnailcn، «صائد المد والجزر التائه» الذي يتجول على شواطئ العصر الرقمي.&lt;/p>
 &lt;p>أؤمن بأن محيط المعرفة شاسع ولا حدود له. كل تكرار تقني، كل تصادم للأفكار، هو بمثابة مد وجزر. وعندما ينحسر المد، يترك دائمًا وراءه كنوزًا لا حصر لها تنتظر من يكتشفها.&lt;/p>
 &lt;p>لقد أنشأت هذا الموقع الصغير لأوثق عملية &amp;ldquo;صيد المد والجزر&amp;rdquo; الخاصة بي.&lt;/p>
 &lt;p>هنا، ما قد أنتشله قد يكون قطعة من شيفرة برمجية أنيقة أو خوارزمية رائعة — هذه هي &amp;ldquo;الأصداف&amp;rdquo; اللامعة في أمواج المعلومات. كما أنني أتطلع إلى الأفكار العظيمة التي توجه مسارنا وفلسفات الحياة التي تغير تصوراتنا — هذه هي &amp;ldquo;النجوم&amp;rdquo; التي تقدم هداية أبدية في سماء الليل.&lt;/p>

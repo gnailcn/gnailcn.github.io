@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on भटकता ज्वार संग्राहक</title><link>https://gnailcn.github.io/hi/categories/hugo/</link><description>Recent content in Hugo on भटकता ज्वार संग्राहक</description><generator>Hugo -- gohugo.io</generator><language>hi</language><lastBuildDate>Thu, 25 Jul 2024 11:00:00 +0800</lastBuildDate><atom:link href="https://gnailcn.github.io/hi/categories/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>पहली पोस्ट: 'भटकता ज्वार संग्राहक' में कैसे योगदान दें</title><link>https://gnailcn.github.io/hi/posts/2024/07/%E0%A4%AA%E0%A4%B9%E0%A4%B2%E0%A5%80-%E0%A4%AA%E0%A5%8B%E0%A4%B8%E0%A5%8D%E0%A4%9F-%E0%A4%AD%E0%A4%9F%E0%A4%95%E0%A4%A4%E0%A4%BE-%E0%A4%9C%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%B0-%E0%A4%B8%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%B9%E0%A4%95-%E0%A4%AE%E0%A5%87%E0%A4%82-%E0%A4%95%E0%A5%88%E0%A4%B8%E0%A5%87-%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%A6%E0%A4%BE%E0%A4%A8-%E0%A4%A6%E0%A5%87%E0%A4%82/</link><pubDate>Thu, 25 Jul 2024 11:00:00 +0800</pubDate><guid>https://gnailcn.github.io/hi/posts/2024/07/%E0%A4%AA%E0%A4%B9%E0%A4%B2%E0%A5%80-%E0%A4%AA%E0%A5%8B%E0%A4%B8%E0%A5%8D%E0%A4%9F-%E0%A4%AD%E0%A4%9F%E0%A4%95%E0%A4%A4%E0%A4%BE-%E0%A4%9C%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%B0-%E0%A4%B8%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%B9%E0%A4%95-%E0%A4%AE%E0%A5%87%E0%A4%82-%E0%A4%95%E0%A5%88%E0%A4%B8%E0%A5%87-%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%A6%E0%A4%BE%E0%A4%A8-%E0%A4%A6%E0%A5%87%E0%A4%82/</guid><description>&lt;p>नमस्ते, भविष्य के मैं, और यहाँ आने वाले संभावित दोस्तों।&lt;/p>
+&lt;p>&amp;lsquo;भटकता ज्वार संग्राहक&amp;rsquo; की शुरुआत में आपका स्वागत है। इस स्थान की कल्पना एक टोकरी के रूप में की गई है, जहाँ ज्ञान और सूचना की लहरों के किनारे से उठाई गई &amp;ldquo;सीपियाँ&amp;rdquo; और &amp;ldquo;तारे&amp;rdquo; रखे जाएँगे। आज, मैं पहली सावधानी से चुनी हुई सीपी रखूँगा - यहाँ सामग्री कैसे बनाएँ, इस पर एक गाइड।&lt;/p>
+&lt;p>यह पोस्ट एक स्मारक और एक ऑपरेटिंग मैनुअल दोनों है, यह सुनिश्चित करने के लिए कि भविष्य की हर रचना स्पष्ट और कुशल हो।&lt;/p>
+&lt;h2 id="i-रचन-क-आरभ-एक-कमड">I. रचना का आरंभ: एक कमांड
+&lt;/h2>&lt;p>हम मैन्युअल रूप से फाइलें नहीं बनाते हैं, बल्कि HUGO के सुरुचिपूर्ण कमांड-लाइन टूल का उपयोग करते हैं। यह एक जादुई छड़ी की तरह है, जो हमारे लिए सब कुछ तैयार कर सकती है।&lt;/p>
+&lt;p>टर्मिनल खोलें, ब्लॉग के रूट डायरेक्टरी में जाएँ, और फिर मंत्र पढ़ें:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># प्रारूप: hugo new content-type/YYYY/MM/your-post-slug/index.lang.md&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new posts/2024/07/a-new-journey/index.hi.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>यह कमांड एक जादू करेगा:&lt;/p>
+&lt;ol>
+&lt;li>यह &lt;code>content/posts/2024/07/&lt;/code> डायरेक्टरी के अंदर &lt;code>a-new-journey&lt;/code> नाम का एक फ़ोल्डर बनाएगा।&lt;/li>
+&lt;li>उस फ़ोल्डर के अंदर, यह एक &lt;code>index.hi.md&lt;/code> फ़ाइल बनाएगा।&lt;/li>
+&lt;li>यह स्वचालित रूप से इस फ़ाइल के लिए &amp;ldquo;पहचान जानकारी&amp;rdquo; (यानी फ्रंट मैटर) भरेगा, जिसमें शीर्षक, तारीख और एक महत्वपूर्ण टैग &lt;code>draft: true&lt;/code> शामिल है। इस टैग का मतलब है कि यह एक ड्राफ्ट है, जो स्थानीय पूर्वावलोकन में दिखाई देगा, लेकिन अंतिम परिनियोजन के समय इसे अनदेखा कर दिया जाएगा, जो बहुत सुरक्षित है।&lt;/li>
+&lt;/ol>
+&lt;p>जब हम लेख लिखना समाप्त कर लें और इसे दुनिया को दिखाने के लिए तैयार हों, तो बस &lt;code>draft: true&lt;/code> को &lt;code>draft: false&lt;/code> में बदल दें।&lt;/p>
+&lt;h2 id="ii-आतम-परदन-करन-शबद-और-चतर">II. आत्मा प्रदान करना: शब्द और चित्र
+&lt;/h2>&lt;p>एक संपूर्ण लेख शब्दों और चित्रों से मिलकर बनता है। हमारी सावधानीपूर्वक डिज़ाइन की गई संरचना में, उन्हें प्रबंधित करना असाधारण रूप से सरल हो जाता है।&lt;/p>
+&lt;h3 id="1-शबद">1. शब्द
+&lt;/h3>&lt;p>फ़ाइल की &amp;ldquo;पहचान जानकारी&amp;rdquo; के नीचे, वह जगह है जहाँ हम अपने शब्द लिखते हैं। यह मानक मार्कडाउन सिंटैक्स का पालन करता है, जो संक्षिप्त और शक्तिशाली है।&lt;/p>
+&lt;h3 id="2-चतर-अवयवसथ-क-अलवद-कह">2. चित्र: अव्यवस्था को अलविदा कहें
+&lt;/h3>&lt;p>यह हमारे वर्कफ़्लो का सबसे अद्भुत हिस्सा है। &lt;strong>हर लेख का अपना समर्पित फ़ोल्डर होता है&lt;/strong>, जिसका अर्थ है कि लेख में उपयोग की गई सभी छवियाँ लेख के साथ ही रखी जा सकती हैं!&lt;/p>
+&lt;p>मान लीजिए कि हम यह &lt;code>a-new-journey&lt;/code> लेख लिख रहे हैं, इसकी डायरेक्टरी संरचना इस तरह है:&lt;/p>
+&lt;pre tabindex="0">&lt;code>content/
+└── posts/
+└── 2024/
+└── 07/
+└── a-new-journey/ &amp;lt;-- लेख का समर्पित फ़ोल्डर
+├── index.hi.md &amp;lt;-- लेख फ़ाइल स्वयं
+└── journey-start.jpg &amp;lt;-- इसकी साथी छवि!
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>इस छवि का संदर्भ कैसे दें?&lt;/strong>&lt;/p>
+&lt;p>&lt;code>index.hi.md&lt;/code> फ़ाइल में, आपको बस नीचे दिए अनुसार लिखना होगा, बिना किसी जटिल पथ के:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">यात्रा की शुरुआत&lt;/span>](&lt;span style="color:#a6e22e">2024/07/a-new-journey/journey-start.jpg&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://gnailcn.github.io/2024/07/a-new-journey/journey-start.jpg" alt="यात्रा की शुरुआत" title="" loading="lazy">&lt;/p>
+&lt;p>यह इतना आसान है! चित्र और पाठ सुरुचिपूर्ण ढंग से एक साथ &amp;ldquo;बंडल&amp;rdquo; किए गए हैं, चाहे वह माइग्रेशन हो, बैकअप हो, या प्रबंधन, कोई और परेशानी नहीं।&lt;/p>
+&lt;h2 id="iii-लख-क-पहचन-फरट-मटर">III. लेख की &amp;ldquo;पहचान&amp;rdquo;: फ्रंट मैटर
+&lt;/h2>&lt;p>प्रत्येक लेख के शीर्ष पर &lt;code>---&lt;/code> से घिरा क्षेत्र इसका मेटाडेटा है, जो यह निर्धारित करता है कि इसे कैसे वर्गीकृत और प्रदर्शित किया जाएगा।&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>title&lt;/code>&lt;/strong>: लेख का शीर्षक।&lt;/li>
+&lt;li>&lt;strong>&lt;code>date&lt;/code>&lt;/strong>: प्रकाशन की तारीख, जो संग्रह में इसकी स्थिति निर्धारित करती है।&lt;/li>
+&lt;li>&lt;strong>&lt;code>categories&lt;/code>&lt;/strong>: श्रेणियाँ, आमतौर पर एक एकल प्रमुख श्रेणी, जैसे &lt;code>[&amp;quot;तकनीकी नोट्स&amp;quot;]&lt;/code> या &lt;code>[&amp;quot;जीवन विचार&amp;quot;]&lt;/code>।&lt;/li>
+&lt;li>&lt;strong>&lt;code>tags&lt;/code>&lt;/strong>: टैग, कई हो सकते हैं, अधिक विस्तृत अनुक्रमण के लिए उपयोग किए जाते हैं, जैसे &lt;code>[&amp;quot;Go&amp;quot;, &amp;quot;Web&amp;quot;, &amp;quot;प्रदर्शन अनुकूलन&amp;quot;]&lt;/code>।&lt;/li>
+&lt;li>&lt;strong>&lt;code>summary&lt;/code>&lt;/strong>: एक संक्षिप्त सारांश, जो लेख सूची पृष्ठ पर प्रदर्शित होगा।&lt;/li>
+&lt;li>&lt;strong>&lt;code>draft&lt;/code>&lt;/strong>: &lt;code>false&lt;/code> का अर्थ है कि लेख दिखाई दे रहा है, &lt;code>true&lt;/code> का अर्थ है कि यह एक ड्राफ्ट है।&lt;/li>
+&lt;/ul>
+&lt;p>इस जानकारी को सावधानीपूर्वक भरने से हमारा ज्ञानकोष व्यवस्थित हो जाएगा।&lt;/p>
+&lt;h2 id="नषकरष">निष्कर्ष
+&lt;/h2>&lt;p>रचना की प्रक्रिया आनंददायक होनी चाहिए, बोझ नहीं।&lt;/p>
+&lt;p>&lt;code>hugo new&lt;/code> के साथ यात्रा शुरू करें, समर्पित फ़ोल्डर में शब्दों और चित्रों को रखें, और अंत में &lt;code>draft&lt;/code> की धूल हटा दें। यही &amp;lsquo;भटकता ज्वार संग्राहक&amp;rsquo; में हर खोज को दर्ज करने का पूरा रहस्य है।&lt;/p>
+&lt;p>कामना है कि यह छोटी टोकरी, दिन-ब-दिन समृद्ध होती जाए।&lt;/p></description></item></channel></rss>

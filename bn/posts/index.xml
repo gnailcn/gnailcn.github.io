@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ভবঘুরে জোয়ার সংগ্রাহক</title><link>https://gnailcn.github.io/bn/posts/</link><description>Recent content in Posts on ভবঘুরে জোয়ার সংগ্রাহক</description><generator>Hugo -- gohugo.io</generator><language>bn</language><lastBuildDate>Thu, 25 Jul 2024 11:00:00 +0800</lastBuildDate><atom:link href="https://gnailcn.github.io/bn/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>প্রথম পোস্ট: 'ভবঘুরে জোয়ার সংগ্রাহক'-এ কীভাবে অবদান রাখবেন</title><link>https://gnailcn.github.io/bn/posts/2024/07/%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A5%E0%A6%AE-%E0%A6%AA%E0%A7%8B%E0%A6%B8%E0%A7%8D%E0%A6%9F-%E0%A6%AD%E0%A6%AC%E0%A6%98%E0%A7%81%E0%A6%B0%E0%A7%87-%E0%A6%9C%E0%A7%8B%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0-%E0%A6%B8%E0%A6%82%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%B9%E0%A6%95-%E0%A6%8F-%E0%A6%95%E0%A7%80%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%85%E0%A6%AC%E0%A6%A6%E0%A6%BE%E0%A6%A8-%E0%A6%B0%E0%A6%BE%E0%A6%96%E0%A6%AC%E0%A7%87%E0%A6%A8/</link><pubDate>Thu, 25 Jul 2024 11:00:00 +0800</pubDate><guid>https://gnailcn.github.io/bn/posts/2024/07/%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A5%E0%A6%AE-%E0%A6%AA%E0%A7%8B%E0%A6%B8%E0%A7%8D%E0%A6%9F-%E0%A6%AD%E0%A6%AC%E0%A6%98%E0%A7%81%E0%A6%B0%E0%A7%87-%E0%A6%9C%E0%A7%8B%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0-%E0%A6%B8%E0%A6%82%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%B9%E0%A6%95-%E0%A6%8F-%E0%A6%95%E0%A7%80%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%85%E0%A6%AC%E0%A6%A6%E0%A6%BE%E0%A6%A8-%E0%A6%B0%E0%A6%BE%E0%A6%96%E0%A6%AC%E0%A7%87%E0%A6%A8/</guid><description>&lt;p>নমস্কার, ভবিষ্যতের আমি, এবং এখানে আসা সম্ভাব্য বন্ধুদের।&lt;/p>
+&lt;p>&amp;lsquo;ভবঘুরে জোয়ার সংগ্রাহক&amp;rsquo;-এর শুরুতে আপনাকে স্বাগত। এই স্থানটি একটি ঝুড়ির মতো কল্পনা করা হয়েছে, যেখানে জ্ঞান ও তথ্যের তরঙ্গের ধার থেকে কুড়িয়ে আনা &amp;ldquo;ঝিনুক&amp;rdquo; ও &amp;ldquo;তারা&amp;rdquo; রাখা হবে। আজ, আমি প্রথম যত্নসহকারে বাছাই করা ঝিনুকটি রাখব - এখানে কীভাবে বিষয়বস্তু তৈরি করতে হয় তার একটি নির্দেশিকা।&lt;/p>
+&lt;p>এই পোস্টটি একটি স্মৃতিচিহ্ন এবং একটি কার্যপ্রণালী নির্দেশিকা উভয়ই, যাতে ভবিষ্যতের প্রতিটি সৃজনশীল কাজ স্পষ্ট এবং কার্যকর হয়।&lt;/p>
+&lt;h2 id="১-সজনর-সচন-একট-কমনড">১. সৃজনের সূচনা: একটি কমান্ড
+&lt;/h2>&lt;p>আমরা হাতে করে ফাইল তৈরি করি না, বরং HUGO-এর চমৎকার কমান্ড-লাইন টুল ব্যবহার করি। এটি একটি জাদুর কাঠির মতো, যা আমাদের জন্য সবকিছু প্রস্তুত করে দিতে পারে।&lt;/p>
+&lt;p>টার্মিনাল খুলুন, ব্লগের রুট ডিরেক্টরিতে যান, এবং তারপর মন্ত্রটি উচ্চারণ করুন:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># ফরম্যাট: hugo new content-type/YYYY/MM/your-post-slug/index.lang.md&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new posts/2024/07/a-new-journey/index.bn.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>এই কমান্ডটি একটি জাদু করবে:&lt;/p>
+&lt;ol>
+&lt;li>এটি &lt;code>content/posts/2024/07/&lt;/code> ডিরেক্টরির মধ্যে &lt;code>a-new-journey&lt;/code> নামে একটি ফোল্ডার তৈরি করবে।&lt;/li>
+&lt;li>সেই ফোল্ডারের ভিতরে, এটি একটি &lt;code>index.bn.md&lt;/code> ফাইল তৈরি করবে।&lt;/li>
+&lt;li>এটি স্বয়ংক্রিয়ভাবে এই ফাইলের জন্য &amp;ldquo;পরিচয় তথ্য&amp;rdquo; (অর্থাৎ Front Matter) পূরণ করবে, যার মধ্যে শিরোনাম, তারিখ এবং একটি গুরুত্বপূর্ণ ট্যাগ &lt;code>draft: true&lt;/code> অন্তর্ভুক্ত থাকবে। এই ট্যাগের অর্থ হল এটি একটি খসড়া, যা স্থানীয় প্রিভিউতে দেখা যাবে, কিন্তু চূড়ান্ত ডিপ্লয়মেন্টের সময় এটি উপেক্ষা করা হবে, যা খুবই নিরাপদ।&lt;/li>
+&lt;/ol>
+&lt;p>যখন আমরা প্রবন্ধ লেখা শেষ করব এবং এটি বিশ্বকে দেখানোর জন্য প্রস্তুত হব, তখন কেবল &lt;code>draft: true&lt;/code>-কে &lt;code>draft: false&lt;/code>-এ পরিবর্তন করে দিলেই হবে।&lt;/p>
+&lt;h2 id="২-পরণ-সঞচর-লখ-ও-ছব">২. প্রাণ সঞ্চার: লেখা ও ছবি
+&lt;/h2>&lt;p>একটি সম্পূর্ণ প্রবন্ধ লেখা এবং ছবি দিয়ে গঠিত হয়। আমাদের যত্নসহকারে ডিজাইন করা কাঠামোতে, এগুলির পরিচালনা অত্যন্ত সহজ হয়ে যায়।&lt;/p>
+&lt;h3 id="১-লখ">১. লেখা
+&lt;/h3>&lt;p>ফাইলের &amp;ldquo;পরিচয় তথ্য&amp;rdquo;-এর নিচে, সেই জায়গা যেখানে আমরা আমাদের শব্দ সাজাই। এটি স্ট্যান্ডার্ড মার্কডাউন সিনট্যাক্স অনুসরণ করে, যা সংক্ষিপ্ত ও শক্তিশালী।&lt;/p>
+&lt;h3 id="২-ছব-বশঙখলক-বদয-জনন">২. ছবি: বিশৃঙ্খলাকে বিদায় জানান
+&lt;/h3>&lt;p>এটি আমাদের কর্মপ্রবাহের সবচেয়ে চমৎকার অংশ। &lt;strong>প্রতিটি প্রবন্ধের নিজস্ব একটি ফোল্ডার থাকে&lt;/strong>, যার মানে হল, প্রবন্ধে ব্যবহৃত সমস্ত ছবি প্রবন্ধের সাথেই রাখা যেতে পারে!&lt;/p>
+&lt;p>ধরুন আমরা এই &lt;code>a-new-journey&lt;/code> প্রবন্ধটি লিখছি, এর ডিরেক্টরি কাঠামোটি এইরকম:&lt;/p>
+&lt;pre tabindex="0">&lt;code>content/
+└── posts/
+└── 2024/
+└── 07/
+└── a-new-journey/ &amp;lt;-- প্রবন্ধের নিজস্ব ফোল্ডার
+├── index.bn.md &amp;lt;-- প্রবন্ধ ফাইল নিজেই
+└── journey-start.jpg &amp;lt;-- এর সঙ্গী ছবি!
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>এই ছবিটি কীভাবে উল্লেখ করবেন?&lt;/strong>&lt;/p>
+&lt;p>&lt;code>index.bn.md&lt;/code> ফাইলে, আপনাকে কেবল নিচে দেওয়া সিনট্যাক্সটি লিখতে হবে, কোনো জটিল পাথ ছাড়াই:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">যাত্রার সূচনা&lt;/span>](&lt;span style="color:#a6e22e">2024/07/a-new-journey/journey-start.jpg&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://gnailcn.github.io/2024/07/a-new-journey/journey-start.jpg" alt="যাত্রার সূচনা" title="" loading="lazy">&lt;/p>
+&lt;p>এটা এতটাই সহজ! ছবি এবং লেখা সুন্দরভাবে একসাথে &amp;ldquo;বান্ডিল&amp;rdquo; করা হয়েছে,迁移, ব্যাকআপ বা পরিচালনা, কোনো ক্ষেত্রেই আর কোনো ঝামেলা নেই।&lt;/p>
+&lt;h2 id="৩-পরবনধর-পরচযপতর-front-matter">৩. প্রবন্ধের &amp;lsquo;পরিচয়পত্র&amp;rsquo;: Front Matter
+&lt;/h2>&lt;p>প্রতিটি প্রবন্ধের উপরে &lt;code>---&lt;/code> দ্বারা ঘেরা এলাকাটি হল এর মেটাডেটা, যা নির্ধারণ করে এটি কীভাবে শ্রেণীবদ্ধ এবং প্রদর্শিত হবে।&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>title&lt;/code>&lt;/strong>: প্রবন্ধের শিরোনাম।&lt;/li>
+&lt;li>&lt;strong>&lt;code>date&lt;/code>&lt;/strong>: প্রকাশনার তারিখ, যা আর্কাইভে এর অবস্থান নির্ধারণ করে।&lt;/li>
+&lt;li>&lt;strong>&lt;code>categories&lt;/code>&lt;/strong>: বিভাগ, সাধারণত একটি একক প্রধান বিভাগ, যেমন &lt;code>[&amp;quot;কারিগরি নোট&amp;quot;]&lt;/code> বা &lt;code>[&amp;quot;জীবনের ভাবনা&amp;quot;]&lt;/code>।&lt;/li>
+&lt;li>&lt;strong>&lt;code>tags&lt;/code>&lt;/strong>: ট্যাগ, একাধিক হতে পারে, আরও সূক্ষ্ম ইনডেক্সিংয়ের জন্য ব্যবহৃত হয়, যেমন &lt;code>[&amp;quot;Go&amp;quot;, &amp;quot;Web&amp;quot;, &amp;quot;কর্মক্ষমতা অপটিমাইজেশন&amp;quot;]&lt;/code>।&lt;/li>
+&lt;li>&lt;strong>&lt;code>summary&lt;/code>&lt;/strong>: একটি সংক্ষিপ্ত সারসংক্ষেপ, যা প্রবন্ধের তালিকা পৃষ্ঠায় প্রদর্শিত হবে।&lt;/li>
+&lt;li>&lt;strong>&lt;code>draft&lt;/code>&lt;/strong>: &lt;code>false&lt;/code> মানে প্রবন্ধটি দৃশ্যমান, &lt;code>true&lt;/code> মানে এটি একটি খসড়া।&lt;/li>
+&lt;/ul>
+&lt;p>এই তথ্যগুলি যত্নসহকারে পূরণ করা আমাদের জ্ঞানভান্ডারকে সুসংগঠিত করে তুলবে।&lt;/p>
+&lt;h2 id="উপসহর">উপসংহার
+&lt;/h2>&lt;p>সৃজনশীলতার প্রক্রিয়াটি আনন্দদায়ক হওয়া উচিত, বোঝা নয়।&lt;/p>
+&lt;p>&lt;code>hugo new&lt;/code> দিয়ে যাত্রা শুরু করুন, নিজস্ব ফোল্ডারে লেখা ও ছবি রাখুন, এবং শেষে &lt;code>draft&lt;/code>-এর ধুলো ঝেড়ে ফেলুন। এটাই &amp;lsquo;ভবঘুরে জোয়ার সংগ্রাহক&amp;rsquo;-এ প্রতিটি আবিষ্কার নথিভুক্ত করার সম্পূর্ণ রহস্য।&lt;/p>
+&lt;p>আশা করি এই ছোট্ট ঝুড়িটি দিনে দিনে সমৃদ্ধ হবে।&lt;/p></description></item></channel></rss>

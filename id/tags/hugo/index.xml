@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on Sang Pengembara Penangkap Pasang</title><link>https://gnailcn.github.io/id/tags/hugo/</link><description>Recent content in Hugo on Sang Pengembara Penangkap Pasang</description><generator>Hugo -- gohugo.io</generator><language>id</language><lastBuildDate>Thu, 25 Jul 2024 11:00:00 +0800</lastBuildDate><atom:link href="https://gnailcn.github.io/id/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Postingan Pertama: Panduan Membangun 'Sang Pengembara Penangkap Pasang'</title><link>https://gnailcn.github.io/id/posts/2024/07/postingan-pertama-panduan-membangun-sang-pengembara-penangkap-pasang/</link><pubDate>Thu, 25 Jul 2024 11:00:00 +0800</pubDate><guid>https://gnailcn.github.io/id/posts/2024/07/postingan-pertama-panduan-membangun-sang-pengembara-penangkap-pasang/</guid><description>&lt;p>Halo, diriku di masa depan, dan teman-teman yang mungkin kebetulan berkunjung.&lt;/p>
+&lt;p>Selamat datang di awal &amp;ldquo;Sang Pengembara Penangkap Pasang.&amp;rdquo; Ruang ini dibayangkan sebagai sebuah keranjang untuk menampung &amp;ldquo;kerang&amp;rdquo; dan &amp;ldquo;bintang&amp;rdquo; yang saya kumpulkan di sepanjang pesisir pengetahuan dan informasi. Hari ini, saya menempatkan kerang pertama yang dipilih dengan cermat di dalamnya—sebuah panduan tentang cara membuat konten di sini.&lt;/p>
+&lt;p>Postingan ini berfungsi sebagai kenang-kenangan dan juga panduan operasional, memastikan bahwa setiap kreasi di masa depan akan jelas dan efisien.&lt;/p>
+&lt;h2 id="i-titik-awal-satu-perintah-tunggal">I. Titik Awal: Satu Perintah Tunggal
+&lt;/h2>&lt;p>Kita tidak membuat file secara manual. Sebaliknya, kita menggunakan alat baris perintah elegan dari HUGO. Ini seperti tongkat sihir yang menyiapkan segalanya untuk kita.&lt;/p>
+&lt;p>Buka terminal Anda, navigasikan ke direktori root blog, dan ucapkan mantranya:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Format: hugo new tipe-konten/TTTT/BB/slug-postingan-anda/index.bahasa.md&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new posts/2024/07/a-new-journey/index.id.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Perintah ini melakukan sedikit keajaiban:&lt;/p>
+&lt;ol>
+&lt;li>Ia membuat folder bernama &lt;code>a-new-journey&lt;/code> di dalam direktori &lt;code>content/posts/2024/07/&lt;/code>.&lt;/li>
+&lt;li>Di dalam folder itu, ia membuat file &lt;code>index.id.md&lt;/code>.&lt;/li>
+&lt;li>Ia secara otomatis mengisi file ini dengan &amp;ldquo;informasi identitas&amp;rdquo; (Front Matter), termasuk judul, tanggal, dan sebuah penanda penting: &lt;code>draft: true&lt;/code>. Penanda ini menandainya sebagai draf, terlihat dalam pratinjau lokal tetapi diabaikan saat perilisan akhir, yang sangat aman.&lt;/li>
+&lt;/ol>
+&lt;p>Ketika kita selesai menulis dan siap agar dunia melihatnya, kita cukup mengubah &lt;code>draft: true&lt;/code> menjadi &lt;code>draft: false&lt;/code>.&lt;/p>
+&lt;h2 id="ii-memberinya-jiwa-kata-kata-dan-gambar">II. Memberinya Jiwa: Kata-kata dan Gambar
+&lt;/h2>&lt;p>Sebuah artikel lengkap terdiri dari teks dan gambar. Dalam struktur kita yang dirancang dengan baik, mengelolanya menjadi sangat sederhana.&lt;/p>
+&lt;h3 id="1-kata-kata">1. Kata-kata
+&lt;/h3>&lt;p>Di bawah &amp;ldquo;informasi identitas&amp;rdquo; file adalah tempat kita menuangkan kata-kata kita. Bagian ini mengikuti sintaks Markdown standar—ringkas dan kuat.&lt;/p>
+&lt;h3 id="2-gambar-akhir-dari-kekacauan">2. Gambar: Akhir dari Kekacauan
+&lt;/h3>&lt;p>Ini adalah bagian terindah dari alur kerja kita. &lt;strong>Setiap artikel memiliki folder khususnya sendiri&lt;/strong>, yang berarti semua gambar yang digunakan dalam artikel dapat disimpan tepat di samping artikel itu sendiri!&lt;/p>
+&lt;p>Katakanlah kita sedang menulis postingan &lt;code>a-new-journey&lt;/code> ini. Struktur direktorinya terlihat seperti ini:&lt;/p>
+&lt;pre tabindex="0">&lt;code>content/
+└── posts/
+└── 2024/
+└── 07/
+└── a-new-journey/ &amp;lt;-- Folder khusus artikel
+├── index.id.md &amp;lt;-- File artikel itu sendiri
+└── journey-start.jpg &amp;lt;-- Gambar pendampingnya!
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>Bagaimana cara mereferensikan gambar ini?&lt;/strong>&lt;/p>
+&lt;p>Di file &lt;code>index.id.md&lt;/code> Anda, Anda hanya perlu menulis yang berikut ini, tanpa jalur yang rumit:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">Perjalanan Dimulai&lt;/span>](&lt;span style="color:#a6e22e">journey-start.jpg&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;picture>
+&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
+&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
+&lt;img src="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
+width="800"
+height="444"
+alt="Perjalanan Dimulai"
+title=""
+loading="lazy">
+&lt;/picture>&lt;/p>
+&lt;p>Sesederhana itu! Gambar dan teks &amp;ldquo;terbungkus&amp;rdquo; bersama dengan elegan, membuat migrasi, pencadangan, dan pengelolaan menjadi pengalaman yang bebas dari kekhawatiran.&lt;/p>
+&lt;h2 id="iii-kartu-identitas-artikel-front-matter">III. &amp;lsquo;Kartu Identitas&amp;rsquo; Artikel: Front Matter
+&lt;/h2>&lt;p>Area di bagian atas setiap artikel, yang dibungkus dengan &lt;code>---&lt;/code>, adalah metadatanya. Ini menentukan bagaimana artikel diklasifikasikan dan ditampilkan.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>title&lt;/code>&lt;/strong>: Judul artikel.&lt;/li>
+&lt;li>&lt;strong>&lt;code>date&lt;/code>&lt;/strong>: Tanggal publikasi, yang menentukan posisinya di arsip.&lt;/li>
+&lt;li>&lt;strong>&lt;code>categories&lt;/code>&lt;/strong>: Kategori, biasanya klasifikasi tunggal yang luas seperti &lt;code>[&amp;quot;Catatan Teknis&amp;quot;]&lt;/code> atau &lt;code>[&amp;quot;Refleksi Kehidupan&amp;quot;]&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;code>tags&lt;/code>&lt;/strong>: Tag, yang bisa lebih dari satu dan digunakan untuk pengindeksan yang lebih rinci, seperti &lt;code>[&amp;quot;Go&amp;quot;, &amp;quot;Web&amp;quot;, &amp;quot;Optimasi Kinerja&amp;quot;]&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;code>summary&lt;/code>&lt;/strong>: Ringkasan singkat yang akan ditampilkan di halaman daftar artikel.&lt;/li>
+&lt;li>&lt;strong>&lt;code>draft&lt;/code>&lt;/strong>: &lt;code>false&lt;/code> berarti artikel diterbitkan; &lt;code>true&lt;/code> berarti itu adalah draf.&lt;/li>
+&lt;/ul>
+&lt;p>Mengisi informasi ini dengan cermat akan menjaga basis pengetahuan kita tetap rapi dan terorganisir.&lt;/p>
+&lt;h2 id="kesimpulan">Kesimpulan
+&lt;/h2>&lt;p>Proses kreatif seharusnya menjadi kegembiraan, bukan beban.&lt;/p>
+&lt;p>Memulai perjalanan dengan &lt;code>hugo new&lt;/code>, menempatkan kata-kata dan gambar di folder khususnya, dan akhirnya, membersihkan debu &lt;code>draft&lt;/code>. Inilah seluruh rahasia untuk mencatat setiap penemuan di sini, di &amp;ldquo;Sang Pengembara Penangkap Pasang.&amp;rdquo;&lt;/p>
+&lt;p>Semoga keranjang kecil ini semakin penuh setiap harinya.&lt;/p></description></item></channel></rss>

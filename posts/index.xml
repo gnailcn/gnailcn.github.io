@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Wandering TideCatcher</title><link>https://gnailcn.github.io/posts/</link><description>Recent content in Posts on Wandering TideCatcher</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 25 Jul 2024 11:00:00 +0800</lastBuildDate><atom:link href="https://gnailcn.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>First Post: A Guide to Building 'Wandering TideCatcher'</title><link>https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/</link><pubDate>Thu, 25 Jul 2024 11:00:00 +0800</pubDate><guid>https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/</guid><description>&lt;p>Hello, future me, and any friends who may happen to visit.&lt;/p>
+&lt;p>Welcome to the beginning of &amp;ldquo;Wandering TideCatcher.&amp;rdquo; This space is envisioned as a basket to hold the &amp;ldquo;shells&amp;rdquo; and &amp;ldquo;stars&amp;rdquo; I pick up along the shores of knowledge and information. Today, I&amp;rsquo;m placing the first carefully chosen shell inside—a guide on how to create content here.&lt;/p>
+&lt;p>This post serves as both a memento and a guide, ensuring that every future act of creation is clear and efficient.&lt;/p>
+&lt;h2 id="i-the-starting-point-a-single-command">I. The Starting Point: A Single Command
+&lt;/h2>&lt;p>We don&amp;rsquo;t create files manually. Instead, we use HUGO&amp;rsquo;s elegant command-line tool. It&amp;rsquo;s like a magic wand that prepares everything for us.&lt;/p>
+&lt;p>Open your terminal, navigate to the blog&amp;rsquo;s root directory, and recite the spell:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Format: hugo new content-type/YYYY/MM/your-post-slug/index.lang.md&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new posts/2024/07/a-new-journey/index.en.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This command performs a bit of magic:&lt;/p>
+&lt;ol>
+&lt;li>It creates a folder named &lt;code>a-new-journey&lt;/code> within the &lt;code>content/posts/2024/07/&lt;/code> directory.&lt;/li>
+&lt;li>Inside that folder, it creates an &lt;code>index.en.md&lt;/code> file.&lt;/li>
+&lt;li>It automatically populates this file with &amp;ldquo;identity information&amp;rdquo; (the Front Matter), including the title, date, and a crucial flag: &lt;code>draft: true&lt;/code>. This flag marks it as a draft, visible in local previews but ignored during final deployment, which is very safe.&lt;/li>
+&lt;/ol>
+&lt;p>When we&amp;rsquo;ve finished writing and are ready for the world to see, we simply change &lt;code>draft: true&lt;/code> to &lt;code>draft: false&lt;/code>.&lt;/p>
+&lt;h2 id="ii-giving-it-soul-words-and-images">II. Giving It Soul: Words and Images
+&lt;/h2>&lt;p>A complete article is composed of both text and images. In our well-designed structure, managing them becomes incredibly simple.&lt;/p>
+&lt;h3 id="1-words">1. Words
+&lt;/h3>&lt;p>Below the file&amp;rsquo;s &amp;ldquo;identity information&amp;rdquo; is where we let our words flow. It follows standard Markdown syntax—concise and powerful.&lt;/p>
+&lt;h3 id="2-images-an-end-to-chaos">2. Images: An End to Chaos
+&lt;/h3>&lt;p>This is the most beautiful part of our workflow. &lt;strong>Every article has its own dedicated folder&lt;/strong>, which means all the images used in the article can be stored right alongside the article itself!&lt;/p>
+&lt;p>Let&amp;rsquo;s say we&amp;rsquo;re writing this &lt;code>a-new-journey&lt;/code> post. Its directory structure looks like this:&lt;/p>
+&lt;pre tabindex="0">&lt;code>content/
+└── posts/
+└── 2024/
+└── 07/
+└── a-new-journey/ &amp;lt;-- The article&amp;#39;s dedicated folder
+├── index.en.md &amp;lt;-- The article file itself
+└── journey-start.jpg &amp;lt;-- Its companion image!
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>How do you reference this image?&lt;/strong>&lt;/p>
+&lt;p>In your &lt;code>index.en.md&lt;/code> file, you just need to write the following, without any complex paths:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">The Journey Begins&lt;/span>](&lt;span style="color:#a6e22e">journey-start.jpg&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;picture>
+&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
+&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
+&lt;img src="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
+width="800"
+height="444"
+alt="The Journey Begins"
+title=""
+loading="lazy">
+&lt;/picture>&lt;/p>
+&lt;p>It&amp;rsquo;s that simple! The image and text are elegantly &amp;ldquo;bundled&amp;rdquo; together, making migration, backup, and management a worry-free experience.&lt;/p>
+&lt;h2 id="iii-the-articles-id-card-front-matter">III. The Article&amp;rsquo;s &amp;ldquo;ID Card&amp;rdquo;: Front Matter
+&lt;/h2>&lt;p>The area at the top of each article, wrapped in &lt;code>---&lt;/code>, is its metadata. It determines how the article is categorized and displayed.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>title&lt;/code>&lt;/strong>: The title of the article.&lt;/li>
+&lt;li>&lt;strong>&lt;code>date&lt;/code>&lt;/strong>: The publication date, which determines its position in the archives.&lt;/li>
+&lt;li>&lt;strong>&lt;code>categories&lt;/code>&lt;/strong>: The category, usually a single, broad classification like &lt;code>[&amp;quot;Tech Notes&amp;quot;]&lt;/code> or &lt;code>[&amp;quot;Life Reflections&amp;quot;]&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;code>tags&lt;/code>&lt;/strong>: Tags, which can be multiple and are used for more granular indexing, like &lt;code>[&amp;quot;Go&amp;quot;, &amp;quot;Web&amp;quot;, &amp;quot;Performance Tuning&amp;quot;]&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;code>summary&lt;/code>&lt;/strong>: A short summary that will be displayed on the article list page.&lt;/li>
+&lt;li>&lt;strong>&lt;code>draft&lt;/code>&lt;/strong>: &lt;code>false&lt;/code> means the article is published; &lt;code>true&lt;/code> means it&amp;rsquo;s a draft.&lt;/li>
+&lt;/ul>
+&lt;p>Carefully filling out this information will keep our knowledge base neat and organized.&lt;/p>
+&lt;h2 id="conclusion">Conclusion
+&lt;/h2>&lt;p>The creative process should be a joy, not a burden.&lt;/p>
+&lt;p>Start the journey with &lt;code>hugo new&lt;/code>, place words and images in their dedicated folder, and finally, brush off the &lt;code>draft&lt;/code> dust. This is the entire secret to recording every discovery here at &amp;ldquo;Wandering TideCatcher.&amp;rdquo;&lt;/p>
+&lt;p>May this little basket grow fuller with each passing day.&lt;/p></description></item></channel></rss>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Странствующий Ловец Приливов</title><link>https://gnailcn.github.io/ru/</link><description>Recent content on Странствующий Ловец Приливов</description><generator>Hugo -- gohugo.io</generator><language>ru</language><lastBuildDate>Thu, 25 Jul 2024 11:00:00 +0800</lastBuildDate><atom:link href="https://gnailcn.github.io/ru/index.xml" rel="self" type="application/rss+xml"/><item><title>Первый пост: Руководство по созданию 'Странствующего Ловца Приливов'</title><link>https://gnailcn.github.io/ru/posts/2024/07/%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B9-%D0%BF%D0%BE%D1%81%D1%82-%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE-%D0%BF%D0%BE-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D1%8E-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D1%83%D1%8E%D1%89%D0%B5%D0%B3%D0%BE-%D0%BB%D0%BE%D0%B2%D1%86%D0%B0-%D0%BF%D1%80%D0%B8%D0%BB%D0%B8%D0%B2%D0%BE%D0%B2/</link><pubDate>Thu, 25 Jul 2024 11:00:00 +0800</pubDate><guid>https://gnailcn.github.io/ru/posts/2024/07/%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B9-%D0%BF%D0%BE%D1%81%D1%82-%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE-%D0%BF%D0%BE-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D1%8E-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D1%83%D1%8E%D1%89%D0%B5%D0%B3%D0%BE-%D0%BB%D0%BE%D0%B2%D1%86%D0%B0-%D0%BF%D1%80%D0%B8%D0%BB%D0%B8%D0%B2%D0%BE%D0%B2/</guid><description>&lt;p>Привет, я из будущего, и все друзья, которые могут зайти сюда.&lt;/p>
+&lt;p>Добро пожаловать в начало «Странствующего Ловца Приливов». Это пространство задумано как корзина для хранения «ракушек» и «звёзд», которые я подбираю на берегах волн знаний и информации. Сегодня я кладу в неё первую тщательно отобранную ракушку — руководство по созданию контента здесь.&lt;/p>
+&lt;p>Этот пост служит одновременно и памяткой, и инструкцией, чтобы каждое будущее творение было ясным и эффективным.&lt;/p>
+&lt;h2 id="i-начало-творения-одна-команда">I. Начало творения: одна команда
+&lt;/h2>&lt;p>Мы не создаём файлы вручную. Вместо этого мы используем элегантный инструмент командной строки HUGO. Он, словно волшебная палочка, готовит для нас всё необходимое.&lt;/p>
+&lt;p>Откройте терминал, перейдите в корневой каталог блога и произнесите заклинание:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Формат: hugo new тип-контента/ГГГГ/ММ/ваш-слаг-поста/index.язык.md&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new posts/2024/07/a-new-journey/index.ru.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Эта команда совершает небольшое волшебство:&lt;/p>
+&lt;ol>
+&lt;li>Она создаёт папку с именем &lt;code>a-new-journey&lt;/code> в каталоге &lt;code>content/posts/2024/07/&lt;/code>.&lt;/li>
+&lt;li>Внутри этой папки она создаёт файл &lt;code>index.ru.md&lt;/code>.&lt;/li>
+&lt;li>Она автоматически заполняет этот файл «идентификационной информацией» (Front Matter), включая заголовок, дату и важный флаг: &lt;code>draft: true&lt;/code>. Этот флаг помечает его как черновик, видимый при локальном просмотре, но игнорируемый при финальном развёртывании, что очень безопасно.&lt;/li>
+&lt;/ol>
+&lt;p>Когда мы закончим писать и будем готовы показать это миру, мы просто изменим &lt;code>draft: true&lt;/code> на &lt;code>draft: false&lt;/code>.&lt;/p>
+&lt;h2 id="ii-вдыхая-душу-текст-и-изображения">II. Вдыхая душу: текст и изображения
+&lt;/h2>&lt;p>Полноценная статья состоит как из текста, так и из изображений. В нашей продуманной структуре управлять ими становится невероятно просто.&lt;/p>
+&lt;h3 id="1-текст">1. Текст
+&lt;/h3>&lt;p>Под «идентификационной информацией» файла находится место, где мы даём волю нашим словам. Здесь используется стандартный синтаксис Markdown — лаконичный и мощный.&lt;/p>
+&lt;h3 id="2-изображения-конец-хаосу">2. Изображения: конец хаосу
+&lt;/h3>&lt;p>Это самая прекрасная часть нашего рабочего процесса. &lt;strong>У каждой статьи есть своя собственная выделенная папка&lt;/strong>, что означает, что все изображения, используемые в статье, могут храниться прямо рядом с самой статьёй!&lt;/p>
+&lt;p>Допустим, мы пишем эту статью &lt;code>a-new-journey&lt;/code>. Структура её каталога выглядит так:&lt;/p>
+&lt;pre tabindex="0">&lt;code>content/
+└── posts/
+└── 2024/
+└── 07/
+└── a-new-journey/ &amp;lt;-- Выделенная папка статьи
+├── index.ru.md &amp;lt;-- Сам файл статьи
+└── journey-start.jpg &amp;lt;-- Сопутствующее изображение!
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>Как сослаться на это изображение?&lt;/strong>&lt;/p>
+&lt;p>В вашем файле &lt;code>index.ru.md&lt;/code> вам просто нужно написать следующее, без каких-либо сложных путей:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">Начало Путешествия&lt;/span>](&lt;span style="color:#a6e22e">journey-start.jpg&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;picture>
+&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
+&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
+&lt;img src="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
+width="800"
+height="444"
+alt="Начало Путешествия"
+title=""
+loading="lazy">
+&lt;/picture>&lt;/p>
+&lt;p>Вот так просто! Изображение и текст элегантно «связаны» вместе, что делает перенос, резервное копирование и управление процессом беззаботным.&lt;/p>
+&lt;h2 id="iii-удостоверение-личности-статьи-front-matter">III. «Удостоверение личности» статьи: Front Matter
+&lt;/h2>&lt;p>Область в верхней части каждой статьи, заключённая в &lt;code>---&lt;/code>, — это её метаданные. Они определяют, как статья будет классифицирована и отображена.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>title&lt;/code>&lt;/strong>: Заголовок статьи.&lt;/li>
+&lt;li>&lt;strong>&lt;code>date&lt;/code>&lt;/strong>: Дата публикации, определяющая её место в архивах.&lt;/li>
+&lt;li>&lt;strong>&lt;code>categories&lt;/code>&lt;/strong>: Категория, обычно одна общая, например &lt;code>[&amp;quot;Технические заметки&amp;quot;]&lt;/code> или &lt;code>[&amp;quot;Жизненные размышления&amp;quot;]&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;code>tags&lt;/code>&lt;/strong>: Теги, которых может быть несколько, используются для более детальной индексации, например &lt;code>[&amp;quot;Go&amp;quot;, &amp;quot;Web&amp;quot;, &amp;quot;Оптимизация производительности&amp;quot;]&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;code>summary&lt;/code>&lt;/strong>: Краткое описание, которое будет отображаться на странице со списком статей.&lt;/li>
+&lt;li>&lt;strong>&lt;code>draft&lt;/code>&lt;/strong>: &lt;code>false&lt;/code> означает, что статья опубликована; &lt;code>true&lt;/code> — что это черновик.&lt;/li>
+&lt;/ul>
+&lt;p>Тщательное заполнение этой информации поможет поддерживать нашу базу знаний в чистоте и порядке.&lt;/p>
+&lt;h2 id="заключение">Заключение
+&lt;/h2>&lt;p>Творческий процесс должен приносить радость, а не быть обузой.&lt;/p>
+&lt;p>Начать путешествие с &lt;code>hugo new&lt;/code>, разместить текст и изображения в их выделенной папке и, наконец, стряхнуть пыль с &lt;code>draft&lt;/code>. В этом весь секрет записи каждого открытия здесь, в «Странствующем Ловце Приливов».&lt;/p>
+&lt;p>Пусть эта маленькая корзинка наполняется с каждым днём.&lt;/p></description></item><item><title>Архивы</title><link>https://gnailcn.github.io/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/archives/</guid><description/></item><item><title>О «Ловце Приливов»</title><link>https://gnailcn.github.io/ru/about/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/ru/about/about/</guid><description>&lt;p>Здравствуйте, я gnailcn, «Странствующий Ловец Приливов», прогуливающийся по пляжам цифровой эпохи.&lt;/p>
+&lt;p>Я верю, что океан знаний огромен и безграничен. Каждая технологическая итерация, каждое столкновение идей — это как прилив. Когда прилив отступает, он всегда оставляет после себя бесчисленные сокровища, ожидающие своего открытия.&lt;/p>
+&lt;p>Я создал этот небольшой сайт, чтобы документировать мой процесс &amp;ldquo;ловли приливов&amp;rdquo;.&lt;/p>
+&lt;p>Здесь то, что я нахожу, может быть элегантным фрагментом кода или гениальным алгоритмом — это сияющие &amp;lsquo;ракушки&amp;rsquo; в волнах информации. Я также восхищаюсь великими идеями, которые указывают нам путь, и жизненными философиями, меняющими наше восприятие — это &amp;lsquo;звёзды&amp;rsquo;, которые служат вечным ориентиром в ночном небе.&lt;/p>
+&lt;p>Этот блог — корзина, в которой я храню эти ракушки и звёзды. В ней содержится то, что я узнал, о чём думал и что чувствовал, и она свидетельствует о том, как обычный человек строит свою собственную когнитивную систему в потоке информации.&lt;/p>
+&lt;p>Желаю поделиться радостью этой ловли приливов с вами, таким же любителем исследований.&lt;/p></description></item><item><title>Поиск</title><link>https://gnailcn.github.io/ru/search/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/ru/search/search/</guid><description/></item></channel></rss>

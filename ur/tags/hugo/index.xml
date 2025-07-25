@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on بھٹکتا ہوا مدوجزر کا شکاری</title><link>https://gnailcn.github.io/ur/tags/hugo/</link><description>Recent content in Hugo on بھٹکتا ہوا مدوجزر کا شکاری</description><generator>Hugo -- gohugo.io</generator><language>ur</language><lastBuildDate>Thu, 25 Jul 2024 11:00:00 +0800</lastBuildDate><atom:link href="https://gnailcn.github.io/ur/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>پہلی پوسٹ: 'بھٹکتا ہوا مدوجزر کا شکاری' میں حصہ کیسے ڈالیں</title><link>https://gnailcn.github.io/ur/posts/2024/07/%D9%BE%DB%81%D9%84%DB%8C-%D9%BE%D9%88%D8%B3%D9%B9-%D8%A8%DA%BE%D9%B9%DA%A9%D8%AA%D8%A7-%DB%81%D9%88%D8%A7-%D9%85%D8%AF%D9%88%D8%AC%D8%B2%D8%B1-%DA%A9%D8%A7-%D8%B4%DA%A9%D8%A7%D8%B1%DB%8C-%D9%85%DB%8C%DA%BA-%D8%AD%D8%B5%DB%81-%DA%A9%DB%8C%D8%B3%DB%92-%DA%88%D8%A7%D9%84%DB%8C%DA%BA/</link><pubDate>Thu, 25 Jul 2024 11:00:00 +0800</pubDate><guid>https://gnailcn.github.io/ur/posts/2024/07/%D9%BE%DB%81%D9%84%DB%8C-%D9%BE%D9%88%D8%B3%D9%B9-%D8%A8%DA%BE%D9%B9%DA%A9%D8%AA%D8%A7-%DB%81%D9%88%D8%A7-%D9%85%D8%AF%D9%88%D8%AC%D8%B2%D8%B1-%DA%A9%D8%A7-%D8%B4%DA%A9%D8%A7%D8%B1%DB%8C-%D9%85%DB%8C%DA%BA-%D8%AD%D8%B5%DB%81-%DA%A9%DB%8C%D8%B3%DB%92-%DA%88%D8%A7%D9%84%DB%8C%DA%BA/</guid><description>&lt;p>سلام، مستقبل کے میں، اور یہاں آنے والے ممکنہ دوستو۔&lt;/p>
+&lt;p>&amp;lsquo;بھٹکتا ہوا مدوجزر کا شکاری&amp;rsquo; کے آغاز میں خوش آمدید۔ اس جگہ کو ایک ٹوکری کے طور پر تصور کیا گیا ہے، جہاں علم اور معلومات کی لہروں کے کنارے سے اٹھائی گئی &amp;ldquo;سیپیاں&amp;rdquo; اور &amp;ldquo;ستارے&amp;rdquo; رکھے جائیں گے۔ آج، میں پہلی احتیاط سے چنی ہوئی سیپی رکھوں گا - یہاں مواد کیسے بنایا جائے، اس پر ایک رہنما۔&lt;/p>
+&lt;p>یہ پوسٹ ایک یادگار اور ایک آپریٹنگ مینوئل دونوں ہے، تاکہ یہ یقینی بنایا جا سکے کہ مستقبل کی ہر تخلیق واضح اور موثر ہو۔&lt;/p>
+&lt;h2 id="i-تخلیق-کا-آغاز-ایک-کمانڈ">I. تخلیق کا آغاز: ایک کمانڈ
+&lt;/h2>&lt;p>ہم دستی طور پر فائلیں نہیں بناتے، بلکہ HUGO کے خوبصورت کمانڈ لائن ٹول کا استعمال کرتے ہیں۔ یہ ایک جادوئی چھڑی کی طرح ہے، جو ہمارے لیے سب کچھ تیار کر سکتی ہے۔&lt;/p>
+&lt;p>ٹرمینل کھولیں، بلاگ کی روٹ ڈائرکٹری میں جائیں، اور پھر منتر پڑھیں:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># فارمیٹ: hugo new content-type/YYYY/MM/your-post-slug/index.lang.md&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new posts/2024/07/a-new-journey/index.ur.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>یہ کمانڈ ایک جادو کرے گا:&lt;/p>
+&lt;ol>
+&lt;li>یہ &lt;code>content/posts/2024/07/&lt;/code> ڈائرکٹری کے اندر &lt;code>a-new-journey&lt;/code> نامی ایک فولڈر بنائے گا۔&lt;/li>
+&lt;li>اس فولڈر کے اندر، یہ ایک &lt;code>index.ur.md&lt;/code> فائل بنائے گا۔&lt;/li>
+&lt;li>یہ خود بخود اس فائل کے لیے &amp;ldquo;شناختی معلومات&amp;rdquo; (یعنی فرنٹ میٹر) بھر دے گا، جس میں عنوان، تاریخ اور ایک اہم ٹیگ &lt;code>draft: true&lt;/code> شامل ہے۔ اس ٹیگ کا مطلب ہے کہ یہ ایک ڈرافٹ ہے، جو مقامی پیش نظارہ میں نظر آئے گا، لیکن حتمی تعیناتی کے وقت اسے نظر انداز کر دیا جائے گا، جو بہت محفوظ ہے۔&lt;/li>
+&lt;/ol>
+&lt;p>جب ہم مضمون لکھنا ختم کر لیں اور اسے دنیا کو دکھانے کے لیے تیار ہوں، تو بس &lt;code>draft: true&lt;/code> کو &lt;code>draft: false&lt;/code> میں بدل دیں۔&lt;/p>
+&lt;h2 id="ii-روح-بخشنا-متن-اور-تصاویر">II. روح بخشنا: متن اور تصاویر
+&lt;/h2>&lt;p>ایک مکمل مضمون متن اور تصاویر پر مشتمل ہوتا ہے۔ ہماری احتیاط سے ڈیزائن کردہ ساخت میں، ان کا انتظام غیر معمولی طور پر آسان ہو جاتا ہے۔&lt;/p>
+&lt;h3 id="1-متن">1. متن
+&lt;/h3>&lt;p>فائل کی &amp;ldquo;شناختی معلومات&amp;rdquo; کے نیچے، وہ جگہ ہے جہاں ہم اپنے الفاظ لکھتے ہیں۔ یہ معیاری مارک ڈاؤن نحو کی پیروی کرتا ہے، جو جامع اور طاقتور ہے۔&lt;/p>
+&lt;h3 id="2-تصاویر-افراتفری-کو-الوداع-کہیں">2. تصاویر: افراتفری کو الوداع کہیں
+&lt;/h3>&lt;p>یہ ہمارے ورک فلو کا سب سے شاندار حصہ ہے۔ &lt;strong>ہر مضمون کا اپنا مخصوص فولڈر ہوتا ہے&lt;/strong>، جس کا مطلب ہے کہ مضمون میں استعمال ہونے والی تمام تصاویر مضمون کے ساتھ ہی رکھی جا سکتی ہیں!&lt;/p>
+&lt;p>فرض کریں کہ ہم یہ &lt;code>a-new-journey&lt;/code> مضمون لکھ رہے ہیں، اس کی ڈائرکٹری کی ساخت اس طرح ہے:&lt;/p>
+&lt;pre tabindex="0">&lt;code>content/
+└── posts/
+└── 2024/
+└── 07/
+└── a-new-journey/ &amp;lt;-- مضمون کا مخصوص فولڈر
+├── index.ur.md &amp;lt;-- مضمون کی فائل خود
+└── journey-start.jpg &amp;lt;-- اس کی ساتھی تصویر!
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>اس تصویر کا حوالہ کیسے دیں؟&lt;/strong>&lt;/p>
+&lt;p>&lt;code>index.ur.md&lt;/code> فائل میں، آپ کو بس نیچے کی طرح لکھنا ہوگا، بغیر کسی پیچیدہ راستے کے:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">سفر کا آغاز&lt;/span>](&lt;span style="color:#a6e22e">2024/07/a-new-journey/journey-start.jpg&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://gnailcn.github.io/2024/07/a-new-journey/journey-start.jpg" alt="سفر کا آغاز" title="" loading="lazy">&lt;/p>
+&lt;p>یہ اتنا آسان ہے! تصاویر اور متن خوبصورتی سے ایک ساتھ &amp;ldquo;بنڈل&amp;rdquo; ہیں، چاہے وہ منتقلی ہو، بیک اپ ہو، یا انتظام، کوئی اور پریشانی نہیں۔&lt;/p>
+&lt;h2 id="iii-مضمون-کی-شناخت-فرنٹ-میٹر">III. مضمون کی &amp;ldquo;شناخت&amp;rdquo;: فرنٹ میٹر
+&lt;/h2>&lt;p>ہر مضمون کے اوپری حصے میں &lt;code>---&lt;/code> سے گھرا ہوا علاقہ اس کا میٹا ڈیٹا ہے، جو یہ تعین کرتا ہے کہ اسے کس طرح درجہ بندی اور دکھایا جائے گا۔&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>title&lt;/code>&lt;/strong>: مضمون کا عنوان۔&lt;/li>
+&lt;li>&lt;strong>&lt;code>date&lt;/code>&lt;/strong>: اشاعت کی تاریخ، جو آرکائیو میں اس کی پوزیشن کا تعین کرتی ہے۔&lt;/li>
+&lt;li>&lt;strong>&lt;code>categories&lt;/code>&lt;/strong>: زمرہ جات، عام طور پر ایک واحد بڑی قسم، جیسے &lt;code>[&amp;quot;تکنیکی نوٹس&amp;quot;]&lt;/code> یا &lt;code>[&amp;quot;زندگی کے خیالات&amp;quot;]&lt;/code>۔&lt;/li>
+&lt;li>&lt;strong>&lt;code>tags&lt;/code>&lt;/strong>: ٹیگز، ایک سے زیادہ ہو سکتے ہیں، جو زیادہ تفصیلی انڈیکسنگ کے لیے استعمال ہوتے ہیں، جیسے &lt;code>[&amp;quot;Go&amp;quot;, &amp;quot;Web&amp;quot;, &amp;quot;کارکردگی کی اصلاح&amp;quot;]&lt;/code>۔&lt;/li>
+&lt;li>&lt;strong>&lt;code>summary&lt;/code>&lt;/strong>: ایک مختصر خلاصہ، جو مضمون کی فہرست کے صفحے پر دکھایا جائے گا۔&lt;/li>
+&lt;li>&lt;strong>&lt;code>draft&lt;/code>&lt;/strong>: &lt;code>false&lt;/code> کا مطلب ہے کہ مضمون نظر آ رہا ہے، &lt;code>true&lt;/code> کا مطلب ہے کہ یہ ایک ڈرافٹ ہے۔&lt;/li>
+&lt;/ul>
+&lt;p>اس معلومات کو احتیاط سے بھرنے سے ہماری علمی اساس منظم ہو جائے گی۔&lt;/p>
+&lt;h2 id="اختتامیہ">اختتامیہ
+&lt;/h2>&lt;p>تخلیق کا عمل خوشگوار ہونا چاہئے، بوجھ نہیں۔&lt;/p>
+&lt;p>&lt;code>hugo new&lt;/code> کے ساتھ سفر شروع کریں، مخصوص فولڈر میں متن اور تصاویر رکھیں، اور آخر میں &lt;code>draft&lt;/code> کی دھول جھاڑ دیں۔ یہی &amp;lsquo;بھٹکتا ہوا مدوجزر کا شکاری&amp;rsquo; میں ہر دریافت کو ریکارڈ کرنے کا پورا راز ہے۔&lt;/p>
+&lt;p>دعا ہے کہ یہ چھوٹی سی ٹوکری، دن بہ دن مالا مال ہوتی جائے۔&lt;/p></description></item></channel></rss>

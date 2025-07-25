@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on O Apanhador de Marés Errante</title><link>https://gnailcn.github.io/pt/tags/hugo/</link><description>Recent content in Hugo on O Apanhador de Marés Errante</description><generator>Hugo -- gohugo.io</generator><language>pt</language><lastBuildDate>Thu, 25 Jul 2024 11:00:00 +0800</lastBuildDate><atom:link href="https://gnailcn.github.io/pt/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Primeiro Post: Um Guia para Construir 'O Apanhador de Marés Errante'</title><link>https://gnailcn.github.io/pt/posts/2024/07/primeiro-post-um-guia-para-construir-o-apanhador-de-mar%C3%A9s-errante/</link><pubDate>Thu, 25 Jul 2024 11:00:00 +0800</pubDate><guid>https://gnailcn.github.io/pt/posts/2024/07/primeiro-post-um-guia-para-construir-o-apanhador-de-mar%C3%A9s-errante/</guid><description>&lt;p>Olá, meu eu do futuro, e a quaisquer amigos que por acaso visitem este lugar.&lt;/p>
+&lt;p>Bem-vindos ao início de &amp;ldquo;O Apanhador de Marés Errante&amp;rdquo;. Este espaço foi concebido como um cesto para guardar as &amp;ldquo;conchas&amp;rdquo; e &amp;ldquo;estrelas&amp;rdquo; que recolho nas margens do conhecimento e da informação. Hoje, coloco a primeira concha cuidadosamente escolhida aqui dentro — um guia sobre como criar conteúdo aqui.&lt;/p>
+&lt;p>Este post serve tanto como uma lembrança quanto como um manual de operações, garantindo que cada futura criação seja clara e eficiente.&lt;/p>
+&lt;h2 id="i-o-ponto-de-partida-um-único-comando">I. O Ponto de Partida: Um Único Comando
+&lt;/h2>&lt;p>Não criamos arquivos manualmente. Em vez disso, usamos a elegante ferramenta de linha de comando do HUGO. É como uma varinha de condão que prepara tudo para nós.&lt;/p>
+&lt;p>Abra o seu terminal, navegue até a raiz do blog e recite o feitiço:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Formato: hugo new tipo-de-conteudo/AAAA/MM/seu-slug-do-post/index.idioma.md&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new posts/2024/07/a-new-journey/index.pt.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Este comando realiza um pouco de magia:&lt;/p>
+&lt;ol>
+&lt;li>Ele cria uma pasta chamada &lt;code>a-new-journey&lt;/code> dentro do diretório &lt;code>content/posts/2024/07/&lt;/code>.&lt;/li>
+&lt;li>Dentro dessa pasta, ele cria um arquivo &lt;code>index.pt.md&lt;/code>.&lt;/li>
+&lt;li>Ele preenche automaticamente este arquivo com &amp;ldquo;informações de identidade&amp;rdquo; (o Front Matter), incluindo o título, a data e um sinalizador crucial: &lt;code>draft: true&lt;/code>. Este sinalizador o marca como um rascunho, visível em pré-visualizações locais, mas ignorado durante a implantação final, o que é muito seguro.&lt;/li>
+&lt;/ol>
+&lt;p>Quando terminarmos de escrever e estivermos prontos para que o mundo veja, simplesmente mudamos &lt;code>draft: true&lt;/code> para &lt;code>draft: false&lt;/code>.&lt;/p>
+&lt;h2 id="ii-dando-lhe-alma-palavras-e-imagens">II. Dando-lhe Alma: Palavras e Imagens
+&lt;/h2>&lt;p>Um artigo completo é composto tanto por texto quanto por imagens. Na nossa estrutura bem projetada, gerenciá-los torna-se incrivelmente simples.&lt;/p>
+&lt;h3 id="1-palavras">1. Palavras
+&lt;/h3>&lt;p>Abaixo das &amp;ldquo;informações de identidade&amp;rdquo; do arquivo é onde deixamos nossas palavras fluírem. Ele segue a sintaxe padrão do Markdown — concisa e poderosa.&lt;/p>
+&lt;h3 id="2-imagens-o-fim-do-caos">2. Imagens: O Fim do Caos
+&lt;/h3>&lt;p>Esta é a parte mais bonita do nosso fluxo de trabalho. &lt;strong>Cada artigo tem a sua própria pasta dedicada&lt;/strong>, o que significa que todas as imagens usadas no artigo podem ser armazenadas junto com o próprio artigo!&lt;/p>
+&lt;p>Digamos que estamos a escrever este post &lt;code>a-new-journey&lt;/code>. A sua estrutura de diretórios fica assim:&lt;/p>
+&lt;pre tabindex="0">&lt;code>content/
+└── posts/
+└── 2024/
+└── 07/
+└── a-new-journey/ &amp;lt;-- A pasta dedicada do artigo
+├── index.pt.md &amp;lt;-- O próprio arquivo do artigo
+└── journey-start.jpg &amp;lt;-- A sua imagem companheira!
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>Como fazer referência a esta imagem?&lt;/strong>&lt;/p>
+&lt;p>No seu arquivo &lt;code>index.pt.md&lt;/code>, você só precisa escrever o seguinte, sem nenhum caminho complicado:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">O Início da Jornada&lt;/span>](&lt;span style="color:#a6e22e">journey-start.jpg&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;picture>
+&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
+&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
+&lt;img src="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
+width="800"
+height="444"
+alt="O Início da Jornada"
+title=""
+loading="lazy">
+&lt;/picture>&lt;/p>
+&lt;p>É simples assim! A imagem e o texto são elegantemente &amp;ldquo;agrupados&amp;rdquo;, tornando a migração, o backup e o gerenciamento uma experiência livre de preocupações.&lt;/p>
+&lt;h2 id="iii-a-identidade-do-artigo-front-matter">III. A &amp;ldquo;Identidade&amp;rdquo; do Artigo: Front Matter
+&lt;/h2>&lt;p>A área no topo de cada artigo, envolta em &lt;code>---&lt;/code>, são os seus metadados. Ela determina como o artigo é classificado e exibido.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>title&lt;/code>&lt;/strong>: O título do artigo.&lt;/li>
+&lt;li>&lt;strong>&lt;code>date&lt;/code>&lt;/strong>: A data de publicação, que determina a sua posição nos arquivos.&lt;/li>
+&lt;li>&lt;strong>&lt;code>categories&lt;/code>&lt;/strong>: A categoria, geralmente uma única classificação ampla como &lt;code>[&amp;quot;Notas de Tecnologia&amp;quot;]&lt;/code> ou &lt;code>[&amp;quot;Reflexões da Vida&amp;quot;]&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;code>tags&lt;/code>&lt;/strong>: As tags, que podem ser múltiplas e são usadas para uma indexação mais granular, como &lt;code>[&amp;quot;Go&amp;quot;, &amp;quot;Web&amp;quot;, &amp;quot;Otimização de Desempenho&amp;quot;]&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;code>summary&lt;/code>&lt;/strong>: Um breve resumo que será exibido na página de lista de artigos.&lt;/li>
+&lt;li>&lt;strong>&lt;code>draft&lt;/code>&lt;/strong>: &lt;code>false&lt;/code> significa que o artigo está publicado; &lt;code>true&lt;/code> significa que é um rascunho.&lt;/li>
+&lt;/ul>
+&lt;p>Preencher cuidadosamente estas informações manterá a nossa base de conhecimento limpa e organizada.&lt;/p>
+&lt;h2 id="conclusão">Conclusão
+&lt;/h2>&lt;p>O processo criativo deve ser um prazer, não um fardo.&lt;/p>
+&lt;p>Começar a jornada com &lt;code>hugo new&lt;/code>, colocar palavras e imagens na sua pasta dedicada e, finalmente, remover a poeira do &lt;code>draft&lt;/code>. Este é todo o segredo para registrar cada descoberta aqui em &amp;ldquo;O Apanhador de Marés Errante&amp;rdquo;.&lt;/p>
+&lt;p>Que este pequeno cesto se encha cada dia mais.&lt;/p></description></item></channel></rss>

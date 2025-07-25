@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on Kẻ Lãng Du Bắt Sóng Triều</title><link>https://gnailcn.github.io/vi/tags/hugo/</link><description>Recent content in Hugo on Kẻ Lãng Du Bắt Sóng Triều</description><generator>Hugo -- gohugo.io</generator><language>vi</language><lastBuildDate>Thu, 25 Jul 2024 11:00:00 +0800</lastBuildDate><atom:link href="https://gnailcn.github.io/vi/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Bài Viết Đầu Tiên: Hướng Dẫn Xây Dựng 'Kẻ Lãng Du Bắt Sóng Triều'</title><link>https://gnailcn.github.io/vi/posts/2024/07/b%C3%A0i-vi%E1%BA%BFt-%C4%91%E1%BA%A7u-ti%C3%AAn-h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-x%C3%A2y-d%E1%BB%B1ng-k%E1%BA%BB-l%C3%A3ng-du-b%E1%BA%AFt-s%C3%B3ng-tri%E1%BB%81u/</link><pubDate>Thu, 25 Jul 2024 11:00:00 +0800</pubDate><guid>https://gnailcn.github.io/vi/posts/2024/07/b%C3%A0i-vi%E1%BA%BFt-%C4%91%E1%BA%A7u-ti%C3%AAn-h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-x%C3%A2y-d%E1%BB%B1ng-k%E1%BA%BB-l%C3%A3ng-du-b%E1%BA%AFt-s%C3%B3ng-tri%E1%BB%81u/</guid><description>&lt;p>Chào tôi của tương lai, và những người bạn có thể ghé thăm nơi đây.&lt;/p>
+&lt;p>Chào mừng đến với sự khởi đầu của &amp;ldquo;Kẻ Lãng Du Bắt Sóng Triều&amp;rdquo;. Không gian này được hình dung như một chiếc giỏ để chứa những &amp;ldquo;vỏ sò&amp;rdquo; và &amp;ldquo;vì sao&amp;rdquo; mà tôi nhặt được dọc theo bờ biển của tri thức và thông tin. Hôm nay, tôi sẽ đặt vào chiếc vỏ sò đầu tiên được lựa chọn cẩn thận—một hướng dẫn về cách tạo nội dung ở đây.&lt;/p>
+&lt;p>Bài đăng này vừa là một kỷ niệm, vừa là một sổ tay hướng dẫn, đảm bảo rằng mọi hoạt động sáng tạo trong tương lai đều rõ ràng và hiệu quả.&lt;/p>
+&lt;h2 id="i-điểm-khởi-đầu-một-lệnh-duy-nhất">I. Điểm Khởi Đầu: Một Lệnh Duy Nhất
+&lt;/h2>&lt;p>Chúng ta không tạo tệp theo cách thủ công. Thay vào đó, chúng ta sử dụng công cụ dòng lệnh thanh lịch của HUGO. Nó giống như một cây đũa thần, chuẩn bị mọi thứ cho chúng ta.&lt;/p>
+&lt;p>Mở terminal của bạn, điều hướng đến thư mục gốc của blog, và đọc thần chú:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Định dạng: hugo new loại-nội-dung/YYYY/MM/slug-bài-viết-của-bạn/index.ngôn-ngữ.md&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new posts/2024/07/a-new-journey/index.vi.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Lệnh này thực hiện một chút phép thuật:&lt;/p>
+&lt;ol>
+&lt;li>Nó tạo một thư mục tên là &lt;code>a-new-journey&lt;/code> trong thư mục &lt;code>content/posts/2024/07/&lt;/code>.&lt;/li>
+&lt;li>Bên trong thư mục đó, nó tạo một tệp &lt;code>index.vi.md&lt;/code>.&lt;/li>
+&lt;li>Nó tự động điền vào tệp này &amp;ldquo;thông tin nhận dạng&amp;rdquo; (Front Matter), bao gồm tiêu đề, ngày tháng và một cờ quan trọng: &lt;code>draft: true&lt;/code>. Cờ này đánh dấu nó là một bản nháp, có thể xem được ở bản xem trước cục bộ nhưng sẽ bị bỏ qua khi triển khai cuối cùng, điều này rất an toàn.&lt;/li>
+&lt;/ol>
+&lt;p>Khi chúng ta viết xong và sẵn sàng cho thế giới thấy, chúng ta chỉ cần thay đổi &lt;code>draft: true&lt;/code> thành &lt;code>draft: false&lt;/code>.&lt;/p>
+&lt;h2 id="ii-thổi-hồn-chữ-viết-và-hình-ảnh">II. Thổi Hồn: Chữ Viết và Hình Ảnh
+&lt;/h2>&lt;p>Một bài viết hoàn chỉnh bao gồm cả văn bản và hình ảnh. Trong cấu trúc được thiết kế tốt của chúng ta, việc quản lý chúng trở nên vô cùng đơn giản.&lt;/p>
+&lt;h3 id="1-chữ-viết">1. Chữ Viết
+&lt;/h3>&lt;p>Bên dưới &amp;ldquo;thông tin nhận dạng&amp;rdquo; của tệp là nơi chúng ta tuôn trào con chữ. Nó tuân theo cú pháp Markdown tiêu chuẩn—ngắn gọn và mạnh mẽ.&lt;/p>
+&lt;h3 id="2-hình-ảnh-tạm-biệt-sự-hỗn-loạn">2. Hình Ảnh: Tạm Biệt Sự Hỗn Loạn
+&lt;/h3>&lt;p>Đây là phần tuyệt vời nhất trong quy trình làm việc của chúng ta. &lt;strong>Mỗi bài viết đều có thư mục riêng&lt;/strong>, điều đó có nghĩa là tất cả hình ảnh được sử dụng trong bài viết có thể được lưu trữ ngay bên cạnh chính bài viết đó!&lt;/p>
+&lt;p>Giả sử chúng ta đang viết bài &lt;code>a-new-journey&lt;/code> này. Cấu trúc thư mục của nó trông như sau:&lt;/p>
+&lt;pre tabindex="0">&lt;code>content/
+└── posts/
+└── 2024/
+└── 07/
+└── a-new-journey/ &amp;lt;-- Thư mục riêng của bài viết
+├── index.vi.md &amp;lt;-- Tệp bài viết
+└── journey-start.jpg &amp;lt;-- Hình ảnh đi kèm của nó!
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>Làm thế nào để tham chiếu đến hình ảnh này?&lt;/strong>&lt;/p>
+&lt;p>Trong tệp &lt;code>index.vi.md&lt;/code> của bạn, bạn chỉ cần viết như sau, không cần bất kỳ đường dẫn phức tạp nào:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">Hành Trình Bắt Đầu&lt;/span>](&lt;span style="color:#a6e22e">journey-start.jpg&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;picture>
+&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
+&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
+&lt;img src="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
+width="800"
+height="444"
+alt="Hành Trình Bắt Đầu"
+title=""
+loading="lazy">
+&lt;/picture>&lt;/p>
+&lt;p>Chỉ đơn giản vậy thôi! Hình ảnh và văn bản được &amp;ldquo;gói&amp;rdquo; lại với nhau một cách thanh lịch, giúp việc di chuyển, sao lưu và quản lý trở thành một trải nghiệm không còn lo lắng.&lt;/p>
+&lt;h2 id="iii-thẻ-căn-cước-của-bài-viết-front-matter">III. &amp;ldquo;Thẻ Căn Cước&amp;rdquo; của Bài Viết: Front Matter
+&lt;/h2>&lt;p>Khu vực ở đầu mỗi bài viết, được bao bọc bởi &lt;code>---&lt;/code>, là siêu dữ liệu của nó. Nó quyết định cách bài viết được phân loại và hiển thị.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>title&lt;/code>&lt;/strong>: Tiêu đề của bài viết.&lt;/li>
+&lt;li>&lt;strong>&lt;code>date&lt;/code>&lt;/strong>: Ngày xuất bản, quyết định vị trí của nó trong kho lưu trữ.&lt;/li>
+&lt;li>&lt;strong>&lt;code>categories&lt;/code>&lt;/strong>: Chuyên mục, thường là một phân loại rộng duy nhất như &lt;code>[&amp;quot;Ghi Chú Kỹ Thuật&amp;quot;]&lt;/code> hoặc &lt;code>[&amp;quot;Suy Ngẫm Cuộc Sống&amp;quot;]&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;code>tags&lt;/code>&lt;/strong>: Thẻ, có thể có nhiều và được sử dụng để lập chỉ mục chi tiết hơn, như &lt;code>[&amp;quot;Go&amp;quot;, &amp;quot;Web&amp;quot;, &amp;quot;Tối Ưu Hóa Hiệu Năng&amp;quot;]&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;code>summary&lt;/code>&lt;/strong>: Một bản tóm tắt ngắn sẽ được hiển thị trên trang danh sách bài viết.&lt;/li>
+&lt;li>&lt;strong>&lt;code>draft&lt;/code>&lt;/strong>: &lt;code>false&lt;/code> có nghĩa là bài viết đã được xuất bản; &lt;code>true&lt;/code> có nghĩa là nó là một bản nháp.&lt;/li>
+&lt;/ul>
+&lt;p>Việc điền cẩn thận những thông tin này sẽ giữ cho cơ sở kiến thức của chúng ta gọn gàng và có tổ chức.&lt;/p>
+&lt;h2 id="kết-luận">Kết Luận
+&lt;/h2>&lt;p>Quá trình sáng tạo nên là một niềm vui, không phải là một gánh nặng.&lt;/p>
+&lt;p>Bắt đầu hành trình với &lt;code>hugo new&lt;/code>, đặt chữ viết và hình ảnh vào thư mục riêng của chúng, và cuối cùng, phủi đi lớp bụi &lt;code>draft&lt;/code>. Đó là toàn bộ bí quyết để ghi lại mọi khám phá ở đây, tại &amp;ldquo;Kẻ Lãng Du Bắt Sóng Triều&amp;rdquo;.&lt;/p>
+&lt;p>Mong rằng chiếc giỏ nhỏ này sẽ ngày càng đầy hơn.&lt;/p></description></item></channel></rss>

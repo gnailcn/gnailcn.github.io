@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Wandernder Gezeitensammler</title><link>https://gnailcn.github.io/de/</link><description>Recent content on Wandernder Gezeitensammler</description><generator>Hugo -- gohugo.io</generator><language>de</language><lastBuildDate>Thu, 25 Jul 2024 11:00:00 +0800</lastBuildDate><atom:link href="https://gnailcn.github.io/de/index.xml" rel="self" type="application/rss+xml"/><item><title>Erster Beitrag: Eine Anleitung zum Aufbau von 'Wandernder Gezeitensammler'</title><link>https://gnailcn.github.io/de/posts/2024/07/erster-beitrag-eine-anleitung-zum-aufbau-von-wandernder-gezeitensammler/</link><pubDate>Thu, 25 Jul 2024 11:00:00 +0800</pubDate><guid>https://gnailcn.github.io/de/posts/2024/07/erster-beitrag-eine-anleitung-zum-aufbau-von-wandernder-gezeitensammler/</guid><description>&lt;p>Hallo, mein zukünftiges Ich, und alle Freunde, die hier zufällig vorbeischauen.&lt;/p>
+&lt;p>Willkommen am Anfang von „Wandernder Gezeitensammler“. Dieser Raum ist als ein Korb gedacht, um die „Muscheln“ und „Sterne“ aufzubewahren, die ich an den Ufern des Wissens und der Informationen aufsammle. Heute lege ich die erste sorgfältig ausgewählte Muschel hinein – eine Anleitung, wie man hier Inhalte erstellt.&lt;/p>
+&lt;p>Dieser Beitrag dient sowohl als Erinnerung als auch als Bedienungsanleitung, um sicherzustellen, dass jede zukünftige Schöpfung klar und effizient ist.&lt;/p>
+&lt;h2 id="i-der-ausgangspunkt-ein-einziger-befehl">I. Der Ausgangspunkt: Ein einziger Befehl
+&lt;/h2>&lt;p>Wir erstellen Dateien nicht manuell. Stattdessen verwenden wir das elegante Kommandozeilen-Tool von HUGO. Es ist wie ein Zauberstab, der alles für uns vorbereitet.&lt;/p>
+&lt;p>Öffne dein Terminal, navigiere zum Stammverzeichnis des Blogs und sprich den Zauberspruch aus:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Format: hugo new inhaltstyp/JJJJ/MM/dein-beitrags-slug/index.sprache.md&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new posts/2024/07/a-new-journey/index.de.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Dieser Befehl vollbringt ein kleines Wunder:&lt;/p>
+&lt;ol>
+&lt;li>Er erstellt einen Ordner namens &lt;code>a-new-journey&lt;/code> im Verzeichnis &lt;code>content/posts/2024/07/&lt;/code>.&lt;/li>
+&lt;li>In diesem Ordner erstellt er eine Datei &lt;code>index.de.md&lt;/code>.&lt;/li>
+&lt;li>Er füllt diese Datei automatisch mit „Identitätsinformationen“ (dem Front Matter), einschließlich Titel, Datum und einem entscheidenden Flag: &lt;code>draft: true&lt;/code>. Dieses Flag markiert ihn als Entwurf, der in lokalen Vorschauen sichtbar, aber bei der endgültigen Bereitstellung ignoriert wird, was sehr sicher ist.&lt;/li>
+&lt;/ol>
+&lt;p>Wenn wir mit dem Schreiben fertig und bereit sind, es der Welt zu zeigen, ändern wir einfach &lt;code>draft: true&lt;/code> in &lt;code>draft: false&lt;/code>.&lt;/p>
+&lt;h2 id="ii-ihm-eine-seele-geben-worte-und-bilder">II. Ihm eine Seele geben: Worte und Bilder
+&lt;/h2>&lt;p>Ein vollständiger Artikel besteht aus Text und Bildern. In unserer gut durchdachten Struktur wird ihre Verwaltung unglaublich einfach.&lt;/p>
+&lt;h3 id="1-worte">1. Worte
+&lt;/h3>&lt;p>Unter den „Identitätsinformationen“ der Datei befindet sich der Ort, an dem wir unseren Worten freien Lauf lassen. Hier folgt man der Standard-Markdown-Syntax – prägnant und leistungsstark.&lt;/p>
+&lt;h3 id="2-bilder-ein-ende-des-chaos">2. Bilder: Ein Ende des Chaos
+&lt;/h3>&lt;p>Das ist der schönste Teil unseres Arbeitsablaufs. &lt;strong>Jeder Artikel hat seinen eigenen dedizierten Ordner&lt;/strong>, was bedeutet, dass alle im Artikel verwendeten Bilder direkt neben dem Artikel selbst gespeichert werden können!&lt;/p>
+&lt;p>Nehmen wir an, wir schreiben diesen &lt;code>a-new-journey&lt;/code>-Beitrag. Seine Verzeichnisstruktur sieht so aus:&lt;/p>
+&lt;pre tabindex="0">&lt;code>content/
+└── posts/
+└── 2024/
+└── 07/
+└── a-new-journey/ &amp;lt;-- Der dedizierte Ordner des Artikels
+├── index.de.md &amp;lt;-- Die Artikeldatei selbst
+└── journey-start.jpg &amp;lt;-- Das zugehörige Bild!
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>Wie verweist man auf dieses Bild?&lt;/strong>&lt;/p>
+&lt;p>In deiner &lt;code>index.de.md&lt;/code>-Datei musst du nur Folgendes schreiben, ohne komplexe Pfade:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">Der Beginn der Reise&lt;/span>](&lt;span style="color:#a6e22e">journey-start.jpg&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;picture>
+&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
+&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
+&lt;img src="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
+width="800"
+height="444"
+alt="Der Beginn der Reise"
+title=""
+loading="lazy">
+&lt;/picture>&lt;/p>
+&lt;p>So einfach ist das! Bild und Text sind elegant „gebündelt“, was Migration, Sicherung und Verwaltung zu einer sorgenfreien Erfahrung macht.&lt;/p>
+&lt;h2 id="iii-der-personalausweis-des-artikels-front-matter">III. Der „Personalausweis“ des Artikels: Front Matter
+&lt;/h2>&lt;p>Der Bereich am Anfang jedes Artikels, umschlossen von &lt;code>---&lt;/code>, sind seine Metadaten. Sie bestimmen, wie der Artikel kategorisiert und angezeigt wird.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>title&lt;/code>&lt;/strong>: Der Titel des Artikels.&lt;/li>
+&lt;li>&lt;strong>&lt;code>date&lt;/code>&lt;/strong>: Das Veröffentlichungsdatum, das seine Position in den Archiven bestimmt.&lt;/li>
+&lt;li>&lt;strong>&lt;code>categories&lt;/code>&lt;/strong>: Die Kategorie, normalerweise eine einzelne, breite Klassifizierung wie &lt;code>[&amp;quot;Technische Notizen&amp;quot;]&lt;/code> oder &lt;code>[&amp;quot;Lebensreflexionen&amp;quot;]&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;code>tags&lt;/code>&lt;/strong>: Die Tags, von denen es mehrere geben kann und die für eine feinere Indexierung verwendet werden, wie &lt;code>[&amp;quot;Go&amp;quot;, &amp;quot;Web&amp;quot;, &amp;quot;Leistungsoptimierung&amp;quot;]&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;code>summary&lt;/code>&lt;/strong>:Eine kurze Zusammenfassung, die auf der Artikellistenseite angezeigt wird.&lt;/li>
+&lt;li>&lt;strong>&lt;code>draft&lt;/code>&lt;/strong>: &lt;code>false&lt;/code> bedeutet, der Artikel ist veröffentlicht; &lt;code>true&lt;/code> bedeutet, er ist ein Entwurf.&lt;/li>
+&lt;/ul>
+&lt;p>Das sorgfältige Ausfüllen dieser Informationen hält unsere Wissensdatenbank sauber und organisiert.&lt;/p>
+&lt;h2 id="fazit">Fazit
+&lt;/h2>&lt;p>Der kreative Prozess sollte eine Freude sein, keine Last.&lt;/p>
+&lt;p>Die Reise mit &lt;code>hugo new&lt;/code> beginnen, Worte und Bilder in ihrem dedizierten Ordner platzieren und schließlich den &lt;code>draft&lt;/code>-Staub abwischen. Das ist das ganze Geheimnis, um jede Entdeckung hier bei „Wandernder Gezeitensammler“ festzuhalten.&lt;/p>
+&lt;p>Möge dieser kleine Korb mit jedem Tag voller werden.&lt;/p></description></item><item><title>Archiv</title><link>https://gnailcn.github.io/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/archives/</guid><description/></item><item><title>Suchen</title><link>https://gnailcn.github.io/de/search/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/de/search/search/</guid><description/></item><item><title>Über den 'Gezeitensammler'</title><link>https://gnailcn.github.io/de/about/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/de/about/about/</guid><description>&lt;p>Hallo, ich bin gnailcn, ein &amp;lsquo;Wandernder Gezeitensammler&amp;rsquo;, der an den Stränden des digitalen Zeitalters spaziert.&lt;/p>
+&lt;p>Ich glaube, dass der Ozean des Wissens weit und grenzenlos ist. Jede technologische Iteration, jede Kollision von Ideen ist wie eine Gezeit. Wenn die Flut zurückweicht, hinterlässt sie immer unzählige Schätze, die darauf warten, entdeckt zu werden.&lt;/p>
+&lt;p>Ich habe diese kleine Seite erstellt, um meinen Prozess des „Gezeitensammelns“ zu dokumentieren.&lt;/p>
+&lt;p>Hier könnte das, was ich berge, ein elegantes Stück Code oder ein brillanter Algorithmus sein – dies sind die glänzenden &amp;lsquo;Muscheln&amp;rsquo; in den Wellen der Information. Ich blicke auch zu den großen Ideen auf, die unsere Richtung weisen, und zu den Lebensphilosophien, die unsere Wahrnehmung verändern – dies sind die &amp;lsquo;Sterne&amp;rsquo;, die ewige Führung am Nachthimmel bieten.&lt;/p>
+&lt;p>Dieser Blog ist der Korb, in dem ich diese Muscheln und Sterne aufbewahre. Er enthält, was ich gelernt, gedacht und gefühlt habe, und zeugt davon, wie ein gewöhnlicher Mensch inmitten der Informationsflut sein eigenes kognitives System aufbaut.&lt;/p>
+&lt;p>Möge ich die Freude dieses Gezeitensammelns mit dir teilen, einem gleichgesinnten Entdecker.&lt;/p></description></item></channel></rss>

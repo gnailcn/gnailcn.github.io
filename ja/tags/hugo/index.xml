@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on さまよう潮拾い</title><link>https://gnailcn.github.io/ja/tags/hugo/</link><description>Recent content in Hugo on さまよう潮拾い</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Thu, 25 Jul 2024 11:00:00 +0800</lastBuildDate><atom:link href="https://gnailcn.github.io/ja/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>最初の投稿：「さまよう潮拾い」を構築する方法</title><link>https://gnailcn.github.io/ja/posts/2024/07/%E6%9C%80%E5%88%9D%E3%81%AE%E6%8A%95%E7%A8%BF%E3%81%95%E3%81%BE%E3%82%88%E3%81%86%E6%BD%AE%E6%8B%BE%E3%81%84%E3%82%92%E6%A7%8B%E7%AF%89%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</link><pubDate>Thu, 25 Jul 2024 11:00:00 +0800</pubDate><guid>https://gnailcn.github.io/ja/posts/2024/07/%E6%9C%80%E5%88%9D%E3%81%AE%E6%8A%95%E7%A8%BF%E3%81%95%E3%81%BE%E3%82%88%E3%81%86%E6%BD%AE%E6%8B%BE%E3%81%84%E3%82%92%E6%A7%8B%E7%AF%89%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</guid><description>&lt;p>こんにちは、未来の私、そしてここを訪れるかもしれない友人たち。&lt;/p>
+&lt;p>「さまよう潮拾い」の始まりへようこそ。この空間は、知識と情報の波打ち際で拾った「貝殻」と「星」を収めるための籠として構想されました。今日、私はその中に最初に丁寧に選んだ貝殻を入れます——ここでコンテンツを作成する方法についてのガイドです。&lt;/p>
+&lt;p>この記事は記念であると同時に、操作マニュアルでもあり、未来のすべての創作が明確で効率的であることを保証します。&lt;/p>
+&lt;h2 id="一創造の起点一つのコマンド">一、創造の起点：一つのコマンド
+&lt;/h2>&lt;p>私たちは手動でファイルを作成しません。代わりに、HUGOのエレガントなコマンドラインツールを使用します。それはまるで魔法の杖のように、私たちのためにすべてを準備してくれます。&lt;/p>
+&lt;p>ターミナルを開き、ブログのルートディレクトリに移動して、呪文を唱えます：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># 書式：hugo new コンテンツタイプ/YYYY/MM/あなたの投稿スラッグ/index.言語.md&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new posts/2024/07/a-new-journey/index.ja.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>このコマンドはちょっとした魔法をかけます：&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>content/posts/2024/07/&lt;/code> ディレクトリ内に &lt;code>a-new-journey&lt;/code> という名前のフォルダを作成します。&lt;/li>
+&lt;li>そのフォルダ内に &lt;code>index.ja.md&lt;/code> というファイルを作成します。&lt;/li>
+&lt;li>このファイルに自動的に「身分情報」（つまりFront Matter）を書き込みます。これにはタイトル、日付、そして重要なフラグ &lt;code>draft: true&lt;/code> が含まれます。このフラグは、この記事が下書きであり、ローカルプレビューでは表示されますが、最終的なデプロイ時には無視されることを意味し、非常に安全です。&lt;/li>
+&lt;/ol>
+&lt;p>記事を書き終え、世界に見せる準備ができたら、&lt;code>draft: true&lt;/code> を &lt;code>draft: false&lt;/code> に変更するだけです。&lt;/p>
+&lt;h2 id="二魂を吹き込む文章と画像">二、魂を吹き込む：文章と画像
+&lt;/h2>&lt;p>完全な記事は、文章と画像の両方で構成されます。私たちの巧みに設計された構造では、それらを管理することは非常に簡単になります。&lt;/p>
+&lt;h3 id="1-文章">1. 文章
+&lt;/h3>&lt;p>ファイルの「身分情報」の下が、私たちが文章を繰り広げる場所です。ここでは標準的なMarkdown構文に従い、簡潔かつ強力です。&lt;/p>
+&lt;h3 id="2-画像混乱よさようなら">2. 画像：混乱よ、さようなら
+&lt;/h3>&lt;p>これが私たちのワークフローで最も素晴らしい部分です。&lt;strong>各記事はそれぞれ専用のフォルダを持っています&lt;/strong>。つまり、記事で使われるすべての画像を、記事自体と一緒に置くことができるのです！&lt;/p>
+&lt;p>私たちがこの &lt;code>a-new-journey&lt;/code> という記事を書いているとしましょう。そのディレクトリ構造は次のようになります：&lt;/p>
+&lt;pre tabindex="0">&lt;code>content/
+└── posts/
+└── 2024/
+└── 07/
+└── a-new-journey/ &amp;lt;-- 記事の専用フォルダ
+├── index.ja.md &amp;lt;-- 記事ファイル自体
+└── journey-start.jpg &amp;lt;-- そのお供の画像！
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>この画像を参照するにはどうすればいいか？&lt;/strong>&lt;/p>
+&lt;p>&lt;code>index.ja.md&lt;/code> ファイルの中で、複雑なパスは一切不要で、次のように書くだけです：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">旅の始まり&lt;/span>](&lt;span style="color:#a6e22e">journey-start.jpg&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;picture>
+&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
+&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
+&lt;img src="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
+width="800"
+height="444"
+alt="旅の始まり"
+title=""
+loading="lazy">
+&lt;/picture>&lt;/p>
+&lt;p>これほど簡単なのです！画像と文章はエレガントに「バンドル」され、移行、バックアップ、管理、いずれにおいても悩むことはありません。&lt;/p>
+&lt;h2 id="三記事の身分証明書front-matter">三、記事の「身分証明書」：Front Matter
+&lt;/h2>&lt;p>各記事の冒頭にある &lt;code>---&lt;/code> で囲まれた領域は、そのメタデータであり、それがどのように分類され、表示されるかを決定します。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>title&lt;/code>&lt;/strong>: 記事のタイトル。&lt;/li>
+&lt;li>&lt;strong>&lt;code>date&lt;/code>&lt;/strong>: 公開日。アーカイブでの位置を決定します。&lt;/li>
+&lt;li>&lt;strong>&lt;code>categories&lt;/code>&lt;/strong>: カテゴリ。通常は &lt;code>[&amp;quot;技術ノート&amp;quot;]&lt;/code> や &lt;code>[&amp;quot;生活の雑感&amp;quot;]&lt;/code> のような単一の大きな分類です。&lt;/li>
+&lt;li>&lt;strong>&lt;code>tags&lt;/code>&lt;/strong>: タグ。複数設定可能で、&lt;code>[&amp;quot;Go&amp;quot;, &amp;quot;Web&amp;quot;, &amp;quot;パフォーマンス最適化&amp;quot;]&lt;/code> のように、より細かい粒度での索引付けに使用します。&lt;/li>
+&lt;li>&lt;strong>&lt;code>summary&lt;/code>&lt;/strong>: 記事一覧ページに表示される短い要約。&lt;/li>
+&lt;li>&lt;strong>&lt;code>draft&lt;/code>&lt;/strong>: &lt;code>false&lt;/code> は記事が公開済みであることを、&lt;code>true&lt;/code> は下書きであることを示します。&lt;/li>
+&lt;/ul>
+&lt;p>これらの情報を丁寧に記入することで、私たちの知識ベースは整然と保たれます。&lt;/p>
+&lt;h2 id="結び">結び
+&lt;/h2>&lt;p>創造のプロセスは、負担ではなく、喜びであるべきです。&lt;/p>
+&lt;p>&lt;code>hugo new&lt;/code> で旅を始め、専用のフォルダに文章と画像を収め、最後に &lt;code>draft&lt;/code> の埃を払う。これが「さまよう潮拾い」で一つ一つの発見を記録するためのすべての秘訣です。&lt;/p>
+&lt;p>この小さな籠が、日増しに満たされていきますように。&lt;/p></description></item></channel></rss>

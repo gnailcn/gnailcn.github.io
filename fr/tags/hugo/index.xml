@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on Le Vadrouilleur des Marées</title><link>https://gnailcn.github.io/fr/tags/hugo/</link><description>Recent content in Hugo on Le Vadrouilleur des Marées</description><generator>Hugo -- gohugo.io</generator><language>fr</language><lastBuildDate>Thu, 25 Jul 2024 11:00:00 +0800</lastBuildDate><atom:link href="https://gnailcn.github.io/fr/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Premier Article : Un Guide pour Construire 'Le Vadrouilleur des Marées'</title><link>https://gnailcn.github.io/fr/posts/2024/07/premier-article-un-guide-pour-construire-le-vadrouilleur-des-mar%C3%A9es/</link><pubDate>Thu, 25 Jul 2024 11:00:00 +0800</pubDate><guid>https://gnailcn.github.io/fr/posts/2024/07/premier-article-un-guide-pour-construire-le-vadrouilleur-des-mar%C3%A9es/</guid><description>&lt;p>Bonjour, mon futur moi, et à tous les amis qui pourraient passer par ici.&lt;/p>
+&lt;p>Bienvenue au commencement du &amp;ldquo;Vadrouilleur des Marées&amp;rdquo;. Cet espace est imaginé comme un panier pour contenir les « coquillages » et les « étoiles » que je ramasse sur les rivages de la connaissance et de l&amp;rsquo;information. Aujourd&amp;rsquo;hui, je dépose le premier coquillage soigneusement choisi — un guide sur la manière de créer du contenu ici.&lt;/p>
+&lt;p>Cet article sert à la fois de souvenir et de manuel d&amp;rsquo;instructions, garantissant que chaque future création soit claire et efficace.&lt;/p>
+&lt;h2 id="i-le-point-de-départ--une-seule-commande">I. Le Point de Départ : Une Seule Commande
+&lt;/h2>&lt;p>Nous ne créons pas de fichiers manuellement. À la place, nous utilisons l&amp;rsquo;élégant outil en ligne de commande de HUGO. C&amp;rsquo;est comme une baguette magique qui prépare tout pour nous.&lt;/p>
+&lt;p>Ouvrez votre terminal, naviguez jusqu&amp;rsquo;à la racine du blog, et prononcez la formule magique :&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Format : hugo new type-de-contenu/AAAA/MM/votre-slug-d-article/index.lang.md&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new posts/2024/07/a-new-journey/index.fr.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Cette commande opère un peu de magie :&lt;/p>
+&lt;ol>
+&lt;li>Elle crée un dossier nommé &lt;code>a-new-journey&lt;/code> dans le répertoire &lt;code>content/posts/2024/07/&lt;/code>.&lt;/li>
+&lt;li>Dans ce dossier, elle crée un fichier &lt;code>index.fr.md&lt;/code>.&lt;/li>
+&lt;li>Elle remplit automatiquement ce fichier avec des « informations d&amp;rsquo;identité » (le Front Matter), incluant le titre, la date, et un indicateur crucial : &lt;code>draft: true&lt;/code>. Cet indicateur le marque comme un brouillon, visible dans les aperçus locaux mais ignoré lors du déploiement final, ce qui est très sûr.&lt;/li>
+&lt;/ol>
+&lt;p>Quand nous avons fini d&amp;rsquo;écrire et sommes prêts à ce que le monde le voie, nous changeons simplement &lt;code>draft: true&lt;/code> en &lt;code>draft: false&lt;/code>.&lt;/p>
+&lt;h2 id="ii-lui-donner-une-âme--mots-et-images">II. Lui Donner une Âme : Mots et Images
+&lt;/h2>&lt;p>Un article complet est composé à la fois de texte et d&amp;rsquo;images. Dans notre structure bien conçue, leur gestion devient incroyablement simple.&lt;/p>
+&lt;h3 id="1-mots">1. Mots
+&lt;/h3>&lt;p>Sous les « informations d&amp;rsquo;identité » du fichier se trouve l&amp;rsquo;endroit où nous laissons nos mots s&amp;rsquo;exprimer. Il suit la syntaxe standard de Markdown — concise et puissante.&lt;/p>
+&lt;h3 id="2-images--la-fin-du-chaos">2. Images : La Fin du Chaos
+&lt;/h3>&lt;p>C&amp;rsquo;est la plus belle partie de notre flux de travail. &lt;strong>Chaque article a son propre dossier dédié&lt;/strong>, ce qui signifie que toutes les images utilisées dans l&amp;rsquo;article peuvent être stockées juste à côté de l&amp;rsquo;article lui-même !&lt;/p>
+&lt;p>Disons que nous écrivons cet article &lt;code>a-new-journey&lt;/code>. Sa structure de répertoires ressemble à ceci :&lt;/p>
+&lt;pre tabindex="0">&lt;code>content/
+└── posts/
+└── 2024/
+└── 07/
+└── a-new-journey/ &amp;lt;-- Le dossier dédié de l&amp;#39;article
+├── index.fr.md &amp;lt;-- Le fichier de l&amp;#39;article lui-même
+└── journey-start.jpg &amp;lt;-- Son image d&amp;#39;accompagnement !
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>Comment référencer cette image ?&lt;/strong>&lt;/p>
+&lt;p>Dans votre fichier &lt;code>index.fr.md&lt;/code>, il vous suffit d&amp;rsquo;écrire ce qui suit, sans aucun chemin complexe :&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">Le Début du Voyage&lt;/span>](&lt;span style="color:#a6e22e">journey-start.jpg&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;picture>
+&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
+&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
+&lt;img src="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
+width="800"
+height="444"
+alt="Le Début du Voyage"
+title=""
+loading="lazy">
+&lt;/picture>&lt;/p>
+&lt;p>C&amp;rsquo;est aussi simple que ça ! L&amp;rsquo;image et le texte sont élégamment « groupés » ensemble, ce qui rend la migration, la sauvegarde et la gestion une expérience sans souci.&lt;/p>
+&lt;h2 id="iii-la--carte-didentité--de-larticle--le-front-matter">III. La « Carte d&amp;rsquo;Identité » de l&amp;rsquo;Article : le Front Matter
+&lt;/h2>&lt;p>La zone en haut de chaque article, encadrée par &lt;code>---&lt;/code>, constitue ses métadonnées. Elle détermine comment l&amp;rsquo;article est classé et affiché.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>title&lt;/code>&lt;/strong>: Le titre de l&amp;rsquo;article.&lt;/li>
+&lt;li>&lt;strong>&lt;code>date&lt;/code>&lt;/strong>: La date de publication, qui détermine sa position dans les archives.&lt;/li>
+&lt;li>&lt;strong>&lt;code>categories&lt;/code>&lt;/strong>: La catégorie, généralement une seule classification large comme &lt;code>[&amp;quot;Notes Techniques&amp;quot;]&lt;/code> ou &lt;code>[&amp;quot;Réflexions de Vie&amp;quot;]&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;code>tags&lt;/code>&lt;/strong>: Les étiquettes (tags), qui peuvent être multiples et sont utilisées pour un indexage plus fin, comme &lt;code>[&amp;quot;Go&amp;quot;, &amp;quot;Web&amp;quot;, &amp;quot;Optimisation des Performances&amp;quot;]&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;code>summary&lt;/code>&lt;/strong>: Un court résumé qui sera affiché sur la page de liste des articles.&lt;/li>
+&lt;li>&lt;strong>&lt;code>draft&lt;/code>&lt;/strong>: &lt;code>false&lt;/code> signifie que l&amp;rsquo;article est publié ; &lt;code>true&lt;/code> signifie que c&amp;rsquo;est un brouillon.&lt;/li>
+&lt;/ul>
+&lt;p>Remplir soigneusement ces informations gardera notre base de connaissances propre et organisée.&lt;/p>
+&lt;h2 id="conclusion">Conclusion
+&lt;/h2>&lt;p>Le processus créatif doit être une joie, pas un fardeau.&lt;/p>
+&lt;p>Commencer le voyage avec &lt;code>hugo new&lt;/code>, placer les mots et les images dans leur dossier dédié, et enfin, dépoussiérer le &lt;code>draft&lt;/code>. C&amp;rsquo;est tout le secret pour enregistrer chaque découverte ici, chez &amp;ldquo;Le Vadrouilleur des Marées&amp;rdquo;.&lt;/p>
+&lt;p>Puisse ce petit panier se remplir de jour en jour.&lt;/p></description></item></channel></rss>

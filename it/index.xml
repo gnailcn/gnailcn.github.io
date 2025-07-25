@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Il Raccoglitore Errante di Maree</title><link>https://gnailcn.github.io/it/</link><description>Recent content on Il Raccoglitore Errante di Maree</description><generator>Hugo -- gohugo.io</generator><language>it</language><lastBuildDate>Thu, 25 Jul 2024 11:00:00 +0800</lastBuildDate><atom:link href="https://gnailcn.github.io/it/index.xml" rel="self" type="application/rss+xml"/><item><title>Primo Articolo: Una Guida per Costruire 'Il Raccoglitore Errante di Maree'</title><link>https://gnailcn.github.io/it/posts/2024/07/primo-articolo-una-guida-per-costruire-il-raccoglitore-errante-di-maree/</link><pubDate>Thu, 25 Jul 2024 11:00:00 +0800</pubDate><guid>https://gnailcn.github.io/it/posts/2024/07/primo-articolo-una-guida-per-costruire-il-raccoglitore-errante-di-maree/</guid><description>&lt;p>Ciao, mio io del futuro, e a tutti gli amici che potrebbero capitare qui.&lt;/p>
+&lt;p>Benvenuti all&amp;rsquo;inizio de &amp;ldquo;Il Raccoglitore Errante di Maree&amp;rdquo;. Questo spazio è stato concepito come un cesto per contenere le &amp;ldquo;conchiglie&amp;rdquo; e le &amp;ldquo;stelle&amp;rdquo; che raccolgo lungo le rive della conoscenza e dell&amp;rsquo;informazione. Oggi, metto al suo interno la prima conchiglia scelta con cura: una guida su come creare contenuti qui.&lt;/p>
+&lt;p>Questo post serve sia come ricordo che come manuale operativo, per garantire che ogni futura creazione sia chiara ed efficiente.&lt;/p>
+&lt;h2 id="i-il-punto-di-partenza-un-singolo-comando">I. Il Punto di Partenza: Un Singolo Comando
+&lt;/h2>&lt;p>Non creiamo file manualmente. Usiamo invece l&amp;rsquo;elegante strumento a riga di comando di HUGO. È come una bacchetta magica che prepara tutto per noi.&lt;/p>
+&lt;p>Apri il tuo terminale, naviga fino alla radice del blog e pronuncia l&amp;rsquo;incantesimo:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Formato: hugo new tipo-contenuto/AAAA/MM/tuo-slug-del-post/index.lingua.md&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new posts/2024/07/a-new-journey/index.it.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Questo comando compie una piccola magia:&lt;/p>
+&lt;ol>
+&lt;li>Crea una cartella chiamata &lt;code>a-new-journey&lt;/code> nella directory &lt;code>content/posts/2024/07/&lt;/code>.&lt;/li>
+&lt;li>All&amp;rsquo;interno di quella cartella, crea un file &lt;code>index.it.md&lt;/code>.&lt;/li>
+&lt;li>Popola automaticamente questo file con le &amp;ldquo;informazioni di identità&amp;rdquo; (il Front Matter), includendo il titolo, la data e un flag cruciale: &lt;code>draft: true&lt;/code>. Questo flag lo contrassegna come bozza, visibile nelle anteprime locali ma ignorato durante la pubblicazione finale, il che è molto sicuro.&lt;/li>
+&lt;/ol>
+&lt;p>Quando abbiamo finito di scrivere e siamo pronti a mostrarlo al mondo, cambiamo semplicemente &lt;code>draft: true&lt;/code> in &lt;code>draft: false&lt;/code>.&lt;/p>
+&lt;h2 id="ii-dargli-unanima-parole-e-immagini">II. Dargli un&amp;rsquo;Anima: Parole e Immagini
+&lt;/h2>&lt;p>Un articolo completo è composto sia da testo che da immagini. Nella nostra struttura ben progettata, gestirli diventa incredibilmente semplice.&lt;/p>
+&lt;h3 id="1-parole">1. Parole
+&lt;/h3>&lt;p>Sotto le &amp;ldquo;informazioni di identità&amp;rdquo; del file c&amp;rsquo;è lo spazio dove lasciamo fluire le nostre parole. Qui si segue la sintassi standard di Markdown — concisa e potente.&lt;/p>
+&lt;h3 id="2-immagini-fine-del-caos">2. Immagini: Fine del Caos
+&lt;/h3>&lt;p>Questa è la parte più bella del nostro flusso di lavoro. &lt;strong>Ogni articolo ha la sua cartella dedicata&lt;/strong>, il che significa che tutte le immagini usate nell&amp;rsquo;articolo possono essere salvate proprio accanto all&amp;rsquo;articolo stesso!&lt;/p>
+&lt;p>Supponiamo di stare scrivendo questo articolo &lt;code>a-new-journey&lt;/code>. La sua struttura di directory è questa:&lt;/p>
+&lt;pre tabindex="0">&lt;code>content/
+└── posts/
+└── 2024/
+└── 07/
+└── a-new-journey/ &amp;lt;-- La cartella dedicata dell&amp;#39;articolo
+├── index.it.md &amp;lt;-- Il file dell&amp;#39;articolo stesso
+└── journey-start.jpg &amp;lt;-- La sua immagine di accompagnamento!
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>Come fare riferimento a questa immagine?&lt;/strong>&lt;/p>
+&lt;p>Nel tuo file &lt;code>index.it.md&lt;/code>, devi solo scrivere quanto segue, senza percorsi complicati:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">L&amp;#39;inizio del viaggio&lt;/span>](&lt;span style="color:#a6e22e">journey-start.jpg&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;picture>
+&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
+&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
+&lt;img src="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
+width="800"
+height="444"
+alt="L&amp;rsquo;inizio del viaggio"
+title=""
+loading="lazy">
+&lt;/picture>&lt;/p>
+&lt;p>È così semplice! L&amp;rsquo;immagine e il testo sono elegantemente &amp;ldquo;impacchettati&amp;rdquo; insieme, rendendo la migrazione, il backup e la gestione un&amp;rsquo;esperienza senza preoccupazioni.&lt;/p>
+&lt;h2 id="iii-la-carta-didentità-dellarticolo-front-matter">III. La &amp;ldquo;Carta d&amp;rsquo;Identità&amp;rdquo; dell&amp;rsquo;Articolo: Front Matter
+&lt;/h2>&lt;p>L&amp;rsquo;area in cima a ogni articolo, racchiusa tra &lt;code>---&lt;/code>, sono i suoi metadati. Essi determinano come l&amp;rsquo;articolo viene classificato e visualizzato.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>title&lt;/code>&lt;/strong>: Il titolo dell&amp;rsquo;articolo.&lt;/li>
+&lt;li>&lt;strong>&lt;code>date&lt;/code>&lt;/strong>: La data di pubblicazione, che determina la sua posizione negli archivi.&lt;/li>
+&lt;li>&lt;strong>&lt;code>categories&lt;/code>&lt;/strong>: La categoria, di solito una singola classificazione ampia come &lt;code>[&amp;quot;Note Tecniche&amp;quot;]&lt;/code> o &lt;code>[&amp;quot;Riflessioni di Vita&amp;quot;]&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;code>tags&lt;/code>&lt;/strong>: I tag, che possono essere multipli e sono usati per un&amp;rsquo;indicizzazione più granulare, come &lt;code>[&amp;quot;Go&amp;quot;, &amp;quot;Web&amp;quot;, &amp;quot;Ottimizzazione delle Prestazioni&amp;quot;]&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;code>summary&lt;/code>&lt;/strong>: Un breve riassunto che verrà mostrato nell&amp;rsquo;elenco degli articoli.&lt;/li>
+&lt;li>&lt;strong>&lt;code>draft&lt;/code>&lt;/strong>: &lt;code>false&lt;/code> significa che l&amp;rsquo;articolo è pubblicato; &lt;code>true&lt;/code> significa che è una bozza.&lt;/li>
+&lt;/ul>
+&lt;p>Compilare attentamente queste informazioni manterrà la nostra base di conoscenza pulita e organizzata.&lt;/p>
+&lt;h2 id="conclusione">Conclusione
+&lt;/h2>&lt;p>Il processo creativo dovrebbe essere una gioia, non un peso.&lt;/p>
+&lt;p>Iniziare il viaggio con &lt;code>hugo new&lt;/code>, inserire parole e immagini nella loro cartella dedicata e, infine, spolverare via il &lt;code>draft&lt;/code>. Questo è tutto il segreto per registrare ogni scoperta qui, su &amp;ldquo;Il Raccoglitore Errante di Maree&amp;rdquo;.&lt;/p>
+&lt;p>Possa questo piccolo cesto riempirsi ogni giorno di più.&lt;/p></description></item><item><title>Archivio</title><link>https://gnailcn.github.io/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/archives/</guid><description/></item><item><title>Cerca</title><link>https://gnailcn.github.io/it/search/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/it/search/search/</guid><description/></item><item><title>Sul 'Raccoglitore di Maree'</title><link>https://gnailcn.github.io/it/about/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gnailcn.github.io/it/about/about/</guid><description>&lt;p>Ciao, sono gnailcn, un &amp;lsquo;Raccoglitore Errante di Maree&amp;rsquo; che passeggia sulle spiagge dell&amp;rsquo;era digitale.&lt;/p>
+&lt;p>Credo che l&amp;rsquo;oceano della conoscenza sia vasto e sconfinato. Ogni iterazione tecnologica, ogni collisione di idee, è come una marea. Quando la marea si ritira, lascia sempre dietro di sé innumerevoli tesori in attesa di essere scoperti.&lt;/p>
+&lt;p>Ho creato questo piccolo sito per documentare il mio processo di &amp;ldquo;raccolta delle maree&amp;rdquo;.&lt;/p>
+&lt;p>Qui, ciò che recupero potrebbe essere un pezzo di codice elegante o un algoritmo brillante: sono le &amp;lsquo;conchiglie&amp;rsquo; scintillanti tra le onde dell&amp;rsquo;informazione. Ammiro anche le grandi idee che guidano la nostra direzione e le filosofie di vita che cambiano la nostra percezione: sono le &amp;lsquo;stelle&amp;rsquo; che offrono una guida eterna nel cielo notturno.&lt;/p>
+&lt;p>Questo blog è il cesto in cui conservo queste conchiglie e stelle. Contiene ciò che ho imparato, pensato e sentito, testimoniando come una persona comune costruisca il proprio sistema cognitivo in mezzo al flusso di informazioni.&lt;/p>
+&lt;p>Possa io condividere la gioia di questa raccolta di maree con te, un compagno esploratore.&lt;/p></description></item></channel></rss>

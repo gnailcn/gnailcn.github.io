@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on صائد المد والجزر التائه</title><link>https://gnailcn.github.io/ar/tags/hugo/</link><description>Recent content in Hugo on صائد المد والجزر التائه</description><generator>Hugo -- gohugo.io</generator><language>ar</language><lastBuildDate>Thu, 25 Jul 2024 11:00:00 +0800</lastBuildDate><atom:link href="https://gnailcn.github.io/ar/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>المقالة الأولى: دليل لبناء 'صائد المد والجزر التائه'</title><link>https://gnailcn.github.io/ar/posts/2024/07/%D8%A7%D9%84%D9%85%D9%82%D8%A7%D9%84%D8%A9-%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89-%D8%AF%D9%84%D9%8A%D9%84-%D9%84%D8%A8%D9%86%D8%A7%D8%A1-%D8%B5%D8%A7%D8%A6%D8%AF-%D8%A7%D9%84%D9%85%D8%AF-%D9%88%D8%A7%D9%84%D8%AC%D8%B2%D8%B1-%D8%A7%D9%84%D8%AA%D8%A7%D8%A6%D9%87/</link><pubDate>Thu, 25 Jul 2024 11:00:00 +0800</pubDate><guid>https://gnailcn.github.io/ar/posts/2024/07/%D8%A7%D9%84%D9%85%D9%82%D8%A7%D9%84%D8%A9-%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89-%D8%AF%D9%84%D9%8A%D9%84-%D9%84%D8%A8%D9%86%D8%A7%D8%A1-%D8%B5%D8%A7%D8%A6%D8%AF-%D8%A7%D9%84%D9%85%D8%AF-%D9%88%D8%A7%D9%84%D8%AC%D8%B2%D8%B1-%D8%A7%D9%84%D8%AA%D8%A7%D8%A6%D9%87/</guid><description>&lt;p>مرحباً يا أنا المستقبلي، وأي أصدقاء قد يزورون هذا المكان.&lt;/p>
+&lt;p>أهلاً بكم في بداية &amp;ldquo;صائد المد والجزر التائه&amp;rdquo;. تم تصور هذه المساحة كسلة لحفظ &amp;ldquo;الأصداف&amp;rdquo; و &amp;ldquo;النجوم&amp;rdquo; التي ألتقطها على شواطئ المعرفة والمعلومات. اليوم، أضع أول صدفة مختارة بعناية في الداخل — دليل حول كيفية إنشاء المحتوى هنا.&lt;/p>
+&lt;p>تعتبر هذه المقالة بمثابة تذكار ودليل تشغيلي، لضمان أن كل عملية إبداعية مستقبلية ستكون واضحة وفعالة.&lt;/p>
+&lt;h2 id="١-نقطة-البداية-أمر-واحد">١. نقطة البداية: أمر واحد
+&lt;/h2>&lt;p>نحن لا ننشئ الملفات يدويًا. بدلاً من ذلك، نستخدم أداة سطر الأوامر الأنيقة من HUGO. إنها مثل عصا سحرية تجهز لنا كل شيء.&lt;/p>
+&lt;p>افتح الطرفية (Terminal)، انتقل إلى المجلد الجذر للمدونة، ثم انطق بالتعويذة:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># الصيغة: hugo new نوع-المحتوى/سنة/شهر/اسم-المقالة/index.لغة.md&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new posts/2024/07/a-new-journey/index.ar.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>هذا الأمر يقوم ببعض السحر:&lt;/p>
+&lt;ol>
+&lt;li>ينشئ مجلدًا باسم &lt;code>a-new-journey&lt;/code> داخل الدليل &lt;code>content/posts/2024/07/&lt;/code>.&lt;/li>
+&lt;li>داخل ذلك المجلد، ينشئ ملفًا باسم &lt;code>index.ar.md&lt;/code>.&lt;/li>
+&lt;li>يملأ هذا الملف تلقائيًا بـ &amp;ldquo;معلومات الهوية&amp;rdquo; (الـ Front Matter)، بما في ذلك العنوان والتاريخ وعلامة حاسمة: &lt;code>draft: true&lt;/code>. هذه العلامة تحدده كمسودة، مرئية في المعاينات المحلية ولكن يتم تجاهلها أثناء النشر النهائي، وهو أمر آمن جدًا.&lt;/li>
+&lt;/ol>
+&lt;p>عندما ننتهي من الكتابة ونكون مستعدين ليراها العالم، نغير ببساطة &lt;code>draft: true&lt;/code> إلى &lt;code>draft: false&lt;/code>.&lt;/p>
+&lt;h2 id="٢-إعطاؤها-الروح-الكلمات-والصور">٢. إعطاؤها الروح: الكلمات والصور
+&lt;/h2>&lt;p>تتكون المقالة الكاملة من نصوص وصور. في هيكلنا المصمم جيدًا، يصبح إدارة هذه العناصر بسيطًا بشكل لا يصدق.&lt;/p>
+&lt;h3 id="١-الكلمات">١. الكلمات
+&lt;/h3>&lt;p>أسفل &amp;ldquo;معلومات الهوية&amp;rdquo; للملف هو المكان الذي نطلق فيه العنان لكلماتنا. يتبع هذا الجزء صيغة Markdown القياسية — موجزة وقوية.&lt;/p>
+&lt;h3 id="٢-الصور-نهاية-للفوضى">٢. الصور: نهاية للفوضى
+&lt;/h3>&lt;p>هذا هو الجزء الأجمل في سير عملنا. &lt;strong>كل مقالة لها مجلدها المخصص&lt;/strong>، مما يعني أن جميع الصور المستخدمة في المقالة يمكن تخزينها بجانب المقالة نفسها!&lt;/p>
+&lt;p>لنفترض أننا نكتب هذه المقالة &lt;code>a-new-journey&lt;/code>. هيكل دليلها يبدو هكذا:&lt;/p>
+&lt;pre tabindex="0">&lt;code>content/
+└── posts/
+└── 2024/
+└── 07/
+└── a-new-journey/ &amp;lt;-- المجلد المخصص للمقالة
+├── index.ar.md &amp;lt;-- ملف المقالة نفسه
+└── journey-start.jpg &amp;lt;-- صورتها المرافقة!
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>كيف تشير إلى هذه الصورة؟&lt;/strong>&lt;/p>
+&lt;p>في ملف &lt;code>index.ar.md&lt;/code> الخاص بك، تحتاج فقط إلى كتابة ما يلي، دون أي مسارات معقدة:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">بداية الرحلة&lt;/span>](&lt;span style="color:#a6e22e">journey-start.jpg&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;picture>
+&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_d3bdc22ac60174da.webp" type="image/webp">
+&lt;source srcset="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg" type="image/jpeg">
+&lt;img src="https://gnailcn.github.io/posts/2024/07/first-post-a-guide-to-building-wandering-tidecatcher/journey-start_hu_559d9133a685170c.jpg"
+width="800"
+height="444"
+alt="بداية الرحلة"
+title=""
+loading="lazy">
+&lt;/picture>&lt;/p>
+&lt;p>بهذه البساطة! يتم &amp;ldquo;تجميع&amp;rdquo; الصورة والنص معًا بأناقة، مما يجعل الترحيل والنسخ الاحتياطي والإدارة تجربة خالية من القلق.&lt;/p>
+&lt;h2 id="٣-بطاقة-هوية-المقالة-الـ-front-matter">٣. &amp;ldquo;بطاقة هوية&amp;rdquo; المقالة: الـ Front Matter
+&lt;/h2>&lt;p>المنطقة الموجودة في أعلى كل مقالة، المحاطة بـ &lt;code>---&lt;/code>، هي بياناتها الوصفية. تحدد هذه البيانات كيفية تصنيف المقالة وعرضها.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>title&lt;/code>&lt;/strong>: عنوان المقالة.&lt;/li>
+&lt;li>&lt;strong>&lt;code>date&lt;/code>&lt;/strong>: تاريخ النشر، الذي يحدد موقعها في الأرشيف.&lt;/li>
+&lt;li>&lt;strong>&lt;code>categories&lt;/code>&lt;/strong>: الفئة، وعادة ما تكون تصنيفًا واحدًا واسعًا مثل &lt;code>[&amp;quot;ملاحظات تقنية&amp;quot;]&lt;/code> أو &lt;code>[&amp;quot;تأملات حياتية&amp;quot;]&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;code>tags&lt;/code>&lt;/strong>: الوسوم، والتي يمكن أن تكون متعددة وتستخدم لفهرسة أكثر تفصيلاً، مثل &lt;code>[&amp;quot;Go&amp;quot;, &amp;quot;Web&amp;quot;, &amp;quot;تحسين الأداء&amp;quot;]&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;code>summary&lt;/code>&lt;/strong>: ملخص قصير سيتم عرضه في صفحة قائمة المقالات.&lt;/li>
+&lt;li>&lt;strong>&lt;code>draft&lt;/code>&lt;/strong>: &lt;code>false&lt;/code> تعني أن المقالة منشورة؛ &lt;code>true&lt;/code> تعني أنها مسودة.&lt;/li>
+&lt;/ul>
+&lt;p>إن ملء هذه المعلومات بعناية سيحافظ على قاعدة معارفنا مرتبة ومنظمة.&lt;/p>
+&lt;h2 id="خاتمة">خاتمة
+&lt;/h2>&lt;p>يجب أن تكون العملية الإبداعية ممتعة، لا عبئًا.&lt;/p>
+&lt;p>ابدأ الرحلة بـ &lt;code>hugo new&lt;/code>، ضع الكلمات والصور في مجلدها المخصص، وأخيرًا، أزل غبار &lt;code>draft&lt;/code>. هذا هو كل السر لتسجيل كل اكتشاف هنا في &amp;ldquo;صائد المد والجزر التائه&amp;rdquo;.&lt;/p>
+&lt;p>أتمنى أن تمتلئ هذه السلة الصغيرة يومًا بعد يوم.&lt;/p></description></item></channel></rss>

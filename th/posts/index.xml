@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on นักจับกระแสคลื่นผู้พเนจร</title><link>https://gnailcn.github.io/th/posts/</link><description>Recent content in Posts on นักจับกระแสคลื่นผู้พเนจร</description><generator>Hugo -- gohugo.io</generator><language>th</language><lastBuildDate>Thu, 25 Jul 2024 11:00:00 +0800</lastBuildDate><atom:link href="https://gnailcn.github.io/th/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>โพสต์แรก: วิธีร่วมสร้างสรรค์ใน 'นักจับกระแสคลื่นผู้พเนจร'</title><link>https://gnailcn.github.io/th/posts/2024/07/%E0%B9%82%E0%B8%9E%E0%B8%AA%E0%B8%95%E0%B9%8C%E0%B9%81%E0%B8%A3%E0%B8%81-%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B8%A3%E0%B9%88%E0%B8%A7%E0%B8%A1%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%AA%E0%B8%A3%E0%B8%A3%E0%B8%84%E0%B9%8C%E0%B9%83%E0%B8%99-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%88%E0%B8%B1%E0%B8%9A%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B9%81%E0%B8%AA%E0%B8%84%E0%B8%A5%E0%B8%B7%E0%B9%88%E0%B8%99%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%9E%E0%B9%80%E0%B8%99%E0%B8%88%E0%B8%A3/</link><pubDate>Thu, 25 Jul 2024 11:00:00 +0800</pubDate><guid>https://gnailcn.github.io/th/posts/2024/07/%E0%B9%82%E0%B8%9E%E0%B8%AA%E0%B8%95%E0%B9%8C%E0%B9%81%E0%B8%A3%E0%B8%81-%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B8%A3%E0%B9%88%E0%B8%A7%E0%B8%A1%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%AA%E0%B8%A3%E0%B8%A3%E0%B8%84%E0%B9%8C%E0%B9%83%E0%B8%99-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%88%E0%B8%B1%E0%B8%9A%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B9%81%E0%B8%AA%E0%B8%84%E0%B8%A5%E0%B8%B7%E0%B9%88%E0%B8%99%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%9E%E0%B9%80%E0%B8%99%E0%B8%88%E0%B8%A3/</guid><description>&lt;p>สวัสดี ตัวฉันในอนาคต และเพื่อนๆ ที่อาจแวะเวียนมาที่นี่&lt;/p>
+&lt;p>ยินดีต้อนรับสู่จุดเริ่มต้นของ &amp;lsquo;นักจับกระแสคลื่นผู้พเนจร&amp;rsquo; พื้นที่แห่งนี้ถูกจินตนาการให้เป็นตะกร้าสำหรับเก็บ &amp;ldquo;เปลือกหอย&amp;rdquo; และ &amp;ldquo;ดวงดาว&amp;rdquo; ที่ฉันเก็บได้จากริมฝั่งของคลื่นแห่งความรู้และข้อมูล วันนี้ ฉันจะใส่เปลือกหอยที่คัดสรรมาอย่างดีชิ้นแรกลงไป นั่นคือคู่มือเกี่ยวกับวิธีการสร้างเนื้อหาที่นี่&lt;/p>
+&lt;p>โพสต์นี้เป็นทั้งอนุสรณ์และคู่มือการใช้งาน เพื่อให้แน่ใจว่าทุกการสร้างสรรค์ในอนาคตจะชัดเจนและมีประสิทธิภาพ&lt;/p>
+&lt;h2 id="i-จดเรมตนของการสรางสรรค-คำสงเดยว">I. จุดเริ่มต้นของการสร้างสรรค์: คำสั่งเดียว
+&lt;/h2>&lt;p>เราจะไม่สร้างไฟล์ด้วยตนเอง แต่จะใช้เครื่องมือบรรทัดคำสั่งที่สวยงามของ HUGO มันเหมือนไม้กายสิทธิ์ที่สามารถเตรียมทุกอย่างให้เราได้&lt;/p>
+&lt;p>เปิดเทอร์มินัล ไปที่ไดเรกทอรีรากของบล็อก แล้วท่องคาถา:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># รูปแบบ: hugo new content-type/YYYY/MM/your-post-slug/index.lang.md&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new posts/2024/07/a-new-journey/index.th.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>คำสั่งนี้จะร่ายเวทมนตร์:&lt;/p>
+&lt;ol>
+&lt;li>มันจะสร้างโฟลเดอร์ชื่อ &lt;code>a-new-journey&lt;/code> ภายในไดเรกทอรี &lt;code>content/posts/2024/07/&lt;/code>&lt;/li>
+&lt;li>ภายในโฟลเดอร์นั้น มันจะสร้างไฟล์ &lt;code>index.th.md&lt;/code>&lt;/li>
+&lt;li>มันจะเติม &amp;ldquo;ข้อมูลระบุตัวตน&amp;rdquo; (คือ Front Matter) สำหรับไฟล์นี้โดยอัตโนมัติ ซึ่งประกอบด้วยชื่อเรื่อง, วันที่ และเครื่องหมายสำคัญ &lt;code>draft: true&lt;/code> เครื่องหมายนี้หมายความว่ามันเป็นฉบับร่าง ซึ่งจะมองเห็นได้ในการแสดงตัวอย่างในเครื่อง แต่จะถูกละเว้นเมื่อทำการปรับใช้จริง ซึ่งปลอดภัยมาก&lt;/li>
+&lt;/ol>
+&lt;p>เมื่อเราเขียนบทความเสร็จและพร้อมที่จะให้โลกได้เห็น ก็เพียงแค่เปลี่ยน &lt;code>draft: true&lt;/code> เป็น &lt;code>draft: false&lt;/code>&lt;/p>
+&lt;h2 id="ii-การมอบชวตชวา-ขอความและรปภาพ">II. การมอบชีวิตชีวา: ข้อความและรูปภาพ
+&lt;/h2>&lt;p>บทความที่สมบูรณ์ประกอบด้วยข้อความและรูปภาพ ในโครงสร้างที่เราออกแบบมาอย่างพิถีพิถัน การจัดการพวกมันกลายเป็นเรื่องง่ายอย่างไม่น่าเชื่อ&lt;/p>
+&lt;h3 id="1-ขอความ">1. ข้อความ
+&lt;/h3>&lt;p>ใต้ &amp;ldquo;ข้อมูลระบุตัวตน&amp;rdquo; ของไฟล์ คือพื้นที่ที่เราจะใช้เขียนข้อความ ที่นี่ปฏิบัติตามไวยากรณ์ Markdown มาตรฐาน ซึ่งกระชับและทรงพลัง&lt;/p>
+&lt;h3 id="2-รปภาพ-บอกลาความยงเหยง">2. รูปภาพ: บอกลาความยุ่งเหยิง
+&lt;/h3>&lt;p>นี่คือส่วนที่ยอดเยี่ยมที่สุดในขั้นตอนการทำงานของเรา &lt;strong>แต่ละบทความมีโฟลเดอร์เฉพาะของตัวเอง&lt;/strong> ซึ่งหมายความว่ารูปภาพทั้งหมดที่ใช้ในบทความ สามารถเก็บไว้ด้วยกันกับตัวบทความได้เลย!&lt;/p>
+&lt;p>สมมติว่าเรากำลังเขียนบทความ &lt;code>a-new-journey&lt;/code> นี้ โครงสร้างไดเรกทอรีของมันจะเป็นดังนี้:&lt;/p>
+&lt;pre tabindex="0">&lt;code>content/
+└── posts/
+└── 2024/
+└── 07/
+└── a-new-journey/ &amp;lt;-- โฟลเดอร์เฉพาะของบทความ
+├── index.th.md &amp;lt;-- ไฟล์บทความเอง
+└── journey-start.jpg &amp;lt;-- รูปภาพประกอบของมัน!
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>จะอ้างอิงถึงรูปภาพนี้ได้อย่างไร?&lt;/strong>&lt;/p>
+&lt;p>ในไฟล์ &lt;code>index.th.md&lt;/code> คุณเพียงแค่ต้องเขียนดังต่อไปนี้ โดยไม่ต้องมีเส้นทางที่ซับซ้อนใดๆ:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>![&lt;span style="color:#f92672">จุดเริ่มต้นของการเดินทาง&lt;/span>](&lt;span style="color:#a6e22e">2024/07/a-new-journey/journey-start.jpg&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://gnailcn.github.io/2024/07/a-new-journey/journey-start.jpg" alt="จุดเริ่มต้นของการเดินทาง" title="" loading="lazy">&lt;/p>
+&lt;p>มันง่ายขนาดนี้เลย! รูปภาพและข้อความถูก &amp;ldquo;รวม&amp;rdquo; เข้าด้วยกันอย่างสวยงาม ไม่ว่าจะเป็นการย้าย, การสำรองข้อมูล หรือการจัดการ ก็ไม่มีปัญหาอีกต่อไป&lt;/p>
+&lt;h2 id="iii-บตรประจำตว-ของบทความ-front-matter">III. &amp;ldquo;บัตรประจำตัว&amp;rdquo; ของบทความ: Front Matter
+&lt;/h2>&lt;p>พื้นที่ที่ล้อมรอบด้วย &lt;code>---&lt;/code> ที่ด้านบนของแต่ละบทความคือข้อมูลเมตาของมัน ซึ่งกำหนดวิธีการจัดหมวดหมู่และแสดงผล&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>title&lt;/code>&lt;/strong>: ชื่อเรื่องของบทความ&lt;/li>
+&lt;li>&lt;strong>&lt;code>date&lt;/code>&lt;/strong>: วันที่เผยแพร่ ซึ่งกำหนดตำแหน่งของมันในคลังบทความ&lt;/li>
+&lt;li>&lt;strong>&lt;code>categories&lt;/code>&lt;/strong>: หมวดหมู่ โดยปกติจะเป็นหมวดหมู่หลักเพียงหมวดหมู่เดียว เช่น &lt;code>[&amp;quot;บันทึกทางเทคนิค&amp;quot;]&lt;/code> หรือ &lt;code>[&amp;quot;เรื่องราวชีวิต&amp;quot;]&lt;/code>&lt;/li>
+&lt;li>&lt;strong>&lt;code>tags&lt;/code>&lt;/strong>: แท็ก สามารถมีได้หลายแท็ก ใช้สำหรับการทำดัชนีที่ละเอียดขึ้น เช่น &lt;code>[&amp;quot;Go&amp;quot;, &amp;quot;Web&amp;quot;, &amp;quot;การเพิ่มประสิทธิภาพ&amp;quot;]&lt;/code>&lt;/li>
+&lt;li>&lt;strong>&lt;code>summary&lt;/code>&lt;/strong>: บทสรุปสั้นๆ ที่จะแสดงในหน้ารายการบทความ&lt;/li>
+&lt;li>&lt;strong>&lt;code>draft&lt;/code>&lt;/strong>: &lt;code>false&lt;/code> หมายถึงบทความสามารถมองเห็นได้, &lt;code>true&lt;/code> หมายถึงเป็นฉบับร่าง&lt;/li>
+&lt;/ul>
+&lt;p>การกรอกข้อมูลเหล่านี้อย่างตั้งใจ จะทำให้คลังความรู้ของเราเป็นระเบียบเรียบร้อย&lt;/p>
+&lt;h2 id="บทสรป">บทสรุป
+&lt;/h2>&lt;p>กระบวนการสร้างสรรค์ควรเป็นสิ่งที่น่าเพลิดเพลิน ไม่ใช่ภาระ&lt;/p>
+&lt;p>เริ่มต้นการเดินทางด้วย &lt;code>hugo new&lt;/code>, จัดวางข้อความและรูปภาพในโฟลเดอร์เฉพาะของมัน และสุดท้ายปัดฝุ่น &lt;code>draft&lt;/code> ออกไป นี่คือเคล็ดลับทั้งหมดในการบันทึกทุกการค้นพบใน &amp;lsquo;นักจับกระแสคลื่นผู้พเนจร&amp;rsquo;&lt;/p>
+&lt;p>หวังว่าตะกร้าใบเล็กๆ นี้จะเต็มเปี่ยมขึ้นทุกวัน&lt;/p></description></item></channel></rss>
